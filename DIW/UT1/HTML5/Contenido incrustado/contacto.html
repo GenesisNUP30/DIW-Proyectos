@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página de contacto del proyecto HTML para 2º DAW">
+    <title>Contacto - Proyecto HTML 2º DAW</title>
+</head>
+<body>
+
+    <header id="inicio">
+        <h1>Página de Contacto</h1>
+        <nav>
+            <ul>
+                <li><a href="etiquetas_de_texto_y_contenido_incrustado.html">Volver a la página principal</a></li>
+                <li><a href="#contacto">Ir directamente al formulario de contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="descripcion">
+            <h2>Sobre este proyecto</h2>
+            <p>
+                Esta página forma parte del ejercicio de <strong>Etiquetas de texto y contenido incrustado</strong> 
+                del módulo <em>Desarrollo Web en Entorno Cliente</em> de 2º DAW.
+            </p>
+        </section>
+
+        <section id="contacto">
+            <h2>Formulario de contacto</h2>
+            <p>Si deseas ponerte en contacto con el autor del proyecto, completa el siguiente formulario:</p>
+
+            <form action="#" method="post">
+                <label for="nombre">Nombre:</label><br>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required><br><br>
+
+                <label for="correo">Correo electrónico:</label><br>
+                <input type="email" id="correo" name="correo" placeholder="tucorreo@ejemplo.com" required><br><br>
+
+                <label for="mensaje">Mensaje:</label><br>
+                <textarea id="mensaje" name="mensaje" rows="5" cols="40" placeholder="Escribe tu mensaje aquí..."></textarea><br><br>
+
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpiar">
+            </form>
+
+            <p><a href="#inicio">↑ Volver al inicio</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 - <strong>Génesis Ushca (2º DAW)</strong></p>
+    </footer>
+
+</body>
+</html>

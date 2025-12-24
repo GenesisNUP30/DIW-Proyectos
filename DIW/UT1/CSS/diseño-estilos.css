@@ -1,0 +1,124 @@
+/* Estilos generales */
+body {
+    /* font-family: Arial, sans-serif; */
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    color: #333;
+}
+
+/* Cabecera */
+header {
+    background-color: #2f4f4f;
+    color: white;
+    text-align: center;
+    padding: 2em 1em;
+}
+
+.cabecera h1 {
+    font-size: 2em;
+    margin: 0.2em 0;
+}
+
+.cabecera p {
+    font-size: 1em;
+    margin: 0;
+    color: white;
+}
+
+.foto {
+    width: 8em;
+    height: 8em;
+    border-radius: 50%;
+    background-color: white;
+    display: block;
+    margin: 0 auto 1em auto;
+    object-fit: cover;
+}
+
+/* Secciones principales */
+main {
+    width: 80%;
+    margin: 2em auto;
+}
+
+h2 {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #2f4f4f;
+    text-transform: uppercase;
+    border-bottom: 0.1em solid transparent;
+    display: inline-block;
+    margin-bottom: 0.5em;
+}
+
+/* Texto */
+p {
+    font-size: 1em;
+    color: #333;
+}
+
+/* Listas */
+ul {
+    list-style-type: square;
+    padding-left: 2em;
+}
+
+/* Separadores */
+hr {
+    border: 0;
+    border-top: 0.05em solid #ccc;
+    margin: 2em 0;
+}
+
+/* Pie de página */
+footer {
+    background-color: #2f4f4f;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    font-size: 0.9em;
+}
+
+/* Enlaces */
+a:link {
+    color: #66ffff;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #99ccff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #2f4f4f;
+    background-color: #66ffff;
+    text-decoration: underline;
+}
+
+a:focus {
+    color: yellow;
+    text-decoration: underline;
+}
+
+a:active {
+    color: red;
+    text-decoration: none;
+}
+
+/* Adaptabilidad */
+@media (max-width: 600px) {
+    main {
+        width: 90%;
+    }
+
+    .foto {
+        width: 6em;
+        height: 6em;
+    }
+
+    .cabecera h1 {
+        font-size: 1.6em;
+    }
+}

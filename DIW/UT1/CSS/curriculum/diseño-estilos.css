@@ -1,0 +1,96 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0;
+    margin: 0 auto;
+}
+
+
+header {
+    width: 100%;
+    background-color: #543775;
+    color: white;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    text-align: center;
+}
+
+header img {
+    margin-top: 1%;
+    border-radius: 100%;
+    width: 10%;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+section {
+    margin-top: 1%;
+    width: 70%;
+}
+
+article {
+    padding: 1em;
+    border-bottom: 2px solid #333;
+    background-color: rgb(209, 193, 245);
+}
+
+article h2 {
+    float: left;
+    border-bottom: 2px solid rgb(255, 196, 0);
+    padding-bottom: 0.1em;
+    line-height: 1em;
+    font-size: 1em;
+}
+
+article p {
+    margin-left: 30%;
+    line-height: 1.3em;
+    text-align: justify;
+    font-size: 1em;
+}
+
+article p,
+article ul {
+    margin-left: 40%;
+    color: black;
+    line-height: 1.5em;
+    margin-bottom: 3.6em;
+}
+
+article ul li {
+    margin-left: 1.2em;
+    list-style: circle;
+    line-height: 1em;
+}
+
+article:nth-child(odd) {
+    background-color: #ede9fe;
+}
+
+footer {
+    background-color: #543775;
+    color: white;
+    text-align: center;
+}
+
+footer a {
+    color: white;
+}
+
+footer a:hover {
+    color: #fbbf24;
+    text-decoration: underline;
+}
+
+footer a:link {
+    color: #00ced1;
+}
+
+footer a:visited {
+    color: yellow;
+}
