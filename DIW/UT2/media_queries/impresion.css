@@ -1,0 +1,8 @@
+body {
+    font-size: 11pt;
+}
+
+header, footer, nav, aside {
+    display: none;
+}
+

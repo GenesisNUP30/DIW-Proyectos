@@ -1,0 +1,16 @@
+.contenedor {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.elemento {
+    width: 10%;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+.elemento:nth-child(even) {
+    order:1;
+}
