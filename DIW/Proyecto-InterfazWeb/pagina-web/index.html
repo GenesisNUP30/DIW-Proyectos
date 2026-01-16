@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>EcoTrip – Viajes responsables y turismo sostenible</title>
+  <meta name="description" content="EcoTrip es una plataforma de turismo sostenible que ofrece viajes responsables, experiencias locales y destinos ecológicos.">
+
+  <!-- Bootstrap CSS (CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&family=Voces&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color:#2F8F6B;">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <img src="../multimedia_optimizado/img/logo.svg" alt="Logo EcoTrip" height="40">
+      EcoTrip
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="destinos.html">Destinos</a></li>
+        <li class="nav-item"><a class="nav-link" href="experiencias.html">Experiencias</a></li>
+        <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre EcoTrip</a></li>
+        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero d-flex align-items-center text-center">
+  <div class="container">
+    <h1>Viajes responsables para un futuro sostenible</h1>
+    <p class="lead">
+      Descubre destinos ecológicos y experiencias locales que respetan el planeta.
+    </p>
+    <a href="destinos.html" class="btn btn-primary btn-lg">Explorar destinos</a>
+  </div>
+</header>
+
+<!-- DESTINOS DESTACADOS -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Destinos sostenibles</h2>
+
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="../multimedia_optimizado/img/bosque.webp"
+               class="card-img-top"
+               alt="Viaje sostenible en bosque natural"
+               loading="lazy">
+          <div class="card-body">
+            <h3 class="card-title h5">Bosques del norte</h3>
+            <p class="card-text">Turismo ecológico en entornos naturales protegidos.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="../multimedia_optimizado/img/playa.webp"
+               class="card-img-top"
+               alt="Playa ecológica con turismo responsable"
+               loading="lazy">
+          <div class="card-body">
+            <h3 class="card-title h5">Playas responsables</h3>
+            <p class="card-text">Disfruta del mar respetando el ecosistema.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="../multimedia_optimizado/img/montana.webp"
+               class="card-img-top"
+               alt="Viaje de montaña sostenible"
+               loading="lazy">
+          <div class="card-body">
+            <h3 class="card-title h5">Montañas y senderismo</h3>
+            <p class="card-text">Rutas sostenibles guiadas por expertos locales.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO PROMOCIONAL -->
+<section class="py-5 bg-dark text-light">
+  <div class="container text-center">
+    <h2>¿Por qué viajar con EcoTrip?</h2>
+    <video controls width="100%" class="mt-4">
+      <source src="../multimedia_optimizado/video/ecotrip.mp4" type="video/mp4">
+      <track src="../multimedia_optimizado/video/ecotrip-subtitulos.vtt" kind="subtitles" srclang="es" label="Español">
+      Tu navegador no soporta el vídeo.
+    </video>
+  </div>
+</section>
+
+<!-- LLAMADA A LA ACCIÓN -->
+<section class="py-5 text-center">
+  <div class="container">
+    <h2>Únete a la comunidad EcoTrip</h2>
+    <p class="lead mb-4">Suscríbete a nuestro boletín y recibe consejos de turismo sostenible.</p>
+    <a href="contacto.html" class="btn btn-primary btn-lg">Suscribirme</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-4 text-center" style="background-color:#0B1D1A; color:#A7D7C5;">
+  <p>&copy; 2026 EcoTrip – Viajes responsables</p>
+  <div class="mt-2">
+    <a href="#" class="text-light mx-2"><svg class="icon"><use xlink:href="../multimedia_optimizado/img/icons.svg#instagram"/></svg></a>
+    <a href="#" class="text-light mx-2"><svg class="icon"><use xlink:href="../multimedia_optimizado/img/icons.svg#linkedin"/></svg></a>
+    <a href="#" class="text-light mx-2"><svg class="icon"><use xlink:href="../multimedia_optimizado/img/icons.svg#github"/></svg></a>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

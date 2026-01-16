@@ -1,0 +1,56 @@
+
+:root {
+  --bs-primary: #2F8F6B;
+  --bs-secondary: #1FA2A6;
+  --bs-dark: #060E21;
+  --bs-light: #FFFFFF;
+}
+
+/* Navbar */
+.navbar {
+  backdrop-filter: blur(10px);
+  background-color: rgba(6, 14, 33, 0.9) !important;
+}
+
+/* Botones Bootstrap */
+.btn-primary {
+  background: linear-gradient(135deg, #2F8F6B, #1FA2A6);
+  border: none;
+}
+
+.btn-primary:hover {
+  filter: brightness(1.15);
+}
+
+/* Tabs */
+.nav-tabs .nav-link {
+  color: #A7D7C5;
+}
+
+.nav-tabs .nav-link.active {
+  background-color: transparent;
+  border-bottom: 3px solid #1FA2A6;
+  color: #FFFFFF;
+}
+
+/* Accordion */
+.accordion-button {
+  background-color: #060E21;
+  color: #FFFFFF;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #0B1D1A;
+  color: #1FA2A6;
+}
+
+.accordion-body {
+  background-color: #0B1D1A;
+  color: #D6D6D6;
+}
+
+/* Cards */
+.card {
+  background-color: #0B1D1A;
+  border: none;
+}
