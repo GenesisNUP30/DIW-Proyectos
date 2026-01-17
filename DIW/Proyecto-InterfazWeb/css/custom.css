@@ -1,21 +1,28 @@
-
 :root {
   --bs-primary: #2F8F6B;
   --bs-secondary: #1FA2A6;
   --bs-dark: #060E21;
-  --bs-light: #FFFFFF;
+  --bs-light: #ffffff;
 }
 
-/* Navbar */
+/* Navbar Bootstrap */
 .navbar {
   backdrop-filter: blur(10px);
   background-color: rgba(6, 14, 33, 0.9) !important;
+  transition: all 0.4s ease;
+}
+
+.navbar.scrolled {
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
 }
 
 /* Botones Bootstrap */
 .btn-primary {
   background: linear-gradient(135deg, #2F8F6B, #1FA2A6);
   border: none;
+  font-weight: 600;
 }
 
 .btn-primary:hover {
@@ -23,34 +30,45 @@
 }
 
 /* Tabs */
+.nav-tabs {
+  border-bottom: none;
+}
+
 .nav-tabs .nav-link {
-  color: #A7D7C5;
+  color: #7ee2b8;
+  background: transparent;
+  border: none;
+  font-weight: 600;
 }
 
 .nav-tabs .nav-link.active {
-  background-color: transparent;
-  border-bottom: 3px solid #1FA2A6;
-  color: #FFFFFF;
+  color: #ffffff;
+  border-bottom: 3px solid #2ecc71;
 }
 
 /* Accordion */
+.accordion-item {
+  border: none;
+  background-color: transparent;
+}
+
 .accordion-button {
   background-color: #060E21;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .accordion-button:not(.collapsed) {
   background-color: #0B1D1A;
-  color: #1FA2A6;
+  color: #7ee2b8;
 }
 
 .accordion-body {
   background-color: #0B1D1A;
-  color: #D6D6D6;
+  color: #d6d6d6;
 }
 
-/* Cards */
-.card {
-  background-color: #0B1D1A;
-  border: none;
+/* Modales */
+.modal-content {
+  background-color: #060E21;
+  color: #ffffff;
 }
