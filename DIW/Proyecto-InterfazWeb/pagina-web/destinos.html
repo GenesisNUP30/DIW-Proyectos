@@ -1,217 +1,541 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Destinos sostenibles – DestinoGreen</title>
-    <meta name="description"
-        content="Descubre destinos de turismo sostenible seleccionados por DestinoGreen. Viajes responsables en contacto con la naturaleza.">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&family=Voces&display=swap"
-    rel="stylesheet">
-    <link rel="stylesheet" href="../css/custom.css">
-    <link rel="stylesheet" href="../css/estilos.css">
-</head>
+    <meta
+      name="description"
+      content="Descubre destinos de turismo sostenible seleccionados por DestinoGreen. Viajes responsables en contacto con la naturaleza."
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&family=Voces&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/custom.css" />
+    <link rel="stylesheet" href="../css/estilos.css" />
+  </head>
 
-<body>
+  <body>
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="../multimedia-optimizado/img/logotipo.svg" alt="Logo DestinoGreen" height="40">
-                DestinoGreen
-            </a>
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img
+            src="../multimedia-optimizado/img/logotipo.svg"
+            alt="Logo DestinoGreen"
+            height="40"
+          />
+          DestinoGreen
+        </a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="menu">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="destinos.html">Destinos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="experiencias.html">Experiencias</a></li>
-                    <li class="nav-item"><a class="nav-link" href="sobre-nosotros.html">Sobre DestinoGreen</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
-                </ul>
-            </div>
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="destinos.html">Destinos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="experiencias.html">Experiencias</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="sobre-nosotros.html"
+                >Sobre DestinoGreen</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contacto.html">Contacto</a>
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
 
     <header class="hero text-center">
-        <div class="container">
-            <h1>Destinos sostenibles</h1>
-            <p class="lead">Viaja de forma responsable y descubre lugares únicos respetando el entorno.</p>
-        </div>
+      <div class="container">
+        <h1>Destinos sostenibles</h1>
+        <p class="lead">
+          Viaja de forma responsable y descubre lugares únicos respetando el
+          entorno.
+        </p>
+      </div>
     </header>
 
     <section class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-4">Destinos destacados</h2>
+      <div class="container">
+        <h2 class="text-center mb-4">Destinos destacados</h2>
 
-            <div id="carouselDestinos" class="carousel slide carousel-fade" data-bs-ride="carousel">
-                <div class="carousel-inner rounded">
-
-                    <div class="carousel-item active">
-                        <img src="../multimedia_optimizado/img/costa-rica.webp" class="d-block w-100"
-                            alt="Selva tropical en Costa Rica" loading="lazy">
-                        <div class="carrusel-caption d-none d-md-block">
-                            <h3>Viajes responsables</h3>
-                            <p>Explora el mundo cuidando el planeta</p>
-                        </div>
-                    </div>
-
-                    <div class="carousel-item">
-                        <img src="../multimedia_optimizado/img/islandia.webp" class="d-block w-100"
-                            alt="Paisaje natural en Islandia" loading="lazy">
-                        <div class="carrusel-caption d-none d-md-block">
-                            <h3>Viajes responsables</h3>
-                            <p>Explora el mundo cuidando el planeta</p>
-                        </div>
-                    </div>
-
-                    <div class="carousel-item">
-                        <img src="../multimedia_optimizado/img/portugal.webp" class="d-block w-100"
-                            alt="Costa natural de Portugal" loading="lazy">
-                        <div class="carrusel-caption d-none d-md-block">
-                            <h3>Viajes responsables</h3>
-                            <p>Explora el mundo cuidando el planeta</p>
-                        </div>
-                    </div>
-
-                </div>
-
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselDestinos"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon"></span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselDestinos"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon"></span>
-                </button>
+        <div
+          id="carouselDestinos"
+          class="carousel slide carousel-fade"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner rounded">
+            <div class="carousel-item active">
+              <img
+                src="../multimedia-optimizado/img/destinos/carrusel/selva-costa-rica.webp"
+                class="d-block w-100"
+                alt="Selva tropical en Costa Rica"
+              />
+              <div class="carrusel-caption d-none d-md-block">
+                <h3>Costa Rica: Paraíso de Biodiversidad</h3>
+              </div>
             </div>
+
+            <div class="carousel-item">
+              <img
+                src="../multimedia-optimizado/img/destinos/carrusel/islandia-paisaje-noche.webp"
+                class="d-block w-100"
+                alt="Paisaje natural en Islandia"
+              />
+              <div class="carrusel-caption d-none d-md-block">
+                <h3>Islandia: Energía Pura y Naturaleza Extrema</h3>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <img
+                src="../multimedia-optimizado/img/destinos/carrusel/portugal-turismo.webp"
+                class="d-block w-100"
+                alt="Costa natural de Portugal"
+              />
+              <div class="carrusel-caption d-none d-md-block">
+                <h3>Portugal: Sostenibilidad Mediterráneas</h3>
+              </div>
+            </div>
+          </div>
+
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselDestinos"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselDestinos"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon"></span>
+          </button>
         </div>
+      </div>
     </section>
 
     <section class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-5">Nuestros destinos</h2>
+      <div class="container">
+        <h2 class="text-center mb-5">Nuestros destinos</h2>
 
-            <div class="row g-4">
-                <div class="col-md-4 animate-on-scroll">
-                    <article class="card h-100">
-                        <img src="../multimedia-optimizado/img/destinos/costa-rica.webp" class="card-img-top"
-                            alt="Viaje ecológico a Costa Rica" loading="lazy">
-                        <div class="card-body d-flex flex-column">
-                            <h3 class="card-title">Costa Rica</h3>
-                            <p class="card-text">
-                                Selvas, biodiversidad y experiencias eco-friendly en uno de los países más sostenibles
-                                del mundo.
-                            </p>
-                            <button class="btn btn-primary mt-auto" data-bs-toggle="modal"
-                                data-bs-target="#modalCostaRica">
-                                Más información
-                            </button>
-                        </div>
-                    </article>
+        <div class="row g-4">
+          <div class="col-md-4 animate-on-scroll">
+            <article class="card h-100">
+              <img
+                src="../multimedia-optimizado/img/destinos/cards/costa-rica.webp"
+                class="card-img-top"
+                alt="Viaje ecológico a Costa Rica"
+                loading="lazy"
+              />
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title">Costa Rica</h3>
+                <p class="card-text">
+                  Descubre selvas tropicales, volcanes activos y playas vírgenes
+                  mientras apoyas comunidades locales y conservación ambiental.
+                </p>
+                <div class="mt-2">
+                  <span class="badge bg-success me-1">Carbono Neutral</span>
+                  <span class="badge bg-info">Biodiversidad</span>
                 </div>
+                <button
+                  class="btn btn-primary mt-auto"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalCostaRica"
+                >
+                  Más información
+                </button>
+              </div>
+            </article>
+          </div>
 
-                <div class="col-md-4 animate-on-scroll">
-                    <article class="card h-100">
-                        <img src="../multimedia-optimizado/img/destinos/islandia.webp" class="card-img-top"
-                            alt="Turismo responsable en Islandia" loading="lazy">
-                        <div class="card-body d-flex flex-column">
-                            <h3 class="card-title">Islandia</h3>
-                            <p class="card-text">
-                                Naturaleza extrema, energía renovable y paisajes únicos gestionados de forma
-                                responsable.
-                            </p>
-                            <button class="btn btn-primary mt-auto" data-bs-toggle="modal"
-                                data-bs-target="#modalIslandia">
-                                Más información
-                            </button>
-                        </div>
-                    </article>
+          <div class="col-md-4 animate-on-scroll">
+            <article class="card h-100">
+              <img
+                src="../multimedia-optimizado/img/destinos/cards/islandia.webp"
+                class="card-img-top"
+                alt="Turismo responsable en Islandia"
+                loading="lazy"
+              />
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title">Islandia</h3>
+                <p class="card-text">
+                  Glaciares milenarios, géiseres activos y auroras boreales en
+                  un país que lidera la transición energética mundial.
+                </p>
+                <div class="mt-2">
+                  <span class="badge bg-primary me-1"
+                    >Energía 100% Renovable</span
+                  >
+                  <span class="badge bg-info">Glaciares</span>
                 </div>
+                <button
+                  class="btn btn-primary mt-auto"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalIslandia"
+                >
+                  Más información
+                </button>
+              </div>
+            </article>
+          </div>
 
-                <div class="col-md-4 animate-on-scroll">
-                    <article class="card h-100">
-                        <img src="../multimedia-optimizado/img/destinos/portugal.webp" class="card-img-top"
-                            alt="Costa natural de Portugal" loading="lazy">
-                        <div class="card-body d-flex flex-column">
-                            <h3 class="card-title">Portugal</h3>
-                            <p class="card-text">
-                                Turismo local, costas protegidas y experiencias sostenibles cerca de casa.
-                            </p>
-                            <button class="btn btn-primary mt-auto" data-bs-toggle="modal"
-                                data-bs-target="#modalPortugal">
-                                Más información
-                            </button>
-                        </div>
-                    </article>
+          <div class="col-md-4 animate-on-scroll">
+            <article class="card h-100">
+              <img
+                src="../multimedia-optimizado/img/destinos/cards/portugal.webp"
+                class="card-img-top"
+                alt="Costa natural de Portugal"
+                loading="lazy"
+              />
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title">Portugal</h3>
+                <p class="card-text">
+                  Pueblos históricos, costas protegidas y gastronomía local en
+                  un destino comprometido con el desarrollo sostenible.
+                </p>
+                <div class="mt-2">
+                  <span class="badge bg-warning me-1">Pesca Sostenible</span>
+                  <span class="badge bg-success">Costas Protegidas</span>
                 </div>
+                <button
+                  class="btn btn-primary mt-auto"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalPortugal"
+                >
+                  Más información
+                </button>
+              </div>
+            </article>
+          </div>
 
-            </div>
+          <div class="col-md-4 animate-on-scroll">
+            <article class="card h-100 border-0 shadow-sm">
+              <img
+                src="../multimedia-optimizado/img/destinos/cards/noruega.webp"
+                class="card-img-top"
+                alt="Fiordos de Noruega sostenibles"
+                loading="lazy"
+              />
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title">Noruega</h3>
+                <p class="card-text">
+                  Fiordos espectaculares, auroras boreales y compromiso con la
+                  movilidad eléctrica y conservación marina.
+                </p>
+                <div class="mt-2">
+                  <span class="badge bg-primary me-1">Movilidad Eléctrica</span>
+                  <span class="badge bg-info">Fiordos</span>
+                </div>
+                <button
+                  class="btn btn-primary mt-auto"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalNoruega"
+                >
+                  Más información
+                </button>
+              </div>
+            </article>
+          </div>
+  
+          <div class="col-md-4 animate-on-scroll">
+            <article class="card h-100 border-0 shadow-sm">
+              <img
+                src="../multimedia-optimizado/img/destinos/cards/nueva-zelanda.webp"
+                class="card-img-top"
+                alt="Naturaleza virgen de Nueva Zelanda"
+                loading="lazy"
+              />
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title">Nueva Zelanda</h3>
+                <p class="card-text">
+                  Conservación de especies únicas, turismo Maorí y paisajes
+                  cinematográficos con enfoque ecológico.
+                </p>
+                <div class="mt-2">
+                  <span class="badge bg-warning me-1">Conservación</span>
+                  <span class="badge bg-success">Cultura Maorí</span>
+                </div>
+                <button
+                  class="btn btn-primary mt-auto"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalNuevaZelanda"
+                >
+                  Más información
+                </button>
+              </div>
+            </article>
+          </div>
+          
+          <div class="col-md-4 animate-on-scroll">
+            <article class="card h-100 border-0 shadow-sm">
+              <img
+                src="../multimedia-optimizado/img/destinos/cards/japon.webp"
+                class="card-img-top"
+                alt="Japón tradicional y sostenible"
+                loading="lazy"
+              />
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title">Japón</h3>
+                <p class="card-text">
+                  Armonía entre tradición y sostenibilidad, bosques sagrados y
+                  gastronomía respetuosa con el medio ambiente.
+                </p>
+                <div class="mt-2">
+                  <span class="badge bg-warning me-1">Tradición</span>
+                  <span class="badge bg-success">Bosques Sagrados</span>
+                </div>
+                <button
+                  class="btn btn-primary mt-auto"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalJapon"
+                >
+                  Más información
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-4 animate-on-scroll">
+            <article class="card h-100 border-0 shadow-sm">
+              <img
+                src="../multimedia-optimizado/img/destinos/cards/chile.webp"
+                class="card-img-top"
+                alt="Patagonia chilena"
+                loading="lazy"
+              />
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title">Chile</h3>
+                <p class="card-text">
+                  Patagonia salvaje, desierto de Atacama y comunidades indígenas
+                  Mapuche preservando su cultura ancestral.
+                </p>
+                <div class="mt-2">
+                  <span class="badge bg-warning me-1">Patagonia</span>
+                  <span class="badge bg-success">Cultura Mapuche</span>
+                </div>
+                <button
+                  class="btn btn-primary mt-auto"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalChile"
+                >
+                  Más información
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-4 animate-on-scroll">
+            <article class="card h-100 border-0 shadow-sm">
+              <img
+                src="../multimedia-optimizado/img/destinos/cards/kenia.webp"
+                class="card-img-top"
+                alt="Safari sostenible en Kenia"
+                loading="lazy"
+              />
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title">Kenia</h3>
+                <p class="card-text">
+                  Safaris éticos, conservación de vida silvestre y apoyo a
+                  comunidades Masai en sus tierras ancestrales.
+                </p>
+                <div class="mt-2">
+                  <span class="badge bg-warning me-1">Vida Silvestre</span>
+                  <span class="badge bg-success">Comunidades Masai</span>
+                </div>
+                <button
+                  class="btn btn-primary mt-auto"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalKenia"
+                >
+                  Más información
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-4 animate-on-scroll">
+            <article class="card h-100 border-0 shadow-sm">
+              <img
+                src="../multimedia-optimizado/img/destinos/cards/tailandia.webp"
+                class="card-img-top"
+                alt="Tailandia eco-turismo"
+                loading="lazy"
+              />
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title">Tailandia</h3>
+                <p class="card-text">
+                  Playas responsables, templos budistas y proyectos de
+                  conservación marina en el sudeste asiático.
+                </p>
+                <div class="mt-2">
+                  <span class="badge bg-warning me-1">Playas</span>
+                  <span class="badge bg-success">Conservación Marina</span>
+                </div>
+                <button
+                  class="btn btn-primary mt-auto"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalTailandia"
+                >
+                  Más información
+                </button>
+              </div>
+            </article>
+          </div>
+
         </div>
+
+
+      </div>
     </section>
 
-    <div class="modal fade" id="modalCostaRica" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content bg-dark text-light">
-                <div class="modal-header">
-                    <h2 class="modal-title">Costa Rica sostenible</h2>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <p>
-                        Costa Rica es un referente mundial en conservación de la biodiversidad y energías renovables.
-                        Nuestros viajes priorizan el respeto al entorno natural y las comunidades locales.
-                    </p>
-                </div>
+    <div
+      class="modal fade"
+      id="modalCostaRica"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content bg-dark text-light">
+          <div class="modal-header">
+            <h2 class="modal-title">Costa Rica sostenible</h2>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-6">
+                <h4>¿Por qué Costa Rica?</h4>
+                <ul class="list-unstyled">
+                  <li>
+                    <i class="fas fa-check-circle me-2"></i> 98% de energía
+                    renovable
+                  </li>
+                  <li>
+                    <i class="fas fa-check-circle me-2"></i> 25% de territorio
+                    protegido
+                  </li>
+                  <li>
+                    <i class="fas fa-check-circle me-2"></i> Certificación
+                    Carbono Neutral
+                  </li>
+                  <li>
+                    <i class="fas fa-check-circle me-2"></i> Comunidades
+                    indígenas preservadas
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <h4>Nuestras Experiencias</h4>
+                <ul class="list-unstyled">
+                  <li>
+                    <i class="fas fa-tree me-2"></i> Senderismo en Monteverde
+                  </li>
+                  <li>
+                    <i class="fas fa-turtle me-2"></i> Observación de tortugas
+                    en Tortuguero
+                  </li>
+                  <li>
+                    <i class="fas fa-mountain me-2"></i> Volcán Arenal con guías
+                    locales
+                  </li>
+                  <li>
+                    <i class="fas fa-leaf me-2"></i> Agricultura sostenible con
+                    familias
+                  </li>
+                </ul>
+              </div>
             </div>
+
+            <hr class="my-4" />
+
+            <div class="alert alert-info">
+              <h5>Impacto Positivo</h5>
+              <p>
+                Cada viaje contribuye al 5% de nuestros ingresos a proyectos de
+                conservación local y educación ambiental en comunidades rurales.
+              </p>
+            </div>
+
+            <div class="text-center mt-4">
+              <a href="contacto.html" class="btn btn-primary btn-lg"
+                >Reservar viaje</a
+              >
+            </div>
+          </div>
         </div>
+      </div>
     </div>
 
     <div class="modal fade" id="modalIslandia" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content bg-dark text-light">
-                <div class="modal-header">
-                    <h2 class="modal-title">Islandia responsable</h2>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <p>
-                        Islandia apuesta por energías limpias y la protección de sus paisajes volcánicos,
-                        glaciares y ecosistemas únicos mediante un turismo controlado y sostenible.
-                    </p>
-                </div>
-            </div>
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content bg-dark text-light">
+          <div class="modal-header">
+            <h2 class="modal-title">Islandia responsable</h2>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>
+              Islandia apuesta por energías limpias y la protección de sus
+              paisajes volcánicos, glaciares y ecosistemas únicos mediante un
+              turismo controlado y sostenible.
+            </p>
+          </div>
         </div>
+      </div>
     </div>
 
     <div class="modal fade" id="modalPortugal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content bg-dark text-light">
-                <div class="modal-header">
-                    <h2 class="modal-title">Portugal sostenible</h2>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <p>
-                        Portugal promueve el turismo de proximidad, la conservación de sus costas
-                        y el apoyo a proyectos locales que respetan el medio ambiente.
-                    </p>
-                </div>
-            </div>
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content bg-dark text-light">
+          <div class="modal-header">
+            <h2 class="modal-title">Portugal sostenible</h2>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>
+              Portugal promueve el turismo de proximidad, la conservación de sus
+              costas y el apoyo a proyectos locales que respetan el medio
+              ambiente.
+            </p>
+          </div>
         </div>
+      </div>
     </div>
 
     <footer class="py-4 text-center">
-        <p>&copy; 2026 DestinoGreen – Viajes responsables</p>
+      <p>&copy; 2026 DestinoGreen – Viajes responsables</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../js/scripts.js"></script>
-</body>
-
+  </body>
 </html>
