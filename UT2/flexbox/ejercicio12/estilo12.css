@@ -1,0 +1,19 @@
+* {
+    border: 1px solid black;
+}
+
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 200px;
+}
+
+
+
+.elemento {
+    width: 20%;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+}

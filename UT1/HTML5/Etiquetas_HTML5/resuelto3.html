@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabla de Contenido - Libro</title>
+  <!-- En el head ponemos información que no se ve directamente, como el título que aparece en la pestaña -->
+</head>
+<body>
+  <table>
+    <caption>Contenido del Libro</caption>
+    <!-- El caption es como el título de la tabla, te dice de qué trata antes de verla -->
+
+    <thead>
+      <tr>
+        <th colspan="3">Capítulo</th>
+        <!-- Aquí usamos colspan para que la celda ocupe tres columnas, me parece útil para destacar títulos -->
+      </tr>
+      <tr>
+        <th>Capítulo</th>
+        <th>Título del Capítulo</th>
+        <th>Páginas</th>
+        <!-- Esta fila sirve como encabezado de cada columna, para entender qué información contiene -->
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td rowspan="2">1</td>
+        <td>Introducción</td>
+        <td>1-5</td>
+        <!-- El rowspan hace que el número de capítulo se repita en varias filas, así no hay que escribirlo varias veces -->
+      </tr>
+      <tr>
+        <td>Primeros Pasos</td>
+        <td>6-12</td>
+      </tr>
+      <tr>
+        <td rowspan="3">2</td>
+        <td>Conceptos Básicos</td>
+        <td>13-20</td>
+      </tr>
+      <tr>
+        <td>Avanzado</td>
+        <td>21-35</td>
+      </tr>
+      <tr>
+        <td>Ejemplos Prácticos</td>
+        <td>36-45</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Conclusiones</td>
+        <td>46-50</td>
+      </tr>
+      <!-- Me gusta cómo organiza todo de manera clara, se ve el capítulo, los títulos y las páginas sin confundirse -->
+    </tbody>
+  </table>
+</body>
+</html>

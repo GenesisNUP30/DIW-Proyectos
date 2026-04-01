@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Ejercicio de selectores</title>
+  <style>
+    /* Todos los elementos de la pagina */
+    * {
+      font-size: 16px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /* Todos los parrafos de la pagina */
+    p {
+      color: #555;
+    }
+
+    /* Todos los párrafos contenidos en #primero */
+    #primero p {
+      color: #369;
+    }
+
+    /* Todos los enlaces la pagina */
+    a {
+      color: #C30;
+    }
+
+    /* Estado normal: enlace no visitado */
+    a:link {
+      color: blue;
+      text-decoration: none;
+      /* sin subrayado */
+    }
+
+    /* Enlace visitado */
+    a:visited {
+      color: purple;
+      text-decoration: none;
+      /* sin subrayado */
+    }
+
+    /* Cuando el cursor está sobre el enlace */
+    a:hover {
+      color: white;
+      /* invertir colores: fondo claro, texto oscuro */
+      background-color: blue;
+      text-decoration: underline;
+    }
+
+    /* Cuando el enlace tiene foco de teclado */
+    a:focus {
+      color: green;
+      /* otro color para el foco */
+      text-decoration: underline;
+    }
+
+    /* Cuando el enlace está activo (clic) */
+    a:active {
+      color: red;
+      /* color distinto al normal */
+      text-decoration: none;
+    }
+
+    /* Los elementos <em> contenidos en #primero */
+    #primero em {
+      color: #0000BB;
+      background-color: #FFFFCC;
+    }
+
+    /* Todos los elementos <em> con la clase "especial" en toda la pagina */
+    em.especial {
+      color: #FFFF00;
+      background: #000000;
+    }
+
+    /* Todos los elementos <span> contenidos en la clase "normal" */
+    .normal span {
+      font-weight: bold;
+    }
+
+    #columna1 {
+      background-color: red;
+    }
+
+    #columna2 {
+      background-color: green;
+    }
+
+    #columna3 {
+      background-color: blue;
+    }
+
+    #fila1 {
+      color: teal;
+    }
+    #fila2 {
+      color: red;
+    }
+    #fila3 {
+      color: blue;
+    }
+    #fila4 {
+      color: orange;
+    }
+    #fila5 {
+      color: purple;
+    }
+    #fila6 {
+      color: olive;
+    }
+    #fila7 {
+      color: fuchsia;
+    }
+    #fila8 {
+      color: green;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="primero">
+
+    <p>
+      Aunque los inicios de <a href="https://es.wikipedia.org/wiki/Internet">Internet</a> se remontan a los años
+      sesenta, no ha sido hasta los años noventa cuando, gracias a la Web, se ha extendido su uso por todo el mundo. En
+      pocos años, la Web ha evolucionado enormemente: se ha pasado de páginas sencillas, con pocas imágenes y contenidos
+      estáticos que eran visitadas por unos pocos usuarios a <em>páginas complejas, con contenidos dinámicos que
+        provienen de bases de datos y que son visitadas por miles de usuarios al mismo tiempo</em>.
+    </p>
+  </div>
+
+  <div id="segundo" class="normal">
+    <p>
+      Todas las páginas están internamente construidas con la misma tecnología, con el <em class="especial">Lenguaje de
+        marcas de hipertexto</em> (<span>Hypertext Markup Language</span>, <a
+        href="https://es.wikipedia.org/wiki/HTML">HTML</a>) y con las <em class="especial">Hojas de estilo en
+        cascada</em> (<span>Cascading Style Sheets</span>, <a href="https://es.wikipedia.org/wiki/CSS">CSS</a>).
+    </p>
+
+    <p>
+      Este libro es <em>adecuado para cualquiera que tenga interés en aprender a desarrollar sus propias páginas
+        web</em>. No son necesarios conocimientos previos para aprender con este libro, lo único que es necesario es
+      saber utilizar un ordenador y saber navegar por la Web.
+    </p>
+  </div>
+  <table border="1">
+    <tr id="fila1">
+      <td>teal</td>
+      <td id="columna1">teal</td>
+      <td id="columna2">teal</td>
+      <td id="columna3">teal</td>
+    </tr>
+    <tr id="fila2">
+      <td>red</td>
+      <td id="columna1">red</td>
+      <td id="columna2">red</td>
+      <td id="columna3">red</td>
+    </tr>
+    <tr id="fila3">
+      <td>blue</td>
+      <td id="columna1">blue</td>
+      <td id="columna2">blue</td>
+      <td id="columna3">blue</td>
+    </tr>
+    <tr id="fila4">
+      <td>orange</td>
+      <td id="columna1">orange</td>
+      <td id="columna2">orange</td>
+      <td id="columna3">orange</td>
+    </tr>
+    <tr id="fila5">
+      <td>prurple</td>
+      <td id="columna1">purple</td>
+      <td id="columna2">purple</td>
+      <td id="columna3">purple</td>
+    </tr>
+    <tr id="fila6">
+      <td>olive</td>
+      <td id="columna1">olive</td>
+      <td id="columna2">olive</td>
+      <td id="columna3">olive</td>
+    </tr>
+    <tr id="fila7">
+      <td>fuchsia</td>
+      <td id="columna1">fuchsia</td>
+      <td id="columna2">fuchsia</td>
+      <td id="columna3">fuchsia</td>
+    </tr>
+    <tr id="fila8">
+      <td>green</td>
+      <td id="columna1">green</td>
+      <td id="columna2">green</td>
+      <td id="columna3">green</td>
+    </tr>
+  </table>
+</body>
+
+</html>

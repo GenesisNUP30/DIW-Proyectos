@@ -1,0 +1,21 @@
+* {
+    border: 1px solid black;
+}
+
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    height: 250px;
+    align-content: space-between; 
+}
+
+
+.elemento {
+    width: 20%;
+    height: 25%;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+}
+
+

@@ -1,0 +1,13 @@
+
+.contenedor {
+    display: flex;
+    height: 80px;
+    background-color: #b6b4b4;
+}
+
+.elemento {
+    width: 20%;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+}

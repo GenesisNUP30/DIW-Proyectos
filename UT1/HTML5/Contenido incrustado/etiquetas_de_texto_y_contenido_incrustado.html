@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etiquetas de texto y contenido incrustado - 2º DAW</title>
+</head>
+
+<body>
+
+    <header id="inicio">
+        <h1>Ejercicio - Etiquetas de texto y contenido incrustado</h1>
+
+        <nav>
+            <h2>Índice de contenido</h2>
+            <ul>
+                <li><a href="#texto">1. Etiquetas de texto</a></li>
+                <li><a href="#listas">2. Listas personalizadas</a></li>
+                <li><a href="#enlaces">3. Hiperenlaces</a></li>
+                <li><a href="#simbolos">4. Símbolos especiales</a></li>
+                <li><a href="#imagen">5. Imagen con atributos</a></li>
+                <li><a href="#video">6. Vídeo de YouTube</a></li>
+                <li><a href="#mapa">7. Mapa de Google</a></li>
+                <li><a href="#final">Ir al final de la página</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="texto">
+            <h2>1. Etiquetas de texto</h2>
+            <p>
+                En esta práctica de <strong>Desarrollo Web</strong> utilizamos etiquetas HTML para dar formato al texto
+                sin aplicar estilos CSS.
+            </p>
+            <p>
+                Ejemplo de etiquetas comunes:
+                <b>Negrita</b>, <i>Cursiva</i>, <u>Subrayado</u>, <mark>Texto resaltado</mark>,
+                <small>Texto en tamaño reducido</small>, <del>Texto eliminado</del> y <ins>Texto insertado</ins>.
+            </p>
+            <p>
+                También usamos abreviaturas como <abbr title="HyperText Markup Language">HTML</abbr> y <abbr
+                    title="Cascading Style Sheets">CSS</abbr>, además de citas como:
+                <q cite="https://developer.mozilla.org/es/docs/Web/HTML">El lenguaje de la web es HTML.</q>
+            </p>
+            <p><a href="#inicio">Volver al inicio ↑</a></p>
+        </section>
+
+        <section id="listas">
+            <h2>2. Listas personalizadas</h2>
+
+            <h3>Lista ordenada</h3>
+            <ol type="I">
+                <li>Planificación</li>
+                <li>Diseño</li>
+                <li>Programación</li>
+                <li>Pruebas</li>
+                <li>Despliegue</li>
+            </ol>
+
+            <h3>Lista desordenada </h3>
+            <ul type="circle">
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+                <li>PHP</li>
+                <li>MySQL</li>
+            </ul>
+
+            <h3>Lista de definición</h3>
+            <dl>
+                <dt><b>Frontend</b></dt>
+                <dd>Parte visible e interactiva de una aplicación web.</dd>
+                <dt><b>Backend</b></dt>
+                <dd>Lógica interna y conexión con bases de datos o APIs.</dd>
+            </dl>
+            <p><a href="#inicio">Volver al inicio ↑</a></p>
+        </section>
+
+        <section id="enlaces">
+            <h2>3. Hiperenlaces</h2>
+            <p>Enlaces útiles para el desarrollo web:</p>
+            <ul>
+                <li><a href="https://www.php.net/manual/es/index.php" target="_blank">Manual de PHP</a></li>
+                <li><a href="https://github.com/" target="_blank">Repositorio en GitHub</a></li>
+                <li><a href="https://codepen.io/" target="_blank">Ejecutar código en CodePen</a></li>
+                <li><a href="#mapa">Ver mapa al final de la página</a></li>
+            </ul>
+
+            <p>Ejemplo de página creada con HTML5:</p>
+            <a href="archivos/ejemploHTML5.html" download="Ejemplo_HTML5"> Descargar HTML</a>
+
+            <p>
+                Página de contacto:
+                <a href="contacto.html" target="_blank">Ir a la sección de contacto</a>
+            </p>
+
+            <p><a href="#inicio">Volver al inicio ↑</a></p>
+        </section>
+
+        <section id="simbolos">
+            <h2>4. Símbolos especiales</h2>
+            <p>
+                Algunos símbolos comunes en el desarrollo web:
+                &lt;html&gt; &lt;/html&gt; — Etiquetas HTML <br>
+                &amp; &nbsp; — Espacio y ampersand <br>
+                &copy; — Derechos reservados <br>
+                &euro; — Euro <br>
+                &lt;div&gt; — Contenedor principal <br>
+            </p>
+            <p><a href="#inicio">Volver al inicio ↑</a></p>
+        </section>
+
+        <section id="imagen">
+            <h2>5. Imagen con atributos</h2>
+            <figure>
+                <img src="archivos/foto.png" alt="Código HTML en pantalla" width="750" height="300" loading="lazy"
+                    title="Ejemplo de código HTML">
+                <figcaption>Figura 1. Código HTML editado con Visual Studio Code.</figcaption>
+            </figure>
+            <p><a href="#inicio">Volver al inicio ↑</a></p>
+        </section>
+
+        <section id="video">
+            <h2>6. Vídeo incrustado (YouTube)</h2>
+            <p>Vídeo recomendado sobre fundamentos de HTML:</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/pQN-pnXPaVg"
+                title="Curso de HTML para principiantes" frameborder="0" allowfullscreen>
+            </iframe>
+            <p><a href="#inicio">Volver al inicio ↑</a></p>
+        </section>
+
+        <section id="mapa">
+            <h2>7. Mapa (Google Maps)</h2>
+            <p>Ubicación del centro donde estudio:</p>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3174.784185658507!2d-6.93804082367388!3d37.27654444070287!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd11cfdfd4973843%3A0x1f8accb0e814d45!2sIES%20La%20Marisma!5e0!3m2!1ses!2ses!4v1760086407619!5m2!1ses!2ses"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <p><a href="#inicio">Volver al inicio ↑</a></p>
+        </section>
+
+    </main>
+
+    <footer id="final">
+        <p>&copy; 2025 - <strong>Génesis Ushca (2º DAW)</strong></p>
+    </footer>
+
+</body>
+
+</html>

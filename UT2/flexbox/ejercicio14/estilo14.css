@@ -1,0 +1,21 @@
+* {
+    border: 1px solid black;
+}
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    height: 300px;
+}
+
+.elemento {
+    width: 20%;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+}
+
+.elemento:nth-child(n+5) {
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+

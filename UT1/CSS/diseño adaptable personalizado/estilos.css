@@ -1,0 +1,196 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f9f9f9;
+    color: #424242;
+}
+
+header {
+    background-color: #d7ccc8;
+    color: #6d4c41;
+    padding: 1em; /*relativo al tamaño de fuente del elemento*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 2;
+}
+
+header h3 {
+    font-style: italic;
+}
+
+nav ul {
+    list-style-type: none; /*Elimina las viñetas*/
+    display: flex; /*Alinea horizontalmente las listas*/
+}
+
+nav li {
+    margin-right: 10% /*margen relativo al ancho del contenedor padre*/
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    border-radius: 0.3em;
+    padding: 0.5em 0.5em;
+}
+
+nav a:hover {
+    background-color: #a1887f;
+}
+
+section {
+    width: 90%;
+    margin: 2em;
+    padding: 1em;
+}
+
+article {
+    margin: 2.5em;
+    padding: 1.5em;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.a {
+    display: none; /*Oculta completamente los elementos*/
+}
+
+.b {
+    display: inline; /*Elementos en línea (sin saltos, sin tamaño definido).*/
+    border: 2px solid #23375e;
+}
+
+.c {
+    display: block; /*Cada párrafo ocupa toda la línea*/
+    background-color: #dd9ee5;
+    width: 5vw;
+    margin: 2%;
+}
+
+.d {
+    /*Combina block e inline, se muestran en la misma línea y 
+    se acepta width, height y márgenes verticales*/
+    display: inline-block; 
+    width: 100px;
+    height: 50px;
+    background-color: #4db6ac;
+    margin-right: -4px; 
+}
+
+.static {
+    position: static;
+    border: 3px solid #af8cc7;
+    padding: 1em;
+    margin: 2%;
+}
+
+.static p {
+    background-color: #9982aa;
+    margin: 2%;
+    color: #f9f9f9;
+    padding: 0.5em;
+}
+
+.relative {
+    position: relative;
+    border: 8px dotted #23375e;
+    width: 60%;
+    margin-left: 20%;
+}
+
+.relative p {
+    background-color: #8fcbe7;
+    margin: 2%; /*ancho relativo al contenedor*/
+    padding: 1em;
+    width: 25%;
+    border-radius: 12px;
+}
+
+.cuadro2 {
+    position: relative;
+    left: 50%;
+}
+
+.cuadro3 {
+    position: relative;
+    left: 20%;
+}
+
+.fixed p {
+    background-color: #cfa14ac9;
+    padding: 0.3em 0.5em;
+    margin: 2%;
+}
+
+.texto2 {
+    position: fixed;
+    top: 20%;
+    left: 70%;
+}
+
+#relative {
+    position: relative;
+    margin: 2%;
+    padding: 1em;
+    width: 15%;
+
+}
+
+.rel {
+    position: relative;
+    line-height: 1.9;
+    margin-top: 4%;
+    border: 10px groove #abdd73;
+}
+
+.abs {
+    position: absolute;
+    border: 3px groove #5f885b;
+    background-color: #96da6f;
+    right: 0%;
+    top: 12%;
+    padding: 1em;
+}
+
+.float p {
+    padding: 1em;
+    font-weight: lighter;
+}
+
+.caja-float {
+    width: 16vw; /*ancho del 16% de la ventana del navegador*/
+    height: 10vh; /*alto del 10% del viewport*/
+    background-color: #5bc5b7;
+    float: left;
+    margin: 0.5em;
+}
+
+.float::after { /* Clearfix para evitar que los elementos flotantes colapsen */
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.overflow {
+    width: 45vw; /*ancho del 45% del viewport*/
+    height: 13vh; /*alto del 13% del viewport*/
+    border: 4px ridge #2a2dce;
+    overflow: auto;
+    padding: 0.8em;
+}
+
+.overflow-item {
+    display: inline-block;
+    width: 10vw;
+    height: 7vh;
+    background-color: #ffccbc;
+    margin: 5% 5%;
+    text-align: center;
+}

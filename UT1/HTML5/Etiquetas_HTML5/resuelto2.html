@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuario</title>
+    <!-- En el head ponemos cosas que no se ven directamente, como el título y configuraciones para que la página se vea bien en móviles -->
+</head>
+<body>
+    <h1>Registro de usuario</h1>
+    <!-- Este es el título principal que se ve en la página, así sabemos de qué trata -->
+
+    <form action="#" method="post">
+        <!-- El form es donde ponemos todo lo que el usuario va a rellenar, y normalmente se envía a algún lugar -->
+
+        <fieldset>
+            <legend>Información Personal</legend>
+            <!-- El fieldset sirve para agrupar cosas relacionadas, y el legend es como el nombre del grupo -->
+
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required><br><br>
+            <!-- Label es la palabra que vemos, y el input es donde escribimos. Me gusta que use 'for' para relacionarlo -->
+
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" required><br><br>
+
+            <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+            <input type="date" id="fechaNacimiento" name="fechaNacimiento" required><br><br>
+
+            <legend>Género:</legend>
+            <input type="radio" id="masculino" name="genero" value="Masculino" required>
+            <label for="masculino">Masculino</label><br>
+
+            <input type="radio" id="femenino" name="genero" value="Femenino">
+            <label for="femenino">Femenino</label><br>
+
+            <input type="radio" id="otro" name="genero" value="Otro">
+            <label for="otro">Otro</label><br><br>
+            <!-- Los radio son para elegir solo una opción, me parece práctico para género -->
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Información de Contacto</legend>
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="telefono">Número de Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" required><br><br>
+
+            <label for="direccion">Dirección:</label><br>
+            <textarea id="direccion" name="direccion" rows="4" cols="50"></textarea><br><br>
+            <!-- Aquí podemos escribir varias líneas, me gusta que el textarea nos deja más espacio que un input normal -->
+        </fieldset>
+
+        <fieldset>
+            <legend>Información de Cuenta</legend>
+            <label for="usuario">Nombre de Usuario:</label>
+            <input type="text" id="usuario" name="usuario" required><br><br>
+
+            <label for="contrasena">Contraseña:</label>
+            <input type="password" id="contrasena" name="contrasena" required><br><br>
+
+            <label for="confirmacionContrasena">Confirmar Contraseña:</label>
+            <input type="password" id="confirmacionContrasena" name="confirmacionContrasena" required><br><br>
+            <!-- Los inputs de tipo password ocultan lo que escribimos, eso es útil para no mostrar la contraseña -->
+        </fieldset>
+
+        <fieldset>
+            <legend>Preferencias</legend>
+            <label for="colorFavorito">Seleccionar un Color Favorito:</label>
+            <select id="colorFavorito" name="colorFavorito">
+                <option value="Rojo">Rojo</option>
+                <option value="Azul">Azul</option>
+                <option value="Verde">Verde</option>
+                <option value="Amarillo">Amarillo</option>
+            </select><br><br>
+            <!-- El select es como un menú desplegable, me gusta porque no ocupa mucho espacio -->
+
+            <input type="checkbox" id="aceptarTerminos" name="aceptarTerminos" required>
+            <label for="aceptarTerminos">Acepto los Términos y Condiciones</label><br><br>
+            <!-- El checkbox es para marcar cosas, como aceptar reglas, y se puede dejar desmarcado si no es obligatorio -->
+        </fieldset>
+
+        <input type="submit" value="Registrarse">
+        <!-- Este botón envía todo lo que escribimos en el formulario -->
+    </form>
+</body>
+</html>

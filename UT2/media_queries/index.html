@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media queries</title>
+    <link rel="stylesheet" href="estilos.css" media="screen">
+    <link rel="stylesheet" href="impresion.css" media="print">
+</head>
+
+<body>
+    <header>
+        <h1>Mi Sitio</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Nosotros</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h2>Sección 1. Te damos la bienvenida a nuestro sitio web.</h2>
+            <p>Te encuentras en una página donde se ven de manifiesto las diferentes propiedades que pueden
+                tener los elementos en una página web. Los elementos que aquí se van a modificar son: header,
+                nav, main, aside y footer. Además, se añadiran más elementos como imágenes, SVG, botones, etc.
+                Algunas de las propiedades que se van a modificar son: color, font-size, font-family, line-height,
+                padding, margin, border, etc.</p>
+            <h3>Imágenes</h3>
+            <p>A continuación se muestran imágenes en distintos formatos:</p>
+
+            <img src="img/pajaro.jpg" alt="Imagen jpg">
+            <img src="img/edificio.png" alt="Imagen png">
+            <img src="img/perro.webp" alt="Imagen webp">
+
+            <h3>Botones</h3>
+            <div class="botones">
+                <button class="boton alert">Alerta</button>
+                <button class="boton outline">Outline</button>
+                <button class="boton icono"><span>💬</span> Mensaje</button>
+                <button class="boton degradado">Gradiente</button>
+                <button class="boton sombra">Sombra</button>
+            </div>
+        </section>
+        <section>
+            <h2>Sección 2</h2>
+            <p>Aquí va un SVG insertado con diferentes métodos, al que le aplicaremos CSS y animación.</p>
+            <h3>SVG como etiqueta &lt;svg&gt;</h3>
+            <svg class="svg-icono" width="120" height="120" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="40" class="svg-circulo" />
+            </svg>
+            <h3>Usando la etiqueta&lt;object&gt;</h3>
+            <object data="img/icono.svg" type="image/svg+xml" class="svg-object"></object>
+        </section>
+    </main>
+    <aside>
+        <h2>Listado</h2>
+        <ul>
+            <li>Elemento 1</li>
+            <li>Elemento 2</li>
+            <li>Elemento 3</li>
+        </ul>
+        <p>Para que la página se vea mejor en distintos dispositivos, se van a aplicar media queries. Las media queries
+            son una forma de aplicar estilos a diferentes dispositivos y tamaños de pantalla.</p>
+    </aside>
+    <footer>
+        <div>
+            <h3>Contacto</h3>
+            <p>Email: info@misitioweb.com</p>
+        </div>
+        <div>
+            <h3>Redes Sociales</h3>
+            <p>Síguenos en Twitter, Facebook, Instagram, etc.</p>
+        </div>
+        <div>
+            <h3>Acerca de Nosotros</h3>
+            <p>Información sobre nuestro sitio web y nuestro equipo.</p>
+        </div>
+        <div>
+            <h3>Enlaces</h3>
+            <p>Mapa del sitio</p>
+        </div>
+        <div class="pie-pagina">
+            <p>&copy; 2025 Media queries. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

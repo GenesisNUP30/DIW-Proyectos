@@ -1,0 +1,17 @@
+
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    height: 200px;
+    background-color: #b6b4b4;
+}
+
+.elemento {
+    width: 20%;
+    height: 20%;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+}
+

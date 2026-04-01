@@ -1,0 +1,170 @@
+* {
+    box-sizing: border-box;
+}
+
+.encabezado,
+.principal,
+.footer {
+    border: 1px solid black;
+    margin: 1% 0;
+}
+
+.encabezado {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: black;
+    padding: 10px;
+}
+
+.barra-superior {
+    display: flex;
+}
+
+.logo,
+.nav,
+.social {
+    border: 7px solid #2c3e50;
+    background-color: #d9534f;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo,
+.social {
+    flex-basis: 20%;
+}
+
+.nav {
+    flex-basis: 60%;
+}
+
+.titulo {
+    border: 10px solid #ff7300;
+    background-color: #ffd96f;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.titulo h1 {
+    margin: 0;
+}
+
+.principal {
+    display: flex;
+    padding: 10px;
+    background-color: black;
+}
+
+.contenido {
+    display: flex;
+    flex-wrap: wrap;
+    width: 75%;
+    background-color: #35526e;
+    border-right: 10px solid black;
+}
+
+.articulo {
+    background-color: #7f8c8d;
+    border: 10px solid #35526e;
+    flex-basis: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navegacion-secundaria {
+    background-color: #d7efff;
+    border: 10px solid #35526e;
+    flex-basis: 100%;
+    text-align: center;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    background-color: #d9534f;
+    border-left: 10px solid black;
+}
+
+
+.publicidad {
+    background-color: #fcf8e3;
+    margin: 10px;
+    text-align: center;
+}
+
+footer {
+    background-color: black;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.pie {
+    background-color: #fcf8e3;
+    width: 60%;
+    text-align: center;
+}
+
+@media (max-width: 800px) {
+    .barra-superior {
+        flex-direction: column;
+        align-items: center;
+        background-color: #2c3e50;
+    }
+
+    .logo,
+    .nav,
+    .social {
+        padding: 0;
+    }
+
+    .principal {
+        flex-direction: column;
+    }
+
+    .contenido {
+        width: 100%;
+        border-right: 0;
+    }
+
+    aside {
+        width: 100%;
+        border-left: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        border-top: 10px solid black;
+    }
+
+    .publicidad {
+        margin: 5 10px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .principal {
+        flex-direction: column;
+    }
+
+    .contenido {
+        width: 100%;
+        border-bottom: 10px solid black;
+    }
+
+    .articulo {
+        flex-basis: 100%;
+    }
+
+    aside {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        border-left: 0;
+    }
+}

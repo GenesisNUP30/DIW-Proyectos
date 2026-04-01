@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño adaptable personalizado</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <header>
+        <h1>Diseño adaptable personalizado</h1>
+        <nav>
+            <h3>Esto es un ejemplo de una cabecera horizontal </h3>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Acerca</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h2>Esta sección es un ejemplo de las diferentes posiciones que pueden tener los contenedores</h2>
+        <article>
+            <h3>1. Esta caja muestra el uso de <code>display</code></h3>
+            </h3>
+            <h4>display: none</h4>
+                <p class="a">Texto 1 </p>
+                <p class="a">Texto 2 </p>
+                <p class="a">Texto 3 </p>
+            <h4>display: inline</h4>
+                <p class="b">Texto 1 </p>
+                <p class="b">Texto 2 </p>
+                <p class="b">Texto 3</p>
+            <h4>display: block</h4>
+                <p class="c">Texto 1 </p>
+                <p class="c">Texto 2 </p>
+                <p class="c">Texto 3 </p>
+            <h4>display: inline-block</h4>
+            <h5>Los elementos inline-block generan espacio no deseado entre ellos. Lo soluciono añadiendo comentarios entre los elementos <code>p</code> pero es mejor usar Flexbox.</h5>
+                <p class="d">Texto 1 </p>
+                <p class="d">Texto 2 </p>
+                <p class="d">Texto 3 </p>
+        </article>
+
+        <article>
+            <h3>2. Esta caja muestra el uso de <code>position</code></h3>
+            <div class="static">
+                <p>Párrafo 1 position: static</p>
+                <p>Párrafo 2 position: static</p>
+            </div>
+            <div class="relative">
+                <p>Cuadro 1
+                    position: relative</p>
+                <p class="cuadro2">Cuadro 2
+                    position: relative</p>
+                <p class="cuadro3">Cuadro 3
+                    position: relative</p>
+            </div>
+            <div class="fixed">
+                <p>Texto 1 position: fixed</p>
+                <p class="texto2">Texto 2 position: fixed</p>
+            </div>
+            <div class="rel">
+                <p>Contenedor con position: relative</p>
+                <p>Contenedor con position: relative</p>
+                <p>Contenedor con position: relative</p>
+                <p>Contenedor con position: relative</p>
+                <p>Contenedor con position: relative</p>
+            <div class="abs"><p>Contenedor con position: absolute</p></div>
+        </article>
+
+        <article>
+            <h3>3. Esta caja muestra el uso de <code>float</code></h3>
+            <div class="float">
+                <p>Con el uso de float el contenedor colapsa y no contiene visualemente a sus hijos, en este caso, los cuadros. Para solucionar este problema usamos la propiedad <code>clearfix</code>
+                Así nos aseguramos que el contenedor envuelva a sus hijos flotantes.</p>
+                <div class="caja-float">1</div>
+                <div class="caja-float">2</div>
+                <div class="caja-float">3</div>
+                <div class="caja-float">4</div>
+            </div>
+        </article>
+
+        <article>
+            <h3>4. Esta caja muestra el uso de <code>overflow</code></h3>
+            <div class="overflow">
+                <p>Este contenedor tiene overflow-x: auto para permitir scroll horizontal si el contenido excede el ancho.</p>
+                <div class="overflow-item">Item 1</div>
+                <div class="overflow-item">Item 2</div>
+                <div class="overflow-item">Item 3</div>
+                <div class="overflow-item">Item 4</div>
+                <div class="overflow-item">Item 5</div>
+            </div>
+        </article>
+
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+
+.contenedor {
+    display: flex;
+    flex-direction: column-reverse;
+    height: 400px;
+    background-color: #b6b4b4;
+}
+
+.elemento {
+    width: 20%;
+    height: 70%;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+}

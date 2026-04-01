@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Práctica CSS – Conceptos Clave</title>
+  <style>
+    /* --- Reset básico y modelo de caja global --- */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+      font-size: 16px; /* Unidad base: px (punto 5: unidades de medida) */
+    }
+
+    /* === 1. Menú horizontal tradicional (punto 12) === */
+    header {
+      background-color: #2c3e50;
+      padding: 0.8em 5%;
+    }
+
+    nav ul {
+      list-style-type: none;
+    }
+
+    nav li {
+      display: inline; /* Menú horizontal con display: inline */
+      margin-right: 1.5em;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 0.4em 0.8em;
+      border-radius: 4px;
+    }
+
+    nav a:hover {
+      background-color: #34495e;
+    }
+
+    /* === Contenedor principal === */
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      margin: 2em auto;
+      padding: 1em;
+    }
+
+    section {
+      margin-bottom: 2.5em;
+      padding: 1.5em;
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
+
+    h2 {
+      margin-bottom: 1em;
+      color: #2c3e50;
+    }
+
+    /* === 2. Modelo de cajas: margin, padding, border (punto 7) === */
+    .modelo-caja-ejemplo {
+      width: 200px;
+      height: 100px;
+      background-color: #b3e5fc;
+      border: 3px solid #0288d1;
+      padding: 15px;     /* margen interno */
+      margin: 20px;      /* margen externo */
+    }
+
+    .pseudo-demo p {
+      margin: 0.8em 0;
+    }
+
+    .pseudo-demo p:hover {
+      color: #e91e63; 
+    }
+
+    .pseudo-demo p::first-line {
+      font-weight: bold;
+      color: #3f51b5;
+    }
+
+    .pseudo-demo p::before {
+      content: "➤ ";
+      color: #4caf50;
+    }
+
+    .float-container {
+      border: 1px dashed #9e9e9e;
+      padding: 1em;
+      margin: 1em 0;
+    }
+
+    .float-box {
+      width: 120px;
+      height: 120px;
+      background-color: #ffc107;
+      float: left;
+      margin: 0.5em;
+    }
+
+    .clearfix::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    .inline-block-demo {
+      background-color: #e0f7fa;
+      padding: 1em;
+      margin: 1em 0;
+      border: 1px solid #b2ebf2;
+    }
+
+    .item-inline {
+      display: inline-block;
+      width: 100px;
+      height: 60px;
+      background-color: #4db6ac;
+      color: white;
+      text-align: center;
+      line-height: 60px;
+      margin-right: -4px; /* Solución al espacio entre inline-block */
+    }
+
+    .overflow-demo {
+      width: 300px;
+      height: 80px;
+      border: 1px solid #ff5722;
+      overflow-x: auto;
+      overflow-y: hidden;
+      white-space: nowrap;
+      padding: 0.5em;
+    }
+
+    .overflow-item {
+      display: inline-block;
+      width: 100px;
+      height: 60px;
+      background-color: #ffccbc;
+      margin-right: 10px;
+      text-align: center;
+      line-height: 60px;
+    }
+
+    /* === Responsive (uso de %, em, vw) === */
+    @media (max-width: 768px) {
+      nav li {
+        display: block;
+        margin: 0.5em 0;
+      }
+
+      .container {
+        width: 95%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Modelo Caja</a></li>
+        <li><a href="#">Pseudo-clases</a></li>
+        <li><a href="#">Float</a></li>
+        <li><a href="#">Responsive</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+
+    <!-- Menú horizontal -->
+    <section>
+      <h2>1. Menú horizontal tradicional</h2>
+      <p>Este menú usa <code>display: inline</code> en los elementos <code><li></code>, sin viñetas (<code>list-style-type: none</code>). Es un ejemplo clásico de navegación horizontal con CSS tradicional.</p>
+    </section>
+
+    <!-- Modelo de cajas -->
+    <section>
+      <h2>2. Modelo de cajas (margin, padding, border)</h2>
+      <p>Elemento con:</p>
+      <ul>
+        <li><code>padding: 15px</code> → espacio interno</li>
+        <li><code>border: 3px solid</code> → borde visible</li>
+        <li><code>margin: 20px</code> → espacio externo</li>
+      </ul>
+      <div class="modelo-caja-ejemplo">
+        Contenido
+      </div>
+    </section>
+
+    <!-- Pseudo-clases y pseudo-elementos -->
+    <section class="pseudo-demo">
+      <h2>3. Pseudo-clases y pseudo-elementos</h2>
+      <p>Este párrafo cambia de color al hacer <em>hover</em> (pseudo-clase <code>:hover</code>).</p>
+      <p>La primera línea está en negrita y azul (<code>::first-line</code>), y cada párrafo lleva un símbolo antes (<code>::before</code>).</p>
+    </section>
+
+    <!-- Float y clearfix -->
+    <section>
+      <h2>4. Uso de <code>float</code> y solución con <code>clearfix</code></h2>
+      <p>Los cuadros amarillos usan <code>float: left</code>. Sin <code>clearfix</code>, el contenedor colapsaría.</p>
+      <div class="float-container clearfix">
+        <div class="float-box">1</div>
+        <div class="float-box">2</div>
+        <div class="float-box">3</div>
+        <div class="float-box">4</div>
+      </div>
+    </section>
+
+    <!-- Espacio entre inline-block -->
+    <section>
+      <h2>5. Problema con elementos <code>inline-block</code></h2>
+      <p>Los elementos <code>display: inline-block</code> generan espacio no deseado. Aquí se aplica <code>margin-right: -4px</code> como solución parcial (mejor usar Flexbox en la práctica).</p>
+      <div class="inline-block-demo">
+        <div class="item-inline">A</div>
+        <div class="item-inline">B</div>
+        <div class="item-inline">C</div>
+      </div>
+    </section>
+
+    <!-- Overflow y posicionamiento -->
+    <section>
+      <h2>6. Propiedad <code>overflow</code> y contenedores con scroll</h2>
+      <p>Este contenedor tiene <code>overflow-x: auto</code> para permitir scroll horizontal si el contenido excede el ancho.</p>
+      <div class="overflow-demo">
+        <div class="overflow-item">Item 1</div>
+        <div class="overflow-item">Item 2</div>
+        <div class="overflow-item">Item 3</div>
+        <div class="overflow-item">Item 4</div>
+        <div class="overflow-item">Item 5</div>
+      </div>
+    </section>
+
+  </div>
+
+</body>
+</html>
