@@ -1,72 +1,36 @@
+/* ==============================================
+   CUSTOM.CSS — DestinoGreen
+   Solo variables Bootstrap y overrides mínimos
+   de componentes que Bootstrap no permite
+   personalizar solo con variables.
+   ============================================== */
+
 :root {
   --bs-primary: #2F8F6B;
   --bs-secondary: #1FA2A6;
   --bs-dark: #060E21;
   --bs-light: #ffffff;
+  --bs-success: #2ecc71;
+  --bs-body-bg: #060E21;
+  --bs-body-color: #eafaf1;
+  --bs-border-radius-lg: 1rem;
+  --bs-border-radius-xl: 1.2rem;
 }
 
-
-.navbar {
-  backdrop-filter: blur(10px);
-  background-color: rgba(6, 14, 33, 0.9) !important;
-  transition: all 0.4s ease;
-}
-
-.navbar.scrolled {
-  padding-top: 0.3rem;
-  padding-bottom: 0.3rem;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
-}
-
+/* Override mínimo: btn-primary usa gradiente, no puede hacerse solo con variables */
 .btn-primary {
   background: linear-gradient(135deg, #2F8F6B, #1FA2A6);
   border: none;
   font-weight: 600;
 }
 
-.btn-primary:hover {
-  filter: brightness(1.15);
+.btn-primary:hover,
+.btn-primary:focus {
+  background: linear-gradient(135deg, #37a87e, #25bcba);
+  border: none;
 }
 
+/* Override nav-tabs: Bootstrap no expone variable para quitar el borde inferior */
 .nav-tabs {
   border-bottom: none;
-}
-
-.nav-tabs .nav-link {
-  color: #7ee2b8;
-  background: transparent;
-  border: none;
-  font-weight: 600;
-}
-
-.nav-tabs .nav-link.active {
-  color: #ffffff;
-  border-bottom: 3px solid #2ecc71;
-}
-
-
-.accordion-item {
-  border: none;
-  background-color: transparent;
-}
-
-.accordion-button {
-  background-color: #060E21;
-  color: #ffffff;
-}
-
-.accordion-button:not(.collapsed) {
-  background-color: #0B1D1A;
-  color: #7ee2b8;
-}
-
-.accordion-body {
-  background-color: #0B1D1A;
-  color: #d6d6d6;
-}
-
-
-.modal-content {
-  background-color: #060E21;
-  color: #ffffff;
 }

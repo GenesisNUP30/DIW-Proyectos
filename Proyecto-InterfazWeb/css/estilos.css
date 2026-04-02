@@ -1,3 +1,9 @@
+/* ==============================================
+   ESTILOS.CSS — DestinoGreen
+   Todos los estilos propios del proyecto
+   (custom.css solo tiene variables Bootstrap)
+   ============================================== */
+
 /* === Body === */
 body {
   background-color: #060E21;
@@ -5,10 +11,8 @@ body {
   overflow-x: hidden;
 }
 
-/* Tipografía */
-h1,
-h2,
-h3 {
+/* === Tipografía === */
+h1, h2, h3 {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   color: #ffffff;
@@ -18,41 +22,78 @@ p {
   font-size: 1.05rem;
 }
 
-/* Fuente global */
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-a,
-button,
-input,
-textarea,
-.card-title,
-.accordion-button {
+body, h1, h2, h3, h4, h5, h6,
+p, a, button, input, textarea,
+.card-title, .accordion-button {
   font-family: 'Raleway', sans-serif;
 }
 
+.logo-font {
+  font-family: 'Voces', sans-serif;
+  font-size: 1.3rem;
+  color: #ffffff !important;
+  text-decoration: none;
+}
 
-/* === HERO === */
+/* === Acento de color === */
+.text-accent {
+  color: #7ee2b8;
+}
+
+
+/* ==============================================
+   NAVBAR
+   ============================================== */
+.navbar {
+  backdrop-filter: blur(10px);
+  background-color: rgba(6, 14, 33, 0.9) !important;
+  transition: all 0.4s ease;
+}
+
+.navbar.scrolled {
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #eafaf1;
+  font-weight: 500;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  transition: color 0.3s, background 0.3s;
+}
+
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #7ee2b8;
+  background: rgba(126, 226, 184, 0.07);
+}
+
+
+/* ==============================================
+   HERO
+   ============================================== */
 .hero {
-  min-height: 85vh;
+  min-height: 90vh;
   position: relative;
   background: url('../multimedia_optimizado/img/hero.webp') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: 80px; /* compensa navbar fixed */
 }
 
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(rgba(6, 14, 33, 0.85),
-      rgba(6, 14, 33, 0.95));
+  background: linear-gradient(
+    160deg,
+    rgba(6, 14, 33, 0.9) 0%,
+    rgba(6, 14, 33, 0.6) 60%,
+    rgba(6, 14, 33, 0.85) 100%
+  );
 }
 
 .hero .container {
@@ -60,11 +101,86 @@ textarea,
   z-index: 2;
 }
 
-.logo-font {
+/* Badge encima del H1 */
+.hero-badge {
+  background: rgba(46, 204, 113, 0.15);
+  border: 1px solid rgba(46, 204, 113, 0.4);
+  color: #7ee2b8;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.4rem 1rem;
+  border-radius: 50px;
+  letter-spacing: 0.05em;
+}
+
+.hero-subtitle {
+  color: rgba(234, 250, 241, 0.8);
+  font-size: 1.15rem;
+}
+
+/* Scroll hint animado */
+.scroll-hint {
+  color: rgba(126, 226, 184, 0.5);
+  font-size: 1.4rem;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}
+
+
+/* ==============================================
+   SECCIÓN DE ESTADÍSTICAS
+   ============================================== */
+.stats-bar {
+  background: linear-gradient(135deg, #0b1c2d 0%, #0d2518 100%);
+  border-top: 1px solid rgba(46, 204, 113, 0.1);
+  border-bottom: 1px solid rgba(46, 204, 113, 0.1);
+}
+
+.stat-icon {
+  font-size: 1.8rem;
+  color: #2ecc71;
+}
+
+.stat-number {
+  color: #7ee2b8;
   font-family: 'Voces', sans-serif;
 }
 
-/* === CARDS === */
+.stats-bar .text-muted {
+  color: #8aada0 !important;
+}
+
+
+/* ==============================================
+   ENCABEZADOS DE SECCIÓN
+   ============================================== */
+.section-tag {
+  display: inline-block;
+  background: rgba(46, 204, 113, 0.12);
+  border: 1px solid rgba(46, 204, 113, 0.3);
+  color: #7ee2b8;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.9rem;
+  border-radius: 50px;
+}
+
+.section-header .text-muted {
+  color: #8aada0 !important;
+  max-width: 540px;
+  margin: 0.5rem auto 0;
+}
+
+
+/* ==============================================
+   CARDS — DESTINOS
+   ============================================== */
 .card {
   position: relative;
   background: linear-gradient(145deg, #0b1c2d, #060E21);
@@ -77,77 +193,279 @@ textarea,
     border-color 0.4s ease;
 }
 
+/* Wrapper para imagen + badge */
+.card-img-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
 .card-img-top {
-  height: 300px;
+  height: 220px;
   object-fit: cover;
+  width: 100%;
   transition: transform 0.6s ease;
+  display: block;
+}
+
+/* Badge sobre la imagen */
+.card-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(6, 14, 33, 0.75);
+  backdrop-filter: blur(6px);
+  color: #eafaf1;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.25rem 0.65rem;
+  border-radius: 50px;
+  border: 1px solid rgba(126, 226, 184, 0.3);
 }
 
 .card-title {
   font-family: 'Voces', sans-serif;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   color: #7ee2b8;
 }
 
 .card-text {
   color: #d1e7dd;
-  font-family: 'Raleway', sans-serif;
-  font-size: 0.95rem;
+  font-size: 0.93rem;
 }
 
-/* Hover pro */
+.card-price {
+  color: #8aada0;
+  font-size: 0.9rem;
+}
+
+.card-price strong {
+  color: #7ee2b8;
+  font-size: 1rem;
+}
+
+/* Hover */
 .card:hover {
-  transform: translateY(-12px) scale(1.02);
+  transform: translateY(-10px) scale(1.01);
   box-shadow:
-    0 20px 40px rgba(0, 0, 0, 0.6),
-    0 0 25px rgba(46, 204, 113, 0.35);
-  border-color: #2ecc71;
+    0 20px 40px rgba(0, 0, 0, 0.5),
+    0 0 25px rgba(46, 204, 113, 0.2);
+  border-color: rgba(46, 204, 113, 0.5);
 }
 
 .card:hover .card-img-top {
-  transform: scale(1.08);
+  transform: scale(1.07);
 }
 
 /* Glow interno */
-.card::before {
+.card::after {
   content: "";
   position: absolute;
   inset: 0;
   border-radius: 1.2rem;
   pointer-events: none;
-  box-shadow: inset 0 0 0 1px rgba(46, 204, 113, 0.25);
+  box-shadow: inset 0 0 0 1px rgba(46, 204, 113, 0.2);
   opacity: 0;
   transition: opacity 0.4s ease;
 }
 
-.card:hover::before {
+.card:hover::after {
   opacity: 1;
 }
 
-/* === ANIMACIONES === */
-.animate-on-scroll {
-  opacity: 0;
-  transform: translateY(80px);
-  transition: all 1s cubic-bezier(0.22, 1, 0.36, 1);
+
+/* ==============================================
+   CARRUSEL DE TESTIMONIOS
+   ============================================== */
+.testimonios-section {
+  background: linear-gradient(180deg, #060E21 0%, #0b1c2d 100%);
 }
 
-.animate-on-scroll.visible {
-  opacity: 1;
-  transform: translateY(0);
+.testimonio-card {
+  max-width: 600px;
+  padding: 2rem 2.5rem 3rem;
 }
 
-/* === NAVBAR === */
-.navbar-dark .navbar-nav .nav-link {
+.testimonio-avatar {
+  font-size: 2.5rem;
+}
+
+.testimonio-texto {
+  font-size: 1.05rem;
+  color: #d1e7dd;
+  line-height: 1.7;
+}
+
+.testimonio-estrellas {
+  color: #f4c430;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+}
+
+.testimonio-nombre {
+  color: #7ee2b8;
+  font-family: 'Voces', sans-serif;
+}
+
+/* Indicadores personalizados */
+#carruselTestimonios .carousel-indicators [data-bs-target] {
+  background-color: rgba(126, 226, 184, 0.3);
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  border: none;
+}
+
+#carruselTestimonios .carousel-indicators .active {
+  background-color: #2ecc71;
+}
+
+#carruselTestimonios .carousel-control-prev-icon,
+#carruselTestimonios .carousel-control-next-icon {
+  filter: invert(0.7) sepia(1) hue-rotate(90deg);
+}
+
+
+/* ==============================================
+   SECCIÓN DE VÍDEO
+   ============================================== */
+.video-section {
+  background: #060E21;
+}
+
+.video-wrapper {
+  border: 1px solid rgba(46, 204, 113, 0.2);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+}
+
+.video-wrapper video {
+  display: block;
+}
+
+/* Lista de features */
+.feature-list li {
+  padding: 0.35rem 0;
+  font-size: 0.95rem;
+  color: #d1e7dd;
+}
+
+
+/* ==============================================
+   PILARES / VALORES
+   ============================================== */
+.pilares-section {
+  background: linear-gradient(135deg, #0b1c2d 0%, #060E21 100%);
+}
+
+.pilar-card {
+  background: rgba(11, 28, 45, 0.6);
+  border: 1px solid rgba(46, 204, 113, 0.12);
+  border-radius: 1rem;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pilar-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(46, 204, 113, 0.35);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.pilar-icon {
+  color: #2ecc71;
+}
+
+.pilares-section .text-muted {
+  color: #8aada0 !important;
+}
+
+
+/* ==============================================
+   CTA / NEWSLETTER
+   ============================================== */
+.cta-section {
+  background: linear-gradient(135deg, #0d2518 0%, #060E21 100%);
+  border-top: 1px solid rgba(46, 204, 113, 0.1);
+}
+
+.newsletter-input {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(126, 226, 184, 0.25);
   color: #eafaf1;
 }
 
-.navbar-dark .navbar-nav .nav-link.active,
-.navbar-dark .navbar-nav .nav-link:hover {
+.newsletter-input::placeholder {
+  color: rgba(234, 250, 241, 0.4);
+}
+
+.newsletter-input:focus {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: #2ecc71;
+  box-shadow: 0 0 0 0.2rem rgba(46, 204, 113, 0.2);
+  color: #eafaf1;
+}
+
+.cta-section .text-muted {
+  color: #8aada0 !important;
+}
+
+
+/* ==============================================
+   FOOTER
+   ============================================== */
+footer {
+  background: linear-gradient(180deg, #060E21, #030a12);
+  color: #8aada0;
+  border-top: 1px solid rgba(126, 226, 184, 0.1);
+}
+
+.footer-heading {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #7ee2b8;
+  margin-bottom: 1rem;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-links a {
+  color: #8aada0;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
   color: #7ee2b8;
 }
 
-/* === TABS EXPERIENCIAS === */
+.footer-social {
+  opacity: 0.7;
+  transition: opacity 0.3s, transform 0.3s;
+  display: inline-block;
+}
 
+.footer-social:hover {
+  opacity: 1;
+  transform: translateY(-3px);
+}
+
+.footer-divider {
+  border-color: rgba(126, 226, 184, 0.1);
+}
+
+footer p {
+  font-size: 0.85rem;
+}
+
+
+/* ==============================================
+   TABS — EXPERIENCIAS
+   ============================================== */
 #experienciasTabs .nav-link {
   color: #A7D7C5;
   background: transparent;
@@ -170,15 +488,52 @@ textarea,
   text-align: center;
 }
 
-/* === FOOTER === */
 
-footer {
-  background: linear-gradient(180deg, #060E21, #0B1D1A);
-  color: #A7D7C5;
-  border-top: 1px solid rgba(126, 226, 184, 0.15);
+/* ==============================================
+   ACCORDION
+   ============================================== */
+.accordion-item {
+  border: none;
+  background-color: transparent;
 }
 
-footer p {
-  margin: 0;
-  font-size: 0.9rem;
+.accordion-button {
+  background-color: #060E21;
+  color: #ffffff;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #0B1D1A;
+  color: #7ee2b8;
+}
+
+.accordion-body {
+  background-color: #0B1D1A;
+  color: #d6d6d6;
+}
+
+
+/* ==============================================
+   MODAL
+   ============================================== */
+.modal-content {
+  background-color: #060E21;
+  color: #ffffff;
+  border: 1px solid rgba(46, 204, 113, 0.2);
+}
+
+
+/* ==============================================
+   ANIMACIONES AL HACER SCROLL
+   ============================================== */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
 }

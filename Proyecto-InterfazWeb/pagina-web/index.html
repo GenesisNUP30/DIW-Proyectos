@@ -4,50 +4,55 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>DestinoGreen - Viajes responsables y turismo sostenible</title>
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="../multimedia-optimizado/img/logotipo.svg"
-    />
-    <meta
-      name="description"
-      content="DestinoGreen es una plataforma de turismo sostenible que ofrece viajes responsables, experiencias locales y destinos ecológicos."
-    />
+    <meta name="description" content="DestinoGreen es una plataforma de turismo sostenible que ofrece viajes responsables, experiencias locales y destinos ecológicos." />
 
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&family=Voces&display=swap"
-      rel="stylesheet"
-    />
+    <!-- Favicon SVG -->
+    <link rel="icon" type="image/svg+xml" href="../multimedia-optimizado/img/logotipo.svg" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&family=Voces&display=swap" rel="stylesheet" />
+
+    <!-- Tus estilos (custom primero, luego estilos) -->
     <link rel="stylesheet" href="../css/custom.css" />
     <link rel="stylesheet" href="../css/estilos.css" />
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+
+    <!-- ===================== NAVBAR ===================== -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" aria-label="Navegación principal">
       <div class="container">
-        <a class="navbar-brand logo-font" href="index.html">
+        <a class="navbar-brand logo-font d-flex align-items-center gap-2" href="index.html">
           <img
             src="../multimedia-optimizado/img/logotipo.svg"
             alt="Logo DestinoGreen"
-            height="60"
+            height="45"
+            width="45"
           />
           DestinoGreen
         </a>
+
         <button
-          class="navbar-toggler"
+          class="navbar-toggler border-0"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#menu"
+          aria-controls="menu"
+          aria-expanded="false"
+          aria-label="Abrir menú"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="menu">
-          <ul class="navbar-nav ms-auto">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+            </li>
             <li class="nav-item">
               <a class="nav-link" href="destinos.html">Destinos</a>
             </li>
@@ -55,180 +60,359 @@
               <a class="nav-link" href="experiencias.html">Experiencias</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="sobre-nosotros.html"
-                >Sobre DestinoGreen</a
-              >
+              <a class="nav-link" href="sobre-nosotros.html">Sobre nosotros</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contacto.html">Contacto</a>
+            <li class="nav-item ms-lg-3">
+              <a class="btn btn-primary btn-sm px-3" href="contacto.html">Reservar viaje</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <header class="hero d-flex align-items-center text-center">
+    <!-- ===================== HERO ===================== -->
+    <header class="hero d-flex align-items-center text-center" role="banner">
       <div class="container">
-        <h1>Viajes responsables para un futuro sostenible</h1>
-        <p class="lead">
-          Descubre destinos ecológicos y experiencias locales que respetan el
-          planeta.
+
+        <!-- Badge pequeño encima del título -->
+        <span class="hero-badge mb-3 d-inline-block">
+          <i class="bi bi-leaf-fill me-1"></i> Turismo 100% sostenible
+        </span>
+
+        <h1 class="display-4 fw-bold mb-3">
+          Viaja consciente.<br />
+          <span class="text-accent">Deja huella verde.</span>
+        </h1>
+
+        <p class="lead mb-4 hero-subtitle">
+          Descubre destinos ecológicos y experiencias locales<br class="d-none d-md-block" />
+          que respetan el planeta y enriquecen comunidades.
         </p>
-        <a href="destinos.html" class="btn btn-primary btn-lg"
-          >Explorar destinos</a
-        >
+
+        <!-- Dos CTAs -->
+        <div class="d-flex flex-wrap gap-3 justify-content-center">
+          <a href="destinos.html" class="btn btn-primary btn-lg px-4">
+            <i class="bi bi-compass me-2"></i>Explorar destinos
+          </a>
+          <a href="sobre-nosotros.html" class="btn btn-outline-light btn-lg px-4">
+            Nuestra misión
+          </a>
+        </div>
+
+        <!-- Scroll hint -->
+        <div class="scroll-hint mt-5" aria-hidden="true">
+          <i class="bi bi-chevron-double-down"></i>
+        </div>
+
       </div>
     </header>
 
-    <section class="py-5">
+    <!-- ===================== STATS / IMPACTO (encima de destinos para romper) ===================== -->
+    <section class="py-5 stats-bar" aria-label="Nuestro impacto">
       <div class="container">
-        <h2 class="text-center mb-4">Destinos sostenibles</h2>
+        <div class="row text-center g-4">
+          <div class="col-6 col-md-3 animate-on-scroll">
+            <div class="stat-icon mb-2"><i class="bi bi-people-fill"></i></div>
+            <div class="display-5 fw-bold stat-number" data-target="15000">0</div>
+            <p class="text-muted mb-0 small">Viajeros satisfechos</p>
+          </div>
+          <div class="col-6 col-md-3 animate-on-scroll">
+            <div class="stat-icon mb-2"><i class="bi bi-geo-alt-fill"></i></div>
+            <div class="display-5 fw-bold stat-number" data-target="50">0</div>
+            <p class="text-muted mb-0 small">Destinos sostenibles</p>
+          </div>
+          <div class="col-6 col-md-3 animate-on-scroll">
+            <div class="stat-icon mb-2"><i class="bi bi-house-heart-fill"></i></div>
+            <div class="display-5 fw-bold stat-number" data-target="250">0</div>
+            <p class="text-muted mb-0 small">Comunidades apoyadas</p>
+          </div>
+          <div class="col-6 col-md-3 animate-on-scroll">
+            <div class="stat-icon mb-2"><i class="bi bi-tree-fill"></i></div>
+            <div class="display-5 fw-bold stat-number" data-target="10000">0</div>
+            <p class="text-muted mb-0 small">Árboles plantados</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== DESTINOS DESTACADOS ===================== -->
+    <section class="py-5" aria-labelledby="destinos-titulo">
+      <div class="container">
+
+        <div class="section-header text-center mb-5 animate-on-scroll">
+          <span class="section-tag">Explora</span>
+          <h2 id="destinos-titulo" class="mt-2">Destinos sostenibles</h2>
+          <p class="text-muted">Cada viaje contribuye a preservar el entorno natural y apoyar las comunidades locales.</p>
+        </div>
 
         <div class="row g-4">
-          <div class="col-md-4">
+
+          <!-- Card 1 -->
+          <div class="col-md-4 animate-on-scroll">
             <div class="card h-100">
-              <img
-                src="../multimedia-optimizado/img/index/bosque.webp"
-                class="card-img-top"
-                alt="Viaje sostenible en bosque natural"
-                loading="lazy"
-              />
-              <div class="card-body">
+              <div class="card-img-wrapper">
+                <img
+                  src="../multimedia-optimizado/img/index/bosque.webp"
+                  class="card-img-top"
+                  alt="Bosques del norte: turismo ecológico en entornos naturales protegidos"
+                  loading="lazy"
+                  width="400"
+                  height="300"
+                />
+                <span class="card-badge">🌲 Naturaleza</span>
+              </div>
+              <div class="card-body d-flex flex-column">
                 <h3 class="card-title h5">Bosques del norte</h3>
-                <p class="card-text">
-                  Turismo ecológico en entornos naturales protegidos.
-                </p>
+                <p class="card-text flex-grow-1">Turismo ecológico en entornos naturales protegidos con guías locales certificados.</p>
+                <div class="d-flex align-items-center justify-content-between mt-3">
+                  <span class="card-price">Desde <strong>890€</strong></span>
+                  <a href="destinos.html" class="btn btn-sm btn-outline-success">Ver más</a>
+                </div>
               </div>
             </div>
           </div>
 
-          <div class="col-md-4">
+          <!-- Card 2 -->
+          <div class="col-md-4 animate-on-scroll">
             <div class="card h-100">
-              <img
-                src="../multimedia-optimizado/img/index/playa.webp"
-                class="card-img-top"
-                alt="Playa ecológica con turismo responsable"
-                loading="lazy"
-              />
-              <div class="card-body">
+              <div class="card-img-wrapper">
+                <img
+                  src="../multimedia-optimizado/img/index/playa.webp"
+                  class="card-img-top"
+                  alt="Playas responsables: disfruta del mar respetando el ecosistema"
+                  loading="lazy"
+                  width="400"
+                  height="300"
+                />
+                <span class="card-badge">🌊 Costa</span>
+              </div>
+              <div class="card-body d-flex flex-column">
                 <h3 class="card-title h5">Playas responsables</h3>
-                <p class="card-text">
-                  Disfruta del mar respetando el ecosistema.
-                </p>
+                <p class="card-text flex-grow-1">Disfruta del mar respetando el ecosistema marino con actividades de bajo impacto.</p>
+                <div class="d-flex align-items-center justify-content-between mt-3">
+                  <span class="card-price">Desde <strong>750€</strong></span>
+                  <a href="destinos.html" class="btn btn-sm btn-outline-success">Ver más</a>
+                </div>
               </div>
             </div>
           </div>
 
-          <div class="col-md-4">
+          <!-- Card 3 -->
+          <div class="col-md-4 animate-on-scroll">
             <div class="card h-100">
-              <img
-                src="../multimedia-optimizado/img/index/montana.webp"
-                class="card-img-top"
-                alt="Viaje de montaña sostenible"
-                loading="lazy"
-              />
-              <div class="card-body">
+              <div class="card-img-wrapper">
+                <img
+                  src="../multimedia-optimizado/img/index/montana.webp"
+                  class="card-img-top"
+                  alt="Montañas y senderismo: rutas sostenibles guiadas por expertos locales"
+                  loading="lazy"
+                  width="400"
+                  height="300"
+                />
+                <span class="card-badge">🏔️ Montaña</span>
+              </div>
+              <div class="card-body d-flex flex-column">
                 <h3 class="card-title h5">Montañas y senderismo</h3>
-                <p class="card-text">
-                  Rutas sostenibles guiadas por expertos locales.
-                </p>
+                <p class="card-text flex-grow-1">Rutas sostenibles guiadas por expertos locales que conocen cada sendero.</p>
+                <div class="d-flex align-items-center justify-content-between mt-3">
+                  <span class="card-price">Desde <strong>620€</strong></span>
+                  <a href="destinos.html" class="btn btn-sm btn-outline-success">Ver más</a>
+                </div>
               </div>
             </div>
           </div>
+
+        </div>
+
+        <div class="text-center mt-5 animate-on-scroll">
+          <a href="destinos.html" class="btn btn-primary px-5">Ver todos los destinos</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================== VÍDEO ===================== -->
+    <section class="py-5 video-section" aria-labelledby="video-titulo">
+      <div class="container">
+        <div class="row align-items-center g-5">
+
+          <div class="col-lg-5 animate-on-scroll">
+            <span class="section-tag">Nuestra historia</span>
+            <h2 id="video-titulo" class="mt-2 mb-3">¿Por qué viajar con DestinoGreen?</h2>
+            <p class="text-muted mb-3">Cada viaje que organizamos está pensado para minimizar el impacto ambiental y maximizar el beneficio a las comunidades locales.</p>
+            <ul class="list-unstyled feature-list">
+              <li><i class="bi bi-check-circle-fill text-success me-2"></i>Compensación de huella de carbono incluida</li>
+              <li><i class="bi bi-check-circle-fill text-success me-2"></i>Guías locales certificados en sostenibilidad</li>
+              <li><i class="bi bi-check-circle-fill text-success me-2"></i>Alojamientos ecológicos seleccionados</li>
+              <li><i class="bi bi-check-circle-fill text-success me-2"></i>Parte de los beneficios va a reforestación</li>
+            </ul>
+            <a href="sobre-nosotros.html" class="btn btn-outline-success mt-3">Conocer más</a>
+          </div>
+
+          <div class="col-lg-7 animate-on-scroll">
+            <div class="video-wrapper rounded-4 overflow-hidden">
+              <video
+                controls
+                width="100%"
+                preload="metadata"
+                poster="../multimedia-optimizado/img/video-poster.webp"
+                aria-label="Vídeo: ¿Por qué viajar con DestinoGreen?"
+              >
+                <source src="../multimedia_optimizado/video/DestinoGreen.mp4" type="video/mp4" />
+                <track
+                  src="../multimedia_optimizado/video/DestinoGreen-subtitulos.vtt"
+                  kind="subtitles"
+                  srclang="es"
+                  label="Español"
+                  default
+                />
+                Tu navegador no soporta la reproducción de vídeo.
+              </video>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
 
-    <section class="py-5 bg-dark text-light">
-      <div class="container text-center">
-        <h2>¿Por qué viajar con DestinoGreen?</h2>
-        <video
-          controls
-          width="100%"
-          class="mt-4"
-          poster="../multimedia-optimizado/img/index/bosque.webp"
-        >
-          <source
-            src="../multimedia-optimizado/video/DestinoGreen.mp4"
-            type="video/mp4"
-          />
-          <track
-            src="../multimedia-optimizado/video/DestinoGreen-subtitulos.vtt"
-            kind="subtitles"
-            srclang="es"
-            label="Español"
-          />
-          Tu navegador no soporta el vídeo.
-        </video>
+    <!-- ===================== VALORES / PILARES ===================== -->
+    <section class="py-5 pilares-section" aria-labelledby="pilares-titulo">
+      <div class="container">
+
+        <div class="section-header text-center mb-5 animate-on-scroll">
+          <span class="section-tag">Nuestros pilares</span>
+          <h2 id="pilares-titulo" class="mt-2">Comprometidos con el planeta</h2>
+        </div>
+
+        <div class="row g-4 text-center">
+          <div class="col-md-4 animate-on-scroll">
+            <div class="pilar-card p-4 h-100">
+              <div class="pilar-icon mb-3" aria-hidden="true">
+                <i class="bi bi-tree fs-1"></i>
+              </div>
+              <h3 class="h5 mb-2">Medio ambiente</h3>
+              <p class="text-muted small">Cada destino es elegido por su compromiso activo con la conservación del entorno natural.</p>
+            </div>
+          </div>
+          <div class="col-md-4 animate-on-scroll">
+            <div class="pilar-card p-4 h-100">
+              <div class="pilar-icon mb-3" aria-hidden="true">
+                <i class="bi bi-people fs-1"></i>
+              </div>
+              <h3 class="h5 mb-2">Comunidad local</h3>
+              <p class="text-muted small">Trabajamos directamente con comunidades para que el turismo genere empleo y bienestar.</p>
+            </div>
+          </div>
+          <div class="col-md-4 animate-on-scroll">
+            <div class="pilar-card p-4 h-100">
+              <div class="pilar-icon mb-3" aria-hidden="true">
+                <i class="bi bi-heart fs-1"></i>
+              </div>
+              <h3 class="h5 mb-2">Experiencia auténtica</h3>
+              <p class="text-muted small">Nada de turismo masificado. Grupos pequeños, vivencias reales y conexión genuina.</p>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
 
-    <section class="py-5">
+    <!-- ===================== NEWSLETTER / CTA FINAL ===================== -->
+    <section class="py-5 cta-section text-center" aria-labelledby="cta-titulo">
       <div class="container">
-        <h2 class="text-center mb-5">Nuestro impacto positivo</h2>
+        <div class="cta-inner animate-on-scroll">
+          <span class="section-tag">Únete</span>
+          <h2 id="cta-titulo" class="mt-2 mb-3">Sé parte del cambio</h2>
+          <p class="lead mb-4 text-muted">Suscríbete a nuestro boletín y recibe destinos exclusivos, consejos de viaje sostenible y ofertas especiales.</p>
 
-        <div class="row text-center">
-          <div class="col-md-3">
-            <div class="display-4 fw-bold text-success">15,000+</div>
-            <p class="text-muted">Viajeros satisfechos</p>
+          <!-- Formulario inline accesible -->
+          <div class="row justify-content-center">
+            <div class="col-md-6">
+              <div class="input-group input-group-lg">
+                <label for="emailNewsletter" class="visually-hidden">Introduce tu correo electrónico</label>
+                <input
+                  type="email"
+                  id="emailNewsletter"
+                  class="form-control newsletter-input"
+                  placeholder="tu@email.com"
+                  aria-label="Correo electrónico para newsletter"
+                />
+                <button class="btn btn-primary" type="button" id="btnNewsletter">
+                  Suscribirme
+                </button>
+              </div>
+              <p class="small text-muted mt-2">Sin spam. Baja cuando quieras.</p>
+            </div>
           </div>
-          <div class="col-md-3">
-            <div class="display-4 fw-bold text-primary">50+</div>
-            <p class="text-muted">Destinos sostenibles</p>
-          </div>
-          <div class="col-md-3">
-            <div class="display-4 fw-bold text-warning">250+</div>
-            <p class="text-muted">Comunidades apoyadas</p>
-          </div>
-          <div class="col-md-3">
-            <div class="display-4 fw-bold text-info">10,000+</div>
-            <p class="text-muted">Árboles plantados</p>
-          </div>
+
         </div>
       </div>
     </section>
 
-    <section class="py-5 text-center">
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="py-5" role="contentinfo">
       <div class="container">
-        <h2>Únete a la comunidad DestinoGreen</h2>
-        <p class="lead mb-4">
-          Suscríbete a nuestro boletín y recibe consejos de turismo sostenible.
-        </p>
-        <a href="contacto.html" class="btn btn-primary btn-lg">Suscribirme</a>
-      </div>
-    </section>
+        <div class="row g-4 mb-4">
 
-    <footer class="py-4 text-center">
-      <p>&copy; 2026 DestinoGreen – Viajes responsables</p>
-      <div class="mt-2">
-        <a href="#" class="text-dark mx-2" aria-label="Síguenos en Instagram">
-          <img
-            src="../multimedia-optimizado/icons/insta.svg"
-            alt=""
-            aria-hidden="true"
-            height="40"
-          />
-        </a>
-        <a href="#" class="text-dark mx-2" aria-label="Síguenos en LinkedIn">
-          <img
-            src="../multimedia-optimizado/icons/linkedin.svg"
-            alt=""
-            aria-hidden="true"
-            height="40"
-          />
-        </a>
-        <a href="#" class="text-dark mx-2" aria-label="Síguenos en GitHub">
-          <img
-            src="../multimedia-optimizado/icons/github.svg"
-            alt=""
-            aria-hidden="true"
-            height="40"
-          />
-        </a>
+          <!-- Col 1: Logo y descripción -->
+          <div class="col-md-4">
+            <a class="navbar-brand logo-font d-flex align-items-center gap-2 mb-3" href="index.html">
+              <img src="../multimedia-optimizado/img/logotipo.svg" alt="DestinoGreen" height="36" width="36" />
+              DestinoGreen
+            </a>
+            <p class="small">Agencia de turismo sostenible comprometida con el planeta y las comunidades locales.</p>
+          </div>
+
+          <!-- Col 2: Navegación -->
+          <div class="col-md-2 offset-md-1">
+            <h4 class="footer-heading">Navegación</h4>
+            <ul class="list-unstyled footer-links">
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="destinos.html">Destinos</a></li>
+              <li><a href="experiencias.html">Experiencias</a></li>
+              <li><a href="sobre-nosotros.html">Sobre nosotros</a></li>
+              <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 3: Legal -->
+          <div class="col-md-2">
+            <h4 class="footer-heading">Legal</h4>
+            <ul class="list-unstyled footer-links">
+              <li><a href="#">Política de privacidad</a></li>
+              <li><a href="#">Aviso legal</a></li>
+              <li><a href="#">Cookies</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 4: Redes sociales -->
+          <div class="col-md-3">
+            <h4 class="footer-heading">Síguenos</h4>
+            <div class="d-flex gap-3 mt-2">
+              <a href="#" class="footer-social" aria-label="Instagram de DestinoGreen">
+                <img src="../multimedia-optimizado/icons/insta.svg" alt="" aria-hidden="true" height="32" width="32" />
+              </a>
+              <a href="#" class="footer-social" aria-label="LinkedIn de DestinoGreen">
+                <img src="../multimedia-optimizado/icons/linkedin.svg" alt="" aria-hidden="true" height="32" width="32" />
+              </a>
+              <a href="#" class="footer-social" aria-label="GitHub de DestinoGreen">
+                <img src="../multimedia-optimizado/icons/github.svg" alt="" aria-hidden="true" height="32" width="32" />
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <hr class="footer-divider" />
+        <p class="text-center small mb-0">&copy; 2026 DestinoGreen – Todos los derechos reservados</p>
+
       </div>
     </footer>
 
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Tus scripts -->
     <script src="../js/scripts.js"></script>
+
   </body>
 </html>
