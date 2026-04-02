@@ -77,7 +77,7 @@
               <a class="nav-link" href="experiencias.html">Experiencias</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="sobre.html">Sobre nosotros</a>
+              <a class="nav-link" href="sobre-nosotros.html">Sobre nosotros</a>
             </li>
             <li class="nav-item ms-lg-3">
               <a class="btn btn-primary btn-sm px-3" href="contacto.html"
@@ -350,13 +350,13 @@
               role="group"
               aria-label="Filtrar por continente"
             >
-                <button
-                  class="filtro-continente active"
-                  data-continente="todos"
-                  aria-pressed="true"
-                >
-                  🌍 Todos
-                </button>
+              <button
+                class="filtro-continente active"
+                data-continente="todos"
+                aria-pressed="true"
+              >
+                🌍 Todos
+              </button>
               <button
                 class="btn filtro-continente"
                 data-continente="Europa"
@@ -1071,7 +1071,9 @@
       aria-labelledby="modalNoruegaLabel"
       aria-hidden="true"
     >
-      <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div
+        class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable"
+      >
         <div class="modal-content">
           <div class="modal-header">
             <h2 class="modal-title h4" id="modalNoruegaLabel">
@@ -1085,15 +1087,55 @@
             ></button>
           </div>
           <div class="modal-body">
-            <p class="text-muted">
-              Fiordos espectaculares y el país con mayor adopción de vehículos
-              eléctricos del mundo. Un destino donde la naturaleza y la
-              sostenibilidad van de la mano.
-            </p>
-            <div class="alert modal-alert mt-3">
+            <div class="row g-4">
+              <div class="col-md-6">
+                <h4 class="modal-subtitle">¿Por qué Noruega?</h4>
+                <ul class="modal-lista">
+                  <li>
+                    <i class="bi bi-check-circle-fill text-success me-2"></i
+                    >100% energía hidroeléctrica y eólica
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill text-success me-2"></i
+                    >Liderazgo mundial en vehículos eléctricos
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill text-success me-2"></i
+                    >Protección estricta de fiordos y vida marina
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill text-success me-2"></i
+                    >Turismo certificado Eco-Lighthouse
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <h4 class="modal-subtitle">Nuestras experiencias</h4>
+                <ul class="modal-lista">
+                  <li>
+                    <i class="bi bi-water text-info me-2"></i>Crucero eléctrico
+                    por los fiordos de Geiranger
+                  </li>
+                  <li>
+                    <i class="bi bi-binoculars text-primary me-2"></i
+                    >Avistamiento responsable de orcas en Lofoten
+                  </li>
+                  <li>
+                    <i class="bi bi-signpost-split text-success me-2"></i
+                    >Senderismo guiado con guardaparques locales
+                  </li>
+                  <li>
+                    <i class="bi bi-house-heart text-warning me-2"></i>Visita a
+                    granjas sostenibles del norte
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="alert modal-alert mt-4">
               <i class="bi bi-heart-fill text-success me-2"></i>
-              <strong>Impacto positivo:</strong> Parte del viaje financia la
-              conservación de ecosistemas marinos en los fiordos noruegos.
+              <strong>Impacto positivo:</strong> Colaboramos con la organización
+              "Future Fjords" para financiar investigación sobre turismo
+              sostenible en ecosistemas marinos sensibles.
             </div>
           </div>
           <div class="modal-footer">
@@ -1120,7 +1162,9 @@
       aria-labelledby="modalNuevaZelandaLabel"
       aria-hidden="true"
     >
-      <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div
+        class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable"
+      >
         <div class="modal-content">
           <div class="modal-header">
             <h2 class="modal-title h4" id="modalNuevaZelandaLabel">
@@ -1134,16 +1178,55 @@
             ></button>
           </div>
           <div class="modal-body">
-            <p class="text-muted">
-              Uno de los países con mayor biodiversidad protegida. El turismo
-              Maorí ofrece una conexión auténtica con la tierra y la cultura
-              ancestral.
-            </p>
-            <div class="alert modal-alert mt-3">
+            <div class="row g-4">
+              <div class="col-md-6">
+                <h4 class="modal-subtitle">¿Por qué Nueva Zelanda?</h4>
+                <ul class="modal-lista">
+                  <li>
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>30%
+                    del territorio protegido como parques nacionales
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill text-success me-2"></i
+                    >Liderazgo en conservación de especies endémicas
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill text-success me-2"></i
+                    >Turismo Maorí con gestión comunitaria auténtica
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill text-success me-2"></i
+                    >Certificación Qualmark Green para alojamientos
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <h4 class="modal-subtitle">Nuestras experiencias</h4>
+                <ul class="modal-lista">
+                  <li>
+                    <i class="bi bi-signpost-split text-success me-2"></i
+                    >Trekking en Tongariro con guías Maorí
+                  </li>
+                  <li>
+                    <i class="bi bi-moon-stars text-warning me-2"></i
+                    >Observación de kiwis en santuarios nocturnos
+                  </li>
+                  <li>
+                    <i class="bi bi-water text-info me-2"></i>Kayak en fiordos
+                    de Milford Sound
+                  </li>
+                  <li>
+                    <i class="bi bi-palette text-primary me-2"></i>Talleres de
+                    cultura y artesanía Maorí
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="alert modal-alert mt-4">
               <i class="bi bi-heart-fill text-success me-2"></i>
-              <strong>Impacto positivo:</strong> Apoyamos proyectos de
-              reintroducción de especies autóctonas liderados por comunidades
-              Maorí.
+              <strong>Impacto positivo:</strong> El 7% de cada viaje apoya
+              proyectos de reintroducción del kakapo y la protección de bosques
+              nativos gestionados por iwi Maorí.
             </div>
           </div>
           <div class="modal-footer">
@@ -1170,7 +1253,9 @@
       aria-labelledby="modalJaponLabel"
       aria-hidden="true"
     >
-      <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div
+        class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable"
+      >
         <div class="modal-content">
           <div class="modal-header">
             <h2 class="modal-title h4" id="modalJaponLabel">
@@ -1184,16 +1269,55 @@
             ></button>
           </div>
           <div class="modal-body">
-            <p class="text-muted">
-              La filosofía japonesa del <em>satoyama</em> promueve la armonía
-              entre humanos y naturaleza. Un país que combina tradición
-              milenaria con innovación sostenible.
-            </p>
-            <div class="alert modal-alert mt-3">
+            <div class="row g-4">
+              <div class="col-md-6">
+                <h4 class="modal-subtitle">¿Por qué Japón?</h4>
+                <ul class="modal-lista">
+                  <li>
+                    <i class="bi bi-check-circle-fill text-success me-2"></i
+                    >Filosofía satoyama: armonía humano-naturaleza
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill text-success me-2"></i
+                    >Templos que preservan bosques sagrados milenarios
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill text-success me-2"></i
+                    >Transporte público eficiente y de bajas emisiones
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill text-success me-2"></i
+                    >Gastronomía washoku con ingredientes locales
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <h4 class="modal-subtitle">Nuestras experiencias</h4>
+                <ul class="modal-lista">
+                  <li>
+                    <i class="bi bi-flower1 text-success me-2"></i>Meditación
+                    zen en templos de Kyoto
+                  </li>
+                  <li>
+                    <i class="bi bi-signpost-split text-primary me-2"></i
+                    >Senderismo en el Camino de Kumano Kodo
+                  </li>
+                  <li>
+                    <i class="bi bi-egg-fried text-warning me-2"></i>Talleres de
+                    agricultura sostenible con familias rurales
+                  </li>
+                  <li>
+                    <i class="bi bi-flower2 text-info me-2"></i>Observación de
+                    cerezos en flor con guías locales
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="alert modal-alert mt-4">
               <i class="bi bi-heart-fill text-success me-2"></i>
-              <strong>Impacto positivo:</strong> Colaboramos con templos rurales
-              que preservan bosques sagrados y tradiciones agrícolas
-              ancestrales.
+              <strong>Impacto positivo:</strong> Colaboramos con la red
+              "Satoyama Initiative" para preservar paisajes tradicionales y
+              apoyar a comunidades rurales en la conservación de biodiversidad.
             </div>
           </div>
           <div class="modal-footer">
@@ -1220,7 +1344,9 @@
       aria-labelledby="modalChileLabel"
       aria-hidden="true"
     >
-      <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div
+        class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable"
+      >
         <div class="modal-content">
           <div class="modal-header">
             <h2 class="modal-title h4" id="modalChileLabel">
@@ -1234,16 +1360,55 @@
             ></button>
           </div>
           <div class="modal-body">
-            <p class="text-muted">
-              Desde el desierto más árido del mundo hasta los glaciares
-              patagónicos, Chile es un laboratorio natural único donde las
-              comunidades Mapuche preservan saberes ancestrales.
-            </p>
-            <div class="alert modal-alert mt-3">
+            <div class="row g-4">
+              <div class="col-md-6">
+                <h4 class="modal-subtitle">¿Por qué Chile?</h4>
+                <ul class="modal-lista">
+                  <li>
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>23%
+                    del territorio bajo protección ambiental
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill text-success me-2"></i
+                    >Liderazgo en energías renovables en Sudamérica
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill text-success me-2"></i
+                    >Comunidades Mapuche guardianas de saberes ancestrales
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill text-success me-2"></i
+                    >Turismo científico en el desierto de Atacama
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <h4 class="modal-subtitle">Nuestras experiencias</h4>
+                <ul class="modal-lista">
+                  <li>
+                    <i class="bi bi-binoculars text-primary me-2"></i
+                    >Avistamiento de cóndores en Torres del Paine
+                  </li>
+                  <li>
+                    <i class="bi bi-people text-success me-2"></i>Experiencias
+                    culturales con comunidades Mapuche
+                  </li>
+                  <li>
+                    <i class="bi bi-stars text-warning me-2"></i>Observación
+                    astronómica en el desierto de Atacama
+                  </li>
+                  <li>
+                    <i class="bi bi-signpost-split text-info me-2"></i>Trekking
+                    en glaciares con certificación Leave No Trace
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="alert modal-alert mt-4">
               <i class="bi bi-heart-fill text-success me-2"></i>
-              <strong>Impacto positivo:</strong> Financiamos directamente
-              proyectos culturales Mapuche y la conservación del Parque Nacional
-              Torres del Paine.
+              <strong>Impacto positivo:</strong> Financiamos directamente la
+              protección del Parque Nacional Torres del Paine y proyectos
+              educativos Mapuche para preservar su lengua y tradiciones.
             </div>
           </div>
           <div class="modal-footer">
@@ -1270,7 +1435,9 @@
       aria-labelledby="modalKeniaLabel"
       aria-hidden="true"
     >
-      <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div
+        class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable"
+      >
         <div class="modal-content">
           <div class="modal-header">
             <h2 class="modal-title h4" id="modalKeniaLabel">
@@ -1284,16 +1451,55 @@
             ></button>
           </div>
           <div class="modal-body">
-            <p class="text-muted">
-              Los safaris éticos en Kenia permiten observar la fauna salvaje sin
-              interferir en su hábitat. Las comunidades Masai son guardianas
-              activas de estas tierras.
-            </p>
-            <div class="alert modal-alert mt-3">
+            <div class="row g-4">
+              <div class="col-md-6">
+                <h4 class="modal-subtitle">¿Por qué Kenia?</h4>
+                <ul class="modal-lista">
+                  <li>
+                    <i class="bi bi-check-circle-fill text-success me-2"></i
+                    >Safaris éticos con vehículos de bajas emisiones
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill text-success me-2"></i
+                    >Comunidades Masai como guardianes de la vida silvestre
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill text-success me-2"></i
+                    >Programas anti-furtivismo con tecnología moderna
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill text-success me-2"></i
+                    >Turismo que financia conservación in situ
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <h4 class="modal-subtitle">Nuestras experiencias</h4>
+                <ul class="modal-lista">
+                  <li>
+                    <i class="bi bi-camera text-primary me-2"></i>Safari
+                    fotográfico en Masai Mara con guías locales
+                  </li>
+                  <li>
+                    <i class="bi bi-building text-success me-2"></i>Visita a
+                    escuelas apoyadas por turismo comunitario
+                  </li>
+                  <li>
+                    <i class="bi bi-signpost-split text-info me-2"></i>Caminatas
+                    interpretativas con rangers Masai
+                  </li>
+                  <li>
+                    <i class="bi bi-binoculars text-warning me-2"></i
+                    >Observación de aves endémicas con expertos
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="alert modal-alert mt-4">
               <i class="bi bi-heart-fill text-success me-2"></i>
-              <strong>Impacto positivo:</strong> El 10% de cada safari financia
-              directamente conservación anti-furtivismo y educación en
-              comunidades Masai.
+              <strong>Impacto positivo:</strong> El 12% de cada safari se
+              destina directamente a programas anti-furtivismo, educación
+              ambiental en comunidades Masai y corredores de vida silvestre.
             </div>
           </div>
           <div class="modal-footer">
@@ -1320,7 +1526,9 @@
       aria-labelledby="modalTailandiaLabel"
       aria-hidden="true"
     >
-      <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div
+        class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable"
+      >
         <div class="modal-content">
           <div class="modal-header">
             <h2 class="modal-title h4" id="modalTailandiaLabel">
@@ -1334,16 +1542,56 @@
             ></button>
           </div>
           <div class="modal-body">
-            <p class="text-muted">
-              Más allá del turismo masificado, Tailandia ofrece experiencias
-              auténticas en comunidades costeras comprometidas con la protección
-              del arrecife de coral.
-            </p>
-            <div class="alert modal-alert mt-3">
+            <div class="row g-4">
+              <div class="col-md-6">
+                <h4 class="modal-subtitle">¿Por qué Tailandia?</h4>
+                <ul class="modal-lista">
+                  <li>
+                    <i class="bi bi-check-circle-fill text-success me-2"></i
+                    >Protección de arrecifes con zonas de no pesca
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill text-success me-2"></i
+                    >Comunidades costeras gestionando turismo responsable
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill text-success me-2"></i
+                    >Templos budistas con prácticas ecológicas ancestrales
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill text-success me-2"></i
+                    >Certificación "Green Leaf" para alojamientos sostenibles
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <h4 class="modal-subtitle">Nuestras experiencias</h4>
+                <ul class="modal-lista">
+                  <li>
+                    <i class="bi bi-water text-info me-2"></i>Buceo responsable
+                    en Koh Tao con biólogos marinos
+                  </li>
+                  <li>
+                    <i class="bi bi-egg-fried text-warning me-2"></i>Talleres de
+                    cocina tailandesa con productos locales
+                  </li>
+                  <li>
+                    <i class="bi bi-tree text-success me-2"></i>Voluntariado en
+                    restauración de manglares
+                  </li>
+                  <li>
+                    <i class="bi bi-building text-primary me-2"></i>Visita a
+                    templos rurales con monjes guías
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="alert modal-alert mt-4">
               <i class="bi bi-heart-fill text-success me-2"></i>
               <strong>Impacto positivo:</strong> Apoyamos proyectos de
-              restauración de arrecifes de coral y pesca sostenible en el Golfo
-              de Tailandia.
+              restauración de arrecifes de coral y la formación de guías locales
+              en prácticas de turismo marino sostenible en el Golfo de
+              Tailandia.
             </div>
           </div>
           <div class="modal-footer">
@@ -1390,7 +1638,7 @@
               <li><a href="index.html">Inicio</a></li>
               <li><a href="destinos.html">Destinos</a></li>
               <li><a href="experiencias.html">Experiencias</a></li>
-              <li><a href="sobre.html">Sobre nosotros</a></li>
+              <li><a href="sobre-nosotros.html">Sobre nosotros</a></li>
               <li><a href="contacto.html">Contacto</a></li>
             </ul>
           </div>

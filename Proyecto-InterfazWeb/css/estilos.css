@@ -536,7 +536,7 @@ footer p {
 
 /* === Carrusel destinos === */
 .carousel-img {
-  height: 460px;
+  height: 600px;
   object-fit: cover;
 }
 
