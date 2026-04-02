@@ -1,114 +1,194 @@
-/**
- * DestinoGreen - Scripts principales para index.html
- */
+/* ==============================================
+   SCRIPTS.JS — DestinoGreen
+   ============================================== */
 
-document.addEventListener('DOMContentLoaded', () => {
+/* === 1. Navbar: clase "scrolled" al hacer scroll === */
+window.addEventListener('scroll', () => {
+  const navbar = document.querySelector('.navbar');
+  if (navbar) {
+    navbar.classList.toggle('scrolled', window.scrollY > 50);
+  }
+});
 
-    // 1. NAVBAR: Cambio de color al hacer scroll
-    const navbar = document.querySelector('.navbar');
-    
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.classList.add('navbar-scrolled'); 
-            // Nota: Asegúrate de tener .navbar-scrolled { background: #1a1a1a !important; } en tu CSS
-        } else {
-            navbar.classList.remove('navbar-scrolled');
-        }
+/* === 2. Animación al hacer scroll (animate-on-scroll) === */
+const scrollObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      scrollObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
+
+document.querySelectorAll('.animate-on-scroll').forEach(el => {
+  scrollObserver.observe(el);
+});
+
+/* === 3. Contador animado (index - stats) === */
+function animarContador(el) {
+  const target = parseInt(el.dataset.target);
+  const duration = 1800;
+  const step = target / (duration / 16);
+  let current = 0;
+  const timer = setInterval(() => {
+    current += step;
+    if (current >= target) {
+      current = target;
+      clearInterval(timer);
+    }
+    el.textContent = Math.floor(current).toLocaleString('es-ES') + '+';
+  }, 16);
+}
+
+const statsObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      animarContador(entry.target);
+      statsObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.5 });
+
+document.querySelectorAll('.stat-number').forEach(el => statsObserver.observe(el));
+
+/* === 4. Newsletter toast (index) === */
+const btnNewsletter = document.getElementById('btnNewsletter');
+if (btnNewsletter) {
+  btnNewsletter.addEventListener('click', () => {
+    const input = document.getElementById('emailNewsletter');
+    if (input && input.value && input.validity.valid) {
+      const toastEl = document.createElement('div');
+      toastEl.className = 'toast align-items-center text-bg-success border-0 position-fixed bottom-0 end-0 m-3';
+      toastEl.setAttribute('role', 'alert');
+      toastEl.setAttribute('aria-live', 'assertive');
+      toastEl.innerHTML = `
+        <div class="d-flex">
+          <div class="toast-body">✅ ¡Suscripción completada! Bienvenido a DestinoGreen.</div>
+          <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Cerrar"></button>
+        </div>`;
+      document.body.appendChild(toastEl);
+      new bootstrap.Toast(toastEl, { delay: 4000 }).show();
+      input.value = '';
+    } else if (input) {
+      input.classList.add('is-invalid');
+      setTimeout(() => input.classList.remove('is-invalid'), 2000);
+    }
+  });
+}
+
+/* === 5. DESTINOS: Filtros por tipo === */
+const filtrosBtns = document.querySelectorAll('.filtro-btn');
+const destinoItems = document.querySelectorAll('.destino-item');
+const sinResultados = document.getElementById('sinResultados');
+
+function filtrarDestinos(filtro) {
+  let visibles = 0;
+  destinoItems.forEach(item => {
+    const tipo = item.dataset.tipo;
+    const mostrar = filtro === 'todos' || tipo === filtro;
+    item.classList.toggle('oculto', !mostrar);
+    if (mostrar) visibles++;
+  });
+  if (sinResultados) {
+    sinResultados.classList.toggle('d-none', visibles > 0);
+  }
+}
+
+filtrosBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    // Actualizar estado activo
+    filtrosBtns.forEach(b => {
+      b.classList.remove('active');
+      b.setAttribute('aria-pressed', 'false');
+    });
+    btn.classList.add('active');
+    btn.setAttribute('aria-pressed', 'true');
+
+    // Resetear continentes
+    document.querySelectorAll('.continente-card').forEach(c => c.classList.remove('active'));
+
+    // Limpiar buscador
+    const buscador = document.getElementById('buscadorDestinos');
+    if (buscador) buscador.value = '';
+
+    filtrarDestinos(btn.dataset.filtro);
+  });
+});
+
+/* === 6. DESTINOS: Buscador === */
+const buscadorDestinos = document.getElementById('buscadorDestinos');
+if (buscadorDestinos) {
+  buscadorDestinos.addEventListener('input', () => {
+    const query = buscadorDestinos.value.toLowerCase().trim();
+
+    // Resetear filtros activos visualmente
+    filtrosBtns.forEach(b => {
+      b.classList.remove('active');
+      b.setAttribute('aria-pressed', 'false');
+    });
+    const btnTodos = document.querySelector('.filtro-btn[data-filtro="todos"]');
+    if (btnTodos) {
+      btnTodos.classList.add('active');
+      btnTodos.setAttribute('aria-pressed', 'true');
+    }
+    document.querySelectorAll('.continente-card').forEach(c => c.classList.remove('active'));
+
+    let visibles = 0;
+    destinoItems.forEach(item => {
+      const nombre = item.dataset.nombre || '';
+      const mostrar = query === '' || nombre.includes(query);
+      item.classList.toggle('oculto', !mostrar);
+      if (mostrar) visibles++;
     });
 
-    // 2. ANIMACIÓN DE ENTRADA (Scroll Reveal)
-    // Hace que los elementos con .animate-on-scroll aparezcan suavemente
-    const animateElements = document.querySelectorAll('.animate-on-scroll');
-    
-    const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                revealObserver.unobserve(entry.target); // Solo anima una vez
-            }
-        });
-    }, { threshold: 0.15 });
+    if (sinResultados) {
+      sinResultados.classList.toggle('d-none', visibles > 0);
+    }
+  });
+}
 
-    animateElements.forEach(el => revealObserver.observe(el));
+/* === 7. DESTINOS: Filtro por continente === */
+const continenteCards = document.querySelectorAll('.continente-card');
+continenteCards.forEach(card => {
+  card.addEventListener('click', () => {
+    const continente = card.dataset.continente;
 
-    // 3. CONTADORES ANIMADOS (Sección Stats)
-    const statNumbers = document.querySelectorAll('.stat-number');
+    // Estado visual
+    continenteCards.forEach(c => c.classList.remove('active'));
+    card.classList.add('active');
 
-    const animarContador = (el) => {
-        const target = parseInt(el.dataset.target);
-        const duration = 2000; // 2 segundos de animación
-        const increment = target / (duration / 16);
-        let current = 0;
-
-        const updateCount = () => {
-            current += increment;
-            if (current < target) {
-                el.textContent = Math.floor(current).toLocaleString('es-ES') + '+';
-                requestAnimationFrame(updateCount);
-            } else {
-                el.textContent = target.toLocaleString('es-ES') + '+';
-            }
-        };
-        updateCount();
-    };
-
-    const statsObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                animarContador(entry.target);
-                statsObserver.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.5 });
-
-    statNumbers.forEach(num => statsObserver.observe(num));
-
-    // 4. NEWSLETTER (Validación y Toast)
-    const btnNewsletter = document.getElementById('btnNewsletter');
-    const inputNewsletter = document.getElementById('emailNewsletter');
-
-    if (btnNewsletter && inputNewsletter) {
-        btnNewsletter.addEventListener('click', () => {
-            const email = inputNewsletter.value;
-            
-            // Validación simple
-            if (email && inputNewsletter.checkValidity()) {
-                mostrarToastSuscripcion();
-                inputNewsletter.value = '';
-                inputNewsletter.classList.remove('is-invalid');
-            } else {
-                inputNewsletter.classList.add('is-invalid');
-                setTimeout(() => inputNewsletter.classList.remove('is-invalid'), 2500);
-            }
-        });
+    // Resetear filtros de tipo
+    filtrosBtns.forEach(b => {
+      b.classList.remove('active');
+      b.setAttribute('aria-pressed', 'false');
+    });
+    const btnTodos = document.querySelector('.filtro-btn[data-filtro="todos"]');
+    if (btnTodos) {
+      btnTodos.classList.add('active');
+      btnTodos.setAttribute('aria-pressed', 'true');
     }
 
-    // Función auxiliar para crear y mostrar el aviso de éxito
-    function mostrarToastSuscripcion() {
-        // Creamos el contenedor del Toast si no existe
-        let container = document.querySelector('.toast-container');
-        if (!container) {
-            container = document.createElement('div');
-            container.className = 'toast-container position-fixed bottom-0 end-0 p-3';
-            document.body.appendChild(container);
-        }
+    // Limpiar buscador
+    if (buscadorDestinos) buscadorDestinos.value = '';
 
-        const id = 'toast-' + Date.now();
-        container.innerHTML += `
-            <div id="${id}" class="toast align-items-center text-bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
-              <div class="d-flex">
-                <div class="toast-body">
-                  <i class="bi bi-check-circle-fill me-2"></i> ¡Gracias! Te has suscrito correctamente.
-                </div>
-                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Cerrar"></button>
-              </div>
-            </div>`;
+    // Filtrar
+    let visibles = 0;
+    destinoItems.forEach(item => {
+      const badge = item.querySelector('.card-continent-badge');
+      const continenteItem = badge ? badge.textContent.trim() : '';
+      const mostrar = continenteItem === continente;
+      item.classList.toggle('oculto', !mostrar);
+      if (mostrar) visibles++;
+    });
 
-        const element = document.getElementById(id);
-        const toast = new bootstrap.Toast(element, { delay: 4000 });
-        toast.show();
-        
-        // Limpiar el DOM cuando se oculte
-        element.addEventListener('hidden.bs.toast', () => element.remove());
+    if (sinResultados) {
+      sinResultados.classList.toggle('d-none', visibles > 0);
     }
+
+    // Scroll suave al grid
+    const grid = document.getElementById('gridDestinos');
+    if (grid) {
+      grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
 });
