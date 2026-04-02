@@ -272,59 +272,6 @@ p, a, button, input, textarea,
   opacity: 1;
 }
 
-
-/* ==============================================
-   CARRUSEL DE TESTIMONIOS
-   ============================================== */
-.testimonios-section {
-  background: linear-gradient(180deg, #060E21 0%, #0b1c2d 100%);
-}
-
-.testimonio-card {
-  max-width: 600px;
-  padding: 2rem 2.5rem 3rem;
-}
-
-.testimonio-avatar {
-  font-size: 2.5rem;
-}
-
-.testimonio-texto {
-  font-size: 1.05rem;
-  color: #d1e7dd;
-  line-height: 1.7;
-}
-
-.testimonio-estrellas {
-  color: #f4c430;
-  font-size: 1.1rem;
-  letter-spacing: 2px;
-}
-
-.testimonio-nombre {
-  color: #7ee2b8;
-  font-family: 'Voces', sans-serif;
-}
-
-/* Indicadores personalizados */
-#carruselTestimonios .carousel-indicators [data-bs-target] {
-  background-color: rgba(126, 226, 184, 0.3);
-  border-radius: 50%;
-  width: 10px;
-  height: 10px;
-  border: none;
-}
-
-#carruselTestimonios .carousel-indicators .active {
-  background-color: #2ecc71;
-}
-
-#carruselTestimonios .carousel-control-prev-icon,
-#carruselTestimonios .carousel-control-next-icon {
-  filter: invert(0.7) sepia(1) hue-rotate(90deg);
-}
-
-
 /* ==============================================
    SECCIÓN DE VÍDEO
    ============================================== */
@@ -536,4 +483,253 @@ footer p {
 .animate-on-scroll.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* ==============================================
+   AÑADIR AL FINAL DE ESTILOS.CSS
+   Estilos específicos de destinos.html
+   ============================================== */
+
+/* === Hero destinos (más bajo que el hero principal) === */
+.hero-destinos {
+  min-height: 55vh;
+  background: url('../multimedia_optimizado/img/hero-destinos.webp') center/cover no-repeat;
+}
+
+/* Buscador en el hero */
+.destinos-search-wrapper {
+  position: relative;
+}
+
+.destinos-search-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(126, 226, 184, 0.6);
+  font-size: 1rem;
+  pointer-events: none;
+}
+
+.destinos-search-input {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(126, 226, 184, 0.3);
+  color: #eafaf1;
+  padding-left: 2.8rem;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  height: 52px;
+  transition: border-color 0.3s, background 0.3s, box-shadow 0.3s;
+}
+
+.destinos-search-input::placeholder {
+  color: rgba(234, 250, 241, 0.35);
+}
+
+.destinos-search-input:focus {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #2ecc71;
+  box-shadow: 0 0 0 0.2rem rgba(46, 204, 113, 0.2);
+  color: #eafaf1;
+  outline: none;
+}
+
+/* === Carrusel destinos === */
+.carousel-img {
+  height: 600px;
+  object-fit: cover;
+}
+
+.carousel-item::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.carrusel-caption-custom {
+    z-index: 2;
+}
+
+/* Panel glassmorphism sobre el carrusel */
+.carrusel-glass {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 5%;
+  max-width: 400px;
+  background: rgba(6, 14, 33, 0.55);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(126, 226, 184, 0.25);
+  border-radius: 1rem;
+  padding: 1.4rem 1.6rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.carousel-tag {
+  background: rgba(46, 204, 113, 0.2);
+  border: 1px solid rgba(46, 204, 113, 0.45);
+  color: #7ee2b8;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 0.3rem 0.8rem;
+  border-radius: 50px;
+  display: inline-block;
+}
+
+.carousel-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.carousel-desc {
+  color: rgba(234, 250, 241, 0.85);
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+/* === Sección destinos grid === */
+.destinos-grid-section {
+  background: #060E21;
+}
+
+/* === Panel de filtros unificado === */
+.filtros-panel {
+  background: rgba(11, 28, 45, 0.7);
+  border: 1px solid rgba(46, 204, 113, 0.15);
+  border-radius: 1rem;
+  padding: 1.2rem 1.5rem;
+}
+
+.filtros-grupo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.filtros-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #7ee2b8;
+  min-width: 72px;
+  flex-shrink: 0;
+}
+
+.filtros-divider {
+  border-top: 1px solid rgba(126, 226, 184, 0.1);
+}
+
+/* Botones de filtro por tipo */
+.filtro-btn {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(46, 204, 113, 0.2);
+  color: #8aada0;
+  border-radius: 50px;
+  padding: 0.35rem 0.9rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.filtro-btn:hover {
+  border-color: rgba(46, 204, 113, 0.5);
+  color: #7ee2b8;
+  background: rgba(46, 204, 113, 0.08);
+}
+
+.filtro-btn.active {
+  background: linear-gradient(135deg, #2F8F6B, #1FA2A6);
+  border-color: transparent;
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(46, 204, 113, 0.3);
+}
+
+/* Botones de filtro por continente */
+.filtro-continente {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(126, 226, 184, 0.15);
+  color: #8aada0;
+  border-radius: 50px;
+  padding: 0.35rem 0.9rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.filtro-continente:hover {
+  border-color: rgba(126, 226, 184, 0.4);
+  color: #eafaf1;
+  background: rgba(126, 226, 184, 0.06);
+}
+
+.filtro-continente.active {
+  background: rgba(46, 204, 113, 0.15);
+  border-color: rgba(46, 204, 113, 0.5);
+  color: #7ee2b8;
+}
+
+.filtro-count {
+  background: rgba(46, 204, 113, 0.2);
+  color: #7ee2b8;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.05rem 0.4rem;
+  border-radius: 50px;
+}
+
+/* === Badge de continente en cards === */
+.card-body .badge {
+  background: #f5f7fa !important;
+  color: #2d3748 !important;
+  border: 1px solid #cbd5e0;
+  font-weight: 500;
+  font-size: 0.78rem;
+  padding: 0.35rem 0.65rem;
+  border-radius: 4px;
+  text-transform: none;
+}
+
+/* Items ocultos por filtro */
+.destino-item.oculto {
+  display: none;
+}
+
+/* === Modales === */
+.modal-subtitle {
+  font-size: 1rem;
+  color: #7ee2b8;
+  font-family: 'Voces', sans-serif;
+  margin-bottom: 0.75rem;
+}
+
+.modal-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.modal-lista li {
+  font-size: 0.93rem;
+  color: #d1e7dd;
+}
+
+.modal-alert {
+  background: rgba(46, 204, 113, 0.08);
+  border: 1px solid rgba(46, 204, 113, 0.25);
+  color: #d1e7dd;
+  border-radius: 0.75rem;
+  font-size: 0.9rem;
 }
