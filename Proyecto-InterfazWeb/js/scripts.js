@@ -148,14 +148,18 @@ if (buscadorDestinos) {
 }
 
 /* === 7. DESTINOS: Filtro por continente === */
-const continenteCards = document.querySelectorAll('.continente-card');
+const continenteCards = document.querySelectorAll('.filtro-continente');
 continenteCards.forEach(card => {
   card.addEventListener('click', () => {
     const continente = card.dataset.continente;
 
-    // Estado visual
-    continenteCards.forEach(c => c.classList.remove('active'));
+    // Estado visual continentes
+    continenteCards.forEach(c => {
+      c.classList.remove('active');
+      c.setAttribute('aria-pressed', 'false');
+    });
     card.classList.add('active');
+    card.setAttribute('aria-pressed', 'true');
 
     // Resetear filtros de tipo
     filtrosBtns.forEach(b => {
@@ -183,12 +187,6 @@ continenteCards.forEach(card => {
 
     if (sinResultados) {
       sinResultados.classList.toggle('d-none', visibles > 0);
-    }
-
-    // Scroll suave al grid
-    const grid = document.getElementById('gridDestinos');
-    if (grid) {
-      grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   });
 });
