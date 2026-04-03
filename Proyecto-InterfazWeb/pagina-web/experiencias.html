@@ -4,317 +4,575 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Experiencias sostenibles – DestinoGreen</title>
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="../multimedia-optimizado/img/logotipo.svg"
-    />
-    <meta
-      name="description"
-      content="Descubre experiencias únicas de turismo sostenible con DestinoGreen. Actividades responsables que conectan con la naturaleza y comunidades locales."
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&family=Voces&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="icon" type="image/svg+xml" href="../multimedia-optimizado/img/logotipo.svg" />
+    <meta name="description" content="Descubre experiencias únicas de turismo sostenible con DestinoGreen. Actividades responsables que conectan con la naturaleza y comunidades locales." />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&family=Voces&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="../css/custom.css" />
     <link rel="stylesheet" href="../css/estilos.css" />
   </head>
 
   <body>
-    <!-- Navbar -->
+
+    <!-- ===================== NAVBAR ===================== -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" aria-label="Navegación principal">
       <div class="container">
         <a class="navbar-brand logo-font d-flex align-items-center gap-2" href="index.html">
-          <img src="../multimedia-optimizado/img/logotipo.svg"
-            alt="Logo DestinoGreen" height="45" width="45"
-          />
+          <img src="../multimedia-optimizado/img/logotipo.svg" alt="Logo DestinoGreen" height="45" width="45" />
           DestinoGreen
         </a>
-        <button
-          class="navbar-toggler border-0"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#menu"
-          aria-controls="menu"
-          aria-expanded="false"
-          aria-label="Abrir menú"
-        >
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+          data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="menu">
           <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Inicio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="destinos.html">Destinos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="experiencias.html"
-                >Experiencias</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="sobre-nosotros.html">Sobre nosotros</a>
-            </li>
+            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="destinos.html">Destinos</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="experiencias.html">Experiencias</a></li>
+            <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre nosotros</a></li>
             <li class="nav-item ms-lg-3">
-              <a class="btn btn-primary btn-sm px-3" href="contacto.html"
-                >Reservar viaje</a
-              >
+              <a class="btn btn-primary btn-sm px-3" href="contacto.html">Reservar viaje</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <header class="hero text-center">
+    <!-- ===================== HERO ===================== -->
+    <header class="hero hero-experiencias d-flex align-items-center text-center" role="banner">
       <div class="container">
-        <h1>Experiencias que transforman</h1>
-        <p class="lead">
-          Actividades sostenibles que conectan con la naturaleza y apoyan
-          comunidades locales
+        <span class="hero-badge mb-3 d-inline-block">
+          <i class="bi bi-stars me-1"></i> Experiencias únicas
+        </span>
+        <h1 class="display-4 fw-bold mb-3">
+          Actividades que<br /><span class="text-accent">transforman tu viaje</span>
+        </h1>
+        <p class="lead hero-subtitle mb-4">
+          Cada experiencia está diseñada para conectar contigo,<br class="d-none d-md-block" />
+          con la naturaleza y con las comunidades que la cuidan.
         </p>
+        <div class="d-flex flex-wrap gap-3 justify-content-center">
+          <a href="#tipos" class="btn btn-primary btn-lg px-4">
+            <i class="bi bi-compass me-2"></i>Ver experiencias
+          </a>
+          <a href="contacto.html" class="btn btn-outline-light btn-lg px-4">
+            Reservar ahora
+          </a>
+        </div>
+        <div class="scroll-hint mt-5" aria-hidden="true">
+          <i class="bi bi-chevron-double-down"></i>
+        </div>
       </div>
     </header>
 
-    <!-- Sección de Tipos de Experiencias -->
-    <section class="py-5">
+    <!-- ===================== CARRUSEL DE FOTOS ===================== -->
+    <section class="py-5" aria-labelledby="carrusel-titulo">
       <div class="container">
-        <h2 class="text-center mb-5">Tipos de experiencias</h2>
+        <div class="section-header text-center mb-4 animate-on-scroll">
+          <span class="section-tag">Galería</span>
+          <h2 id="carrusel-titulo" class="mt-2">Momentos reales de nuestros viajeros</h2>
+          <p class="text-muted">Imágenes auténticas de experiencias vividas con DestinoGreen.</p>
+        </div>
 
-        <div class="row g-4">
-          <div class="col-md-4">
-            <div class="card h-100 border-0 shadow-sm">
-              <div class="card-body text-center p-4">
-                <div class="mb-3">
-                  <i class="fas fa-tree fa-3x text-success"></i>
-                </div>
-                <h3 class="card-title">Ecoaventura</h3>
-                <p class="card-text">
-                  Senderismo, observación de fauna, kayak y actividades al aire
-                  libre con mínimo impacto ambiental.
-                </p>
-                <a href="#" class="btn btn-outline-success">Ver actividades</a>
+        <div id="carruselExperiencias" class="carousel slide animate-on-scroll" data-bs-ride="carousel" data-bs-interval="3500" aria-label="Galería de experiencias">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carruselExperiencias" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Foto 1"></button>
+            <button type="button" data-bs-target="#carruselExperiencias" data-bs-slide-to="1" aria-label="Foto 2"></button>
+            <button type="button" data-bs-target="#carruselExperiencias" data-bs-slide-to="2" aria-label="Foto 3"></button>
+            <button type="button" data-bs-target="#carruselExperiencias" data-bs-slide-to="3" aria-label="Foto 4"></button>
+          </div>
+
+          <div class="carousel-inner rounded-4 overflow-hidden">
+            <div class="carousel-item active">
+              <img src="../multimedia-optimizado/img/experiencias/carrusel/senderismo.webp"
+                class="d-block w-100 exp-carousel-img"
+                alt="Grupo haciendo senderismo en un bosque tropical"
+                loading="lazy" />
+              <div class="carrusel-glass d-none d-md-flex flex-column align-items-start">
+                <span class="carousel-tag mb-2">🥾 Ecoaventura</span>
+                <h3 class="carousel-title">Senderismo en Monteverde</h3>
+                <p class="carousel-desc">Costa Rica · Grupos reducidos · Guía local certificado</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="../multimedia-optimizado/img/experiencias/carrusel/comunidad.webp"
+                class="d-block w-100 exp-carousel-img"
+                alt="Viajeros conviviendo con una comunidad local"
+                loading="lazy" />
+              <div class="carrusel-glass d-none d-md-flex flex-column align-items-start">
+                <span class="carousel-tag mb-2">🤝 Turismo comunitario</span>
+                <h3 class="carousel-title">Convivencia con familias Mapuche</h3>
+                <p class="carousel-desc">Chile · Inmersión cultural · Apoyo directo a la comunidad</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="../multimedia-optimizado/img/experiencias/carrusel/gastronomia.webp"
+                class="d-block w-100 exp-carousel-img"
+                alt="Taller de gastronomía local con productos orgánicos"
+                loading="lazy" />
+              <div class="carrusel-glass d-none d-md-flex flex-column align-items-start">
+                <span class="carousel-tag mb-2">🍽️ Gastronomía</span>
+                <h3 class="carousel-title">Taller de cocina tradicional</h3>
+                <p class="carousel-desc">Portugal · Productos km 0 · Recetas ancestrales</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="../multimedia-optimizado/img/experiencias/carrusel/fauna.webp"
+                class="d-block w-100 exp-carousel-img"
+                alt="Observación de fauna salvaje en su hábitat natural"
+                loading="lazy" />
+              <div class="carrusel-glass d-none d-md-flex flex-column align-items-start">
+                <span class="carousel-tag mb-2">🦁 Safari ético</span>
+                <h3 class="carousel-title">Observación de fauna en Kenia</h3>
+                <p class="carousel-desc">Kenia · Sin interferir en el hábitat · Conservación activa</p>
               </div>
             </div>
           </div>
 
-          <div class="col-md-4">
-            <div class="card h-100 border-0 shadow-sm">
-              <div class="card-body text-center p-4">
-                <div class="mb-3">
-                  <i class="fas fa-hands-helping fa-3x text-primary"></i>
-                </div>
-                <h3 class="card-title">Turismo Comunitario</h3>
-                <p class="card-text">
-                  Vive con familias locales, aprende tradiciones y apoya
-                  proyectos de desarrollo sostenible.
-                </p>
-                <a href="#" class="btn btn-outline-primary"
-                  >Conocer comunidades</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="card h-100 border-0 shadow-sm">
-              <div class="card-body text-center p-4">
-                <div class="mb-3">
-                  <i class="fas fa-utensils fa-3x text-warning"></i>
-                </div>
-                <h3 class="card-title">Gastronomía Local</h3>
-                <p class="card-text">
-                  Degusta productos orgánicos, cocina tradicional y apoya
-                  agricultores locales.
-                </p>
-                <a href="#" class="btn btn-outline-warning"
-                  >Descubrir sabores</a
-                >
-              </div>
-            </div>
-          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carruselExperiencias" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carruselExperiencias" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+          </button>
         </div>
       </div>
     </section>
 
-    <!-- Sección de Reseñas -->
-    <section class="py-5">
+    <!-- ===================== TIPOS DE EXPERIENCIAS ===================== -->
+    <section class="py-5 exp-tipos-section" id="tipos" aria-labelledby="tipos-titulo">
       <div class="container">
-        <h2 class="text-center mb-5">Lo que dicen nuestros viajeros</h2>
 
-        <div class="row g-4">
-          <div class="col-md-4">
-            <div class="card h-100 border-0 shadow">
-              <div class="card-body">
-                <div class="d-flex align-items-center mb-3">
-                  <div class="flex-shrink-0">
-                    <div
-                      class="avatar rounded-circle bg-primary text-white d-flex align-items-center justify-content-center"
-                      style="width: 60px; height: 60px"
-                    >
-                      <span class="fs-3">M</span>
-                    </div>
-                  </div>
-                  <div class="flex-grow-1 ms-3">
-                    <h5 class="mb-0 text-light">María Rodríguez</h5>
-                    <div class="text-warning">
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                    </div>
-                  </div>
-                </div>
-                <p class="card-text">
-                  "El viaje a Costa Rica fue increíble. No solo disfrutamos de
-                  la naturaleza, sino que aprendimos sobre conservación y
-                  apoyamos directamente a una comunidad indígena. ¡Volveré!"
-                </p>
-                <small class="text-muted"
-                  >Viajó en junio 2025 - Costa Rica</small
-                >
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="card h-100 border-0 shadow">
-              <div class="card-body">
-                <div class="d-flex align-items-center mb-3">
-                  <div class="flex-shrink-0">
-                    <div
-                      class="avatar rounded-circle bg-success text-white d-flex align-items-center justify-content-center"
-                      style="width: 60px; height: 60px"
-                    >
-                      <span class="fs-3">C</span>
-                    </div>
-                  </div>
-                  <div class="flex-grow-1 ms-3">
-                    <h5 class="mb-0 text-light">Carlos Méndez</h5>
-                    <div class="text-warning">
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star-half-alt"></i>
-                    </div>
-                  </div>
-                </div>
-                <p class="card-text">
-                  "La experiencia en Islandia fue única. Los guías locales nos
-                  enseñaron sobre energías renovables y cómo proteger estos
-                  frágiles ecosistemas. Un viaje que cambia tu perspectiva."
-                </p>
-                <small class="text-muted"
-                  >Viajó en agosto 2025 - Islandia</small
-                >
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="card h-100 border-0 shadow">
-              <div class="card-body">
-                <div class="d-flex align-items-center mb-3">
-                  <div class="flex-shrink-0">
-                    <div
-                      class="avatar rounded-circle bg-info text-white d-flex align-items-center justify-content-center"
-                      style="width: 60px; height: 60px"
-                    >
-                      <span class="fs-3">A</span>
-                    </div>
-                  </div>
-                  <div class="flex-grow-1 ms-3">
-                    <h5 class="mb-0 text-light">Ana García</h5>
-                    <div class="text-warning">
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                    </div>
-                  </div>
-                </div>
-                <p class="card-text">
-                  "Portugal nos sorprendió con su compromiso con el turismo
-                  sostenible. Desde alojamientos eco-friendly hasta restaurantes
-                  con productos locales. ¡Una experiencia auténtica y
-                  responsable!"
-                </p>
-                <small class="text-muted"
-                  >Viajó en septiembre 2025 - Portugal</small
-                >
-              </div>
-            </div>
-          </div>
+        <div class="section-header text-center mb-5 animate-on-scroll">
+          <span class="section-tag">Explora</span>
+          <h2 id="tipos-titulo" class="mt-2">Tipos de experiencias</h2>
+          <p class="text-muted">Elige la que más conecte contigo. Todas están diseñadas para dejar huella positiva.</p>
         </div>
 
-        <div class="text-center mt-4">
-          <a href="contacto.html" class="btn btn-primary btn-lg"
-            >Compartir tu experiencia</a
-          >
+        <!-- Tabs -->
+        <ul class="nav nav-tabs justify-content-center mb-4 animate-on-scroll" id="experienciasTabs" role="tablist" aria-label="Tipos de experiencias">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="tab-ecoaventura" data-bs-toggle="tab"
+              data-bs-target="#ecoaventura" type="button" role="tab"
+              aria-controls="ecoaventura" aria-selected="true">
+              🥾 Ecoaventura
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="tab-comunitario" data-bs-toggle="tab"
+              data-bs-target="#comunitario" type="button" role="tab"
+              aria-controls="comunitario" aria-selected="false">
+              🤝 Comunitario
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="tab-gastronomia" data-bs-toggle="tab"
+              data-bs-target="#gastronomia" type="button" role="tab"
+              aria-controls="gastronomia" aria-selected="false">
+              🍽️ Gastronomía
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="tab-conservacion" data-bs-toggle="tab"
+              data-bs-target="#conservacion" type="button" role="tab"
+              aria-controls="conservacion" aria-selected="false">
+              🌱 Conservación
+            </button>
+          </li>
+        </ul>
+
+        <!-- Tab content -->
+        <div class="tab-content animate-on-scroll" id="experienciasTabContent">
+
+          <!-- ECOAVENTURA -->
+          <div class="tab-pane fade show active" id="ecoaventura" role="tabpanel" aria-labelledby="tab-ecoaventura">
+            <div class="row g-4 align-items-center">
+              <div class="col-lg-5">
+                <div class="exp-tab-img-wrapper">
+                  <img src="../multimedia-optimizado/img/experiencias/tabs/ecoaventura.webp"
+                    alt="Senderismo y kayak en entornos naturales protegidos"
+                    class="exp-tab-img rounded-4"
+                    loading="lazy" width="500" height="360" />
+                  <div class="exp-tab-img-badge">
+                    <i class="bi bi-shield-check me-1"></i> Bajo impacto ambiental
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-7">
+                <span class="section-tag mb-3 d-inline-block">Actividades al aire libre</span>
+                <h3 class="mb-3">Ecoaventura</h3>
+                <p class="text-muted mb-4">Vive la naturaleza desde dentro con actividades de mínimo impacto ambiental. Cada ruta, cada inmersión y cada excursión está planificada con guías locales que conocen y cuidan el entorno.</p>
+                <div class="row g-3 mb-4">
+                  <div class="col-sm-6">
+                    <div class="exp-feature-item">
+                      <i class="bi bi-arrow-right-circle-fill text-success me-2"></i>
+                      Senderismo guiado en bosques primarios
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="exp-feature-item">
+                      <i class="bi bi-arrow-right-circle-fill text-success me-2"></i>
+                      Kayak y actividades acuáticas sostenibles
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="exp-feature-item">
+                      <i class="bi bi-arrow-right-circle-fill text-success me-2"></i>
+                      Observación de flora y fauna local
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="exp-feature-item">
+                      <i class="bi bi-arrow-right-circle-fill text-success me-2"></i>
+                      Escalada y rappel en zonas permitidas
+                    </div>
+                  </div>
+                </div>
+                <a href="contacto.html" class="btn btn-primary px-4">
+                  Reservar ecoaventura <i class="bi bi-arrow-right ms-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- TURISMO COMUNITARIO -->
+          <div class="tab-pane fade" id="comunitario" role="tabpanel" aria-labelledby="tab-comunitario">
+            <div class="row g-4 align-items-center">
+              <div class="col-lg-5">
+                <div class="exp-tab-img-wrapper">
+                  <img src="../multimedia-optimizado/img/experiencias/tabs/comunitario.webp"
+                    alt="Convivencia auténtica con comunidades locales"
+                    class="exp-tab-img rounded-4"
+                    loading="lazy" width="500" height="360" />
+                  <div class="exp-tab-img-badge">
+                    <i class="bi bi-heart-fill me-1"></i> Impacto social directo
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-7">
+                <span class="section-tag mb-3 d-inline-block">Conexión humana</span>
+                <h3 class="mb-3">Turismo Comunitario</h3>
+                <p class="text-muted mb-4">La experiencia más transformadora que puedes tener: vivir con familias locales, aprender sus tradiciones y contribuir directamente a su bienestar. El viaje que te cambia por dentro.</p>
+                <div class="row g-3 mb-4">
+                  <div class="col-sm-6">
+                    <div class="exp-feature-item">
+                      <i class="bi bi-arrow-right-circle-fill text-success me-2"></i>
+                      Estancia con familias locales certificadas
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="exp-feature-item">
+                      <i class="bi bi-arrow-right-circle-fill text-success me-2"></i>
+                      Talleres de artesanía y cultura ancestral
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="exp-feature-item">
+                      <i class="bi bi-arrow-right-circle-fill text-success me-2"></i>
+                      Voluntariado en proyectos locales
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="exp-feature-item">
+                      <i class="bi bi-arrow-right-circle-fill text-success me-2"></i>
+                      Clases de lenguas e idiomas locales
+                    </div>
+                  </div>
+                </div>
+                <a href="contacto.html" class="btn btn-primary px-4">
+                  Reservar experiencia comunitaria <i class="bi bi-arrow-right ms-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- GASTRONOMÍA -->
+          <div class="tab-pane fade" id="gastronomia" role="tabpanel" aria-labelledby="tab-gastronomia">
+            <div class="row g-4 align-items-center">
+              <div class="col-lg-5">
+                <div class="exp-tab-img-wrapper">
+                  <img src="../multimedia-optimizado/img/experiencias/tabs/gastronomia.webp"
+                    alt="Taller de cocina con productos orgánicos y locales"
+                    class="exp-tab-img rounded-4"
+                    loading="lazy" width="500" height="360" />
+                  <div class="exp-tab-img-badge">
+                    <i class="bi bi-geo-alt-fill me-1"></i> Productos km 0
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-7">
+                <span class="section-tag mb-3 d-inline-block">Sabores auténticos</span>
+                <h3 class="mb-3">Gastronomía Local</h3>
+                <p class="text-muted mb-4">La cocina es cultura. Cada plato cuenta la historia de un pueblo, sus ingredientes y su relación con la tierra. Aprende a cocinar con productores locales y descubre sabores que no encontrarás en ningún otro sitio.</p>
+                <div class="row g-3 mb-4">
+                  <div class="col-sm-6">
+                    <div class="exp-feature-item">
+                      <i class="bi bi-arrow-right-circle-fill text-success me-2"></i>
+                      Talleres de cocina tradicional
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="exp-feature-item">
+                      <i class="bi bi-arrow-right-circle-fill text-success me-2"></i>
+                      Visitas a mercados locales y agricultores
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="exp-feature-item">
+                      <i class="bi bi-arrow-right-circle-fill text-success me-2"></i>
+                      Rutas de degustación de productos orgánicos
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="exp-feature-item">
+                      <i class="bi bi-arrow-right-circle-fill text-success me-2"></i>
+                      Maridajes con vinos y bebidas artesanales
+                    </div>
+                  </div>
+                </div>
+                <a href="contacto.html" class="btn btn-primary px-4">
+                  Reservar experiencia gastronómica <i class="bi bi-arrow-right ms-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- CONSERVACIÓN -->
+          <div class="tab-pane fade" id="conservacion" role="tabpanel" aria-labelledby="tab-conservacion">
+            <div class="row g-4 align-items-center">
+              <div class="col-lg-5">
+                <div class="exp-tab-img-wrapper">
+                  <img src="../multimedia-optimizado/img/experiencias/tabs/conservacion.webp"
+                    alt="Voluntariado en proyectos de conservación natural"
+                    class="exp-tab-img rounded-4"
+                    loading="lazy" width="500" height="360" />
+                  <div class="exp-tab-img-badge">
+                    <i class="bi bi-tree-fill me-1"></i> Impacto ambiental real
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-7">
+                <span class="section-tag mb-3 d-inline-block">Actúa por el planeta</span>
+                <h3 class="mb-3">Conservación activa</h3>
+                <p class="text-muted mb-4">No solo observas: participas. Desde plantar árboles hasta monitorear especies en peligro, estas experiencias te convierten en parte de la solución. El turismo más significativo que existe.</p>
+                <div class="row g-3 mb-4">
+                  <div class="col-sm-6">
+                    <div class="exp-feature-item">
+                      <i class="bi bi-arrow-right-circle-fill text-success me-2"></i>
+                      Reforestación con especies nativas
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="exp-feature-item">
+                      <i class="bi bi-arrow-right-circle-fill text-success me-2"></i>
+                      Monitoreo de fauna en peligro
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="exp-feature-item">
+                      <i class="bi bi-arrow-right-circle-fill text-success me-2"></i>
+                      Limpieza de playas y ríos
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="exp-feature-item">
+                      <i class="bi bi-arrow-right-circle-fill text-success me-2"></i>
+                      Restauración de arrecifes de coral
+                    </div>
+                  </div>
+                </div>
+                <a href="contacto.html" class="btn btn-primary px-4">
+                  Unirme a un proyecto <i class="bi bi-arrow-right ms-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
 
-    <!-- Sección de Beneficios -->
-    <section class="py-5 bg-dark text-light">
+    <!-- ===================== RESEÑAS EN CARRUSEL ===================== -->
+    <section class="py-5 resenas-section" aria-labelledby="resenas-titulo">
       <div class="container">
-        <h2 class="text-center mb-5">Nuestro compromiso sostenible</h2>
 
-        <div class="row g-4">
-          <div class="col-md-4 text-center">
-            <div class="mb-3">
-              <i class="fas fa-leaf fa-3x"></i>
-            </div>
-            <h3>Compensación de Carbono</h3>
-            <p>
-              Compensamos el 100% de las emisiones de carbono de todos nuestros
-              viajes mediante proyectos de reforestación certificados.
-            </p>
+        <div class="section-header text-center mb-5 animate-on-scroll">
+          <span class="section-tag">Opiniones</span>
+          <h2 id="resenas-titulo" class="mt-2">Lo que dicen nuestros viajeros</h2>
+          <p class="text-muted">Experiencias reales de personas que eligieron viajar de forma responsable.</p>
+        </div>
+
+        <div id="carruselResenas" class="carousel slide animate-on-scroll" data-bs-ride="carousel" data-bs-interval="5000" aria-label="Carrusel de reseñas de viajeros">
+
+          <div class="carousel-indicators resenas-indicators">
+            <button type="button" data-bs-target="#carruselResenas" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Reseña 1"></button>
+            <button type="button" data-bs-target="#carruselResenas" data-bs-slide-to="1" aria-label="Reseña 2"></button>
+            <button type="button" data-bs-target="#carruselResenas" data-bs-slide-to="2" aria-label="Reseña 3"></button>
           </div>
 
-          <div class="col-md-4 text-center">
-            <div class="mb-3">
-              <i class="fas fa-hand-holding-heart fa-3x"></i>
+          <div class="carousel-inner">
+
+            <div class="carousel-item active">
+              <div class="resena-card mx-auto">
+                <div class="resena-comillas" aria-hidden="true">"</div>
+                <p class="resena-texto">
+                  El viaje a Costa Rica fue increíble. No solo disfrutamos de la naturaleza, sino que aprendimos sobre conservación y apoyamos directamente a una comunidad indígena. Una experiencia que te cambia la perspectiva del turismo para siempre.
+                </p>
+                <div class="resena-estrellas mb-3" aria-label="5 de 5 estrellas">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                </div>
+                <div class="d-flex align-items-center justify-content-center gap-3">
+                  <div class="resena-avatar">M</div>
+                  <div class="text-start">
+                    <div class="resena-nombre">María Rodríguez</div>
+                    <div class="resena-meta">Viajó en junio 2025 · Costa Rica</div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <h3>Apoyo Comunitario</h3>
-            <p>
-              El 15% de nuestros ingresos se destina directamente a proyectos de
-              desarrollo sostenible en las comunidades que visitamos.
-            </p>
+
+            <div class="carousel-item">
+              <div class="resena-card mx-auto">
+                <div class="resena-comillas" aria-hidden="true">"</div>
+                <p class="resena-texto">
+                  La experiencia en Islandia fue única. Los guías locales nos enseñaron sobre energías renovables y cómo proteger estos frágiles ecosistemas. Volver a casa con esa conciencia ambiental es el mejor souvenir que te puedes llevar.
+                </p>
+                <div class="resena-estrellas mb-3" aria-label="5 de 5 estrellas">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-half"></i>
+                </div>
+                <div class="d-flex align-items-center justify-content-center gap-3">
+                  <div class="resena-avatar" style="background: linear-gradient(135deg, #2F8F6B, #1FA2A6);">C</div>
+                  <div class="text-start">
+                    <div class="resena-nombre">Carlos Méndez</div>
+                    <div class="resena-meta">Viajó en agosto 2025 · Islandia</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="resena-card mx-auto">
+                <div class="resena-comillas" aria-hidden="true">"</div>
+                <p class="resena-texto">
+                  Portugal nos sorprendió con su compromiso real con el turismo sostenible. Desde alojamientos eco-friendly hasta restaurantes con productos de la huerta propia. Nada de greenwashing, todo auténtico y responsable.
+                </p>
+                <div class="resena-estrellas mb-3" aria-label="5 de 5 estrellas">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                </div>
+                <div class="d-flex align-items-center justify-content-center gap-3">
+                  <div class="resena-avatar" style="background: linear-gradient(135deg, #1FA2A6, #1a7a8c);">A</div>
+                  <div class="text-start">
+                    <div class="resena-nombre">Ana García</div>
+                    <div class="resena-meta">Viajó en septiembre 2025 · Portugal</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
 
-          <div class="col-md-4 text-center">
-            <div class="mb-3">
-              <i class="fas fa-recycle fa-3x"></i>
-            </div>
-            <h3>Prácticas Eco-friendly</h3>
-            <p>
-              Trabajamos exclusivamente con proveedores que cumplen estándares
-              ambientales y sociales rigurosos.
-            </p>
-          </div>
+          <button class="carousel-control-prev resenas-control" type="button" data-bs-target="#carruselResenas" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button class="carousel-control-next resenas-control" type="button" data-bs-target="#carruselResenas" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+          </button>
+
+        </div>
+
+        <div class="text-center mt-5 animate-on-scroll">
+          <a href="contacto.html" class="btn btn-outline-success px-4">
+            <i class="bi bi-pencil me-2"></i>Compartir tu experiencia
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================== CTA FINAL ===================== -->
+    <section class="py-5 cta-section text-center" aria-labelledby="cta-exp-titulo">
+      <div class="container">
+        <div class="cta-inner animate-on-scroll">
+          <span class="section-tag">¿Listo para empezar?</span>
+          <h2 id="cta-exp-titulo" class="mt-2 mb-3">Tu próxima experiencia te espera</h2>
+          <p class="lead mb-4 text-muted">Cuéntanos qué tipo de viaje buscas y diseñamos una experiencia sostenible a tu medida.</p>
+          <a href="contacto.html" class="btn btn-primary btn-lg px-5">
+            <i class="bi bi-send me-2"></i>Contactar ahora
+          </a>
         </div>
       </div>
     </section>
 
-    <footer class="py-4 text-center">
-      <p>&copy; 2026 DestinoGreen – Viajes responsables</p>
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="py-5" role="contentinfo">
+      <div class="container">
+        <div class="row g-4 mb-4">
+          <div class="col-md-4">
+            <a class="navbar-brand logo-font d-flex align-items-center gap-2 mb-3" href="index.html">
+              <img src="../multimedia-optimizado/img/logotipo.svg" alt="DestinoGreen" height="36" width="36" />
+              DestinoGreen
+            </a>
+            <p class="small">Agencia de turismo sostenible comprometida con el planeta y las comunidades locales.</p>
+          </div>
+          <div class="col-md-2 offset-md-1">
+            <h4 class="footer-heading">Navegación</h4>
+            <ul class="list-unstyled footer-links">
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="destinos.html">Destinos</a></li>
+              <li><a href="experiencias.html">Experiencias</a></li>
+              <li><a href="sobre.html">Sobre nosotros</a></li>
+              <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+          </div>
+          <div class="col-md-2">
+            <h4 class="footer-heading">Legal</h4>
+            <ul class="list-unstyled footer-links">
+              <li><a href="#">Privacidad</a></li>
+              <li><a href="#">Aviso legal</a></li>
+              <li><a href="#">Cookies</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h4 class="footer-heading">Síguenos</h4>
+            <div class="d-flex gap-3 mt-2">
+              <a href="#" class="footer-social" aria-label="Instagram de DestinoGreen">
+                <img src="../multimedia-optimizado/icons/insta.svg" alt="" aria-hidden="true" height="32" width="32" />
+              </a>
+              <a href="#" class="footer-social" aria-label="LinkedIn de DestinoGreen">
+                <img src="../multimedia-optimizado/icons/linkedin.svg" alt="" aria-hidden="true" height="32" width="32" />
+              </a>
+              <a href="#" class="footer-social" aria-label="GitHub de DestinoGreen">
+                <img src="../multimedia-optimizado/icons/github.svg" alt="" aria-hidden="true" height="32" width="32" />
+              </a>
+            </div>
+          </div>
+        </div>
+        <hr class="footer-divider" />
+        <p class="text-center small mb-0">&copy; 2026 DestinoGreen – Todos los derechos reservados</p>
+      </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../js/scripts.js"></script>
+
   </body>
 </html>

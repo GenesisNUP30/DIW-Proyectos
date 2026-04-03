@@ -734,3 +734,185 @@ footer p {
   font-size: 0.9rem;
 }
 
+/* ==============================================
+   AÑADIR AL FINAL DE ESTILOS.CSS
+   Estilos específicos de experiencias.html
+   ============================================== */
+
+/* === Hero experiencias === */
+.hero-experiencias {
+  min-height: 80vh;
+  background: url('../multimedia_optimizado/img/hero-experiencias.webp') center/cover no-repeat;
+}
+
+/* === Carrusel de fotos === */
+.exp-carousel-img {
+  height: 480px;
+  object-fit: cover;
+}
+
+/* === Sección tipos === */
+.exp-tipos-section {
+  background: linear-gradient(180deg, #060E21 0%, #0b1c2d 100%);
+}
+
+/* Tabs de experiencias */
+#experienciasTabs {
+  border-bottom: 1px solid rgba(46, 204, 113, 0.15);
+  gap: 0.25rem;
+}
+
+#experienciasTabs .nav-link {
+  color: #8aada0;
+  background: transparent;
+  border: none;
+  border-bottom: 3px solid transparent;
+  font-weight: 600;
+  font-size: 0.92rem;
+  padding: 0.6rem 1.1rem;
+  border-radius: 0;
+  transition: color 0.3s, border-color 0.3s;
+}
+
+#experienciasTabs .nav-link:hover {
+  color: #7ee2b8;
+}
+
+#experienciasTabs .nav-link.active {
+  color: #ffffff;
+  border-bottom: 3px solid #2ecc71;
+  background: transparent;
+}
+
+/* Imagen dentro del tab */
+.exp-tab-img-wrapper {
+  position: relative;
+}
+
+.exp-tab-img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  display: block;
+}
+
+.exp-tab-img-badge {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  background: rgba(6, 14, 33, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(46, 204, 113, 0.3);
+  color: #7ee2b8;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.35rem 0.8rem;
+  border-radius: 50px;
+}
+
+/* Lista de features dentro del tab */
+.exp-feature-item {
+  font-size: 0.9rem;
+  color: #d1e7dd;
+  padding: 0.4rem 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.2rem;
+}
+
+/* === Sección reseñas === */
+.resenas-section {
+  background: linear-gradient(180deg, #0b1c2d 0%, #060E21 100%);
+}
+
+.resena-card {
+  max-width: 680px;
+  background: rgba(11, 28, 45, 0.6);
+  border: 1px solid rgba(46, 204, 113, 0.15);
+  border-radius: 1.2rem;
+  padding: 2.5rem 2.5rem 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.resena-comillas {
+  font-family: 'Voces', serif;
+  font-size: 5rem;
+  line-height: 1;
+  color: rgba(46, 204, 113, 0.2);
+  position: absolute;
+  top: 0.5rem;
+  left: 1.5rem;
+  pointer-events: none;
+  user-select: none;
+}
+
+.resena-texto {
+  font-size: 1.05rem;
+  color: #d1e7dd;
+  line-height: 1.75;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+
+.resena-estrellas {
+  color: #f4c430;
+  font-size: 1rem;
+  letter-spacing: 3px;
+}
+
+.resena-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2F8F6B, #2ecc71);
+  color: #ffffff;
+  font-size: 1.3rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-family: 'Voces', sans-serif;
+}
+
+.resena-nombre {
+  font-weight: 700;
+  color: #eafaf1;
+  font-size: 0.95rem;
+}
+
+.resena-meta {
+  color: #7ee2b8;
+  font-size: 0.8rem;
+}
+
+/* Indicadores del carrusel de reseñas */
+.resenas-indicators {
+  position: static;
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+}
+
+.resenas-indicators [data-bs-target] {
+  background-color: rgba(126, 226, 184, 0.3);
+  border-radius: 50%;
+  width: 9px;
+  height: 9px;
+  border: none;
+}
+
+.resenas-indicators .active {
+  background-color: #2ecc71;
+}
+
+/* Controles carrusel reseñas: más discretos */
+.resenas-control {
+  width: 2.5rem;
+  opacity: 0.4;
+  transition: opacity 0.3s;
+}
+
+.resenas-control:hover {
+  opacity: 0.9;
+}
