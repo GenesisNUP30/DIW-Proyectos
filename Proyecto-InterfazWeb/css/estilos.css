@@ -735,7 +735,6 @@ footer p {
 }
 
 /* ==============================================
-   AÑADIR AL FINAL DE ESTILOS.CSS
    Estilos específicos de experiencias.html
    ============================================== */
 
@@ -915,4 +914,115 @@ footer p {
 
 .resenas-control:hover {
   opacity: 0.9;
+}
+
+/* ==============================================
+   SOBRE NOSOTROS
+   ============================================== */
+ 
+/* Hero sobre */
+.hero-sobre {
+  min-height: 70vh;
+  background: url('../multimedia_optimizado/img/hero-sobre.webp') center/cover no-repeat;
+}
+ 
+/* Tarjetas de datos (año, países...) */
+.sobre-dato-card {
+  background: rgba(11, 28, 45, 0.7);
+  border: 1px solid rgba(46, 204, 113, 0.15);
+  border-radius: 0.85rem;
+  transition: border-color 0.3s, transform 0.3s;
+}
+ 
+.sobre-dato-card:hover {
+  border-color: rgba(46, 204, 113, 0.4);
+  transform: translateY(-3px);
+}
+ 
+.sobre-dato-num {
+  font-family: 'Voces', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #7ee2b8;
+  line-height: 1.1;
+}
+ 
+.sobre-dato-label {
+  font-size: 0.78rem;
+  color: #8aada0;
+  margin-top: 0.25rem;
+}
+ 
+/* Imagen con badge */
+.sobre-img-wrapper {
+  position: relative;
+}
+ 
+.sobre-img {
+  width: 100%;
+  height: 440px;
+  object-fit: cover;
+}
+ 
+.sobre-img-badge {
+  position: absolute;
+  bottom: 1.2rem;
+  left: 1.2rem;
+  background: rgba(6, 14, 33, 0.75);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(46, 204, 113, 0.3);
+  color: #eafaf1;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+}
+ 
+/* Sección filosofía */
+.sobre-filosofia-section {
+  background: linear-gradient(180deg, #060E21 0%, #0b1c2d 100%);
+}
+ 
+/* Wrapper del iframe YouTube */
+.sobre-video-wrapper {
+  border: 1px solid rgba(46, 204, 113, 0.2);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+}
+ 
+/* Acordeón FAQ */
+.sobre-accordion {
+  border-top: 1px solid rgba(46, 204, 113, 0.1);
+}
+ 
+.sobre-accordion .accordion-item {
+  border: none;
+  border-bottom: 1px solid rgba(46, 204, 113, 0.1);
+  background: transparent;
+}
+ 
+.sobre-accordion .accordion-button {
+  background: transparent;
+  color: #eafaf1;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 1.1rem 0;
+  box-shadow: none;
+}
+ 
+.sobre-accordion .accordion-button:not(.collapsed) {
+  color: #7ee2b8;
+  background: transparent;
+  box-shadow: none;
+}
+ 
+.sobre-accordion .accordion-button::after {
+  filter: invert(0.7) sepia(1) hue-rotate(100deg);
+}
+ 
+.sobre-accordion .accordion-body {
+  background: transparent;
+  color: #8aada0;
+  font-size: 0.93rem;
+  line-height: 1.7;
+  padding: 0 0 1.2rem 0;
 }
