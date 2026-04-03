@@ -75,9 +75,9 @@ p, a, button, input, textarea,
    HERO
    ============================================== */
 .hero {
-  min-height: 90vh;
+  min-height: 100vh;
   position: relative;
-  background: url('../multimedia_optimizado/img/hero.webp') center/cover no-repeat;
+  background: url('../multimedia-optimizado/img/index/portada.webp') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
