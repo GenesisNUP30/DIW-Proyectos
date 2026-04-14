@@ -1005,7 +1005,7 @@ footer p {
  
 /* Hero contacto */
 .hero-contacto {
-  min-height: 60vh;
+  min-height: 100vh;
   background: url('../multimedia-optimizado/img/contacto/hero-contacto.webp') center/cover no-repeat;
 }
  

@@ -52,6 +52,7 @@ const statsObserver = new IntersectionObserver((entries) => {
 document.querySelectorAll('.stat-number').forEach(el => statsObserver.observe(el));
 
 /* === 4. Newsletter toast (index) === */
+//TODO: crear funcion para menejar errores al suscribirse
 const btnNewsletter = document.getElementById('btnNewsletter');
 if (btnNewsletter) {
   btnNewsletter.addEventListener('click', () => {
