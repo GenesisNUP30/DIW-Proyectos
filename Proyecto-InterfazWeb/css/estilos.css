@@ -492,8 +492,8 @@ footer p {
 
 /* === Hero destinos (más bajo que el hero principal) === */
 .hero-destinos {
-  min-height: 55vh;
-  background: url('../multimedia_optimizado/img/hero-destinos.webp') center/cover no-repeat;
+  min-height: 100vh;
+  background: url('../multimedia-optimizado/img/destinos/hero-destinos.webp') center/cover no-repeat;
 }
 
 /* Buscador en el hero */
@@ -740,8 +740,8 @@ footer p {
 
 /* === Hero experiencias === */
 .hero-experiencias {
-  min-height: 80vh;
-  background: url('../multimedia_optimizado/img/hero-experiencias.webp') center/cover no-repeat;
+  min-height: 100vh;
+  background: url('../multimedia-optimizado/img/experiencias/hero-experiencias.webp') center/cover no-repeat;
 }
 
 /* === Carrusel de fotos === */
@@ -922,8 +922,8 @@ footer p {
  
 /* Hero sobre */
 .hero-sobre {
-  min-height: 70vh;
-  background: url('../multimedia_optimizado/img/hero-sobre.webp') center/cover no-repeat;
+  min-height: 100vh;
+  background: url('../multimedia-optimizado/img/sobre-nosotros/hero-sobre-nosotros.webp') center/cover no-repeat;
 }
  
 /* Tarjetas de datos (año, países...) */
