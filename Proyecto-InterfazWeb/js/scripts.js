@@ -3,27 +3,24 @@
    ============================================== */
 
 /* === 1. Navbar: clase "scrolled" al hacer scroll === */
-window.addEventListener("scroll", () => {
-  const navbar = document.querySelector(".navbar");
+window.addEventListener('scroll', () => {
+  const navbar = document.querySelector('.navbar');
   if (navbar) {
-    navbar.classList.toggle("scrolled", window.scrollY > 50);
+    navbar.classList.toggle('scrolled', window.scrollY > 50);
   }
 });
 
 /* === 2. Animación al hacer scroll (animate-on-scroll) === */
-const scrollObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-        scrollObserver.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.12 },
-);
+const scrollObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      scrollObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
 
-document.querySelectorAll(".animate-on-scroll").forEach((el) => {
+document.querySelectorAll('.animate-on-scroll').forEach(el => {
   scrollObserver.observe(el);
 });
 
@@ -39,37 +36,31 @@ function animarContador(el) {
       current = target;
       clearInterval(timer);
     }
-    el.textContent = Math.floor(current).toLocaleString("es-ES") + "+";
+    el.textContent = Math.floor(current).toLocaleString('es-ES') + '+';
   }, 16);
 }
 
-const statsObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        animarContador(entry.target);
-        statsObserver.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.5 },
-);
+const statsObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      animarContador(entry.target);
+      statsObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.5 });
 
-document
-  .querySelectorAll(".stat-number")
-  .forEach((el) => statsObserver.observe(el));
+document.querySelectorAll('.stat-number').forEach(el => statsObserver.observe(el));
 
 /* === 4. Newsletter toast (index) === */
-const btnNewsletter = document.getElementById("btnNewsletter");
+const btnNewsletter = document.getElementById('btnNewsletter');
 if (btnNewsletter) {
-  btnNewsletter.addEventListener("click", () => {
-    const input = document.getElementById("emailNewsletter");
+  btnNewsletter.addEventListener('click', () => {
+    const input = document.getElementById('emailNewsletter');
     if (input && input.value && input.validity.valid) {
-      const toastEl = document.createElement("div");
-      toastEl.className =
-        "toast align-items-center text-bg-success border-0 position-fixed bottom-0 end-0 m-3";
-      toastEl.setAttribute("role", "alert");
-      toastEl.setAttribute("aria-live", "assertive");
+      const toastEl = document.createElement('div');
+      toastEl.className = 'toast align-items-center text-bg-success border-0 position-fixed bottom-0 end-0 m-3';
+      toastEl.setAttribute('role', 'alert');
+      toastEl.setAttribute('aria-live', 'assertive');
       toastEl.innerHTML = `
         <div class="d-flex">
           <div class="toast-body">✅ ¡Suscripción completada! Bienvenido a DestinoGreen.</div>
@@ -77,173 +68,152 @@ if (btnNewsletter) {
         </div>`;
       document.body.appendChild(toastEl);
       new bootstrap.Toast(toastEl, { delay: 4000 }).show();
-      input.value = "";
+      input.value = '';
     } else if (input) {
-      input.classList.add("is-invalid");
-      setTimeout(() => input.classList.remove("is-invalid"), 2000);
+      input.classList.add('is-invalid');
+      setTimeout(() => input.classList.remove('is-invalid'), 2000);
     }
   });
 }
 
-/* === FILTRO COMBINADO (Tipo + Continente) === */
-const filtrosTipo = document.querySelectorAll(".filtro-btn");
-const filtrosContinente = document.querySelectorAll(".filtro-continente");
-const destinoItems = document.querySelectorAll(".destino-item");
-const sinResultados = document.getElementById("sinResultados");
-const buscadorDestinos = document.getElementById("buscadorDestinos");
+/* === 5. DESTINOS: Filtros por tipo === */
+const filtrosBtns = document.querySelectorAll('.filtro-btn');
+const destinoItems = document.querySelectorAll('.destino-item');
+const sinResultados = document.getElementById('sinResultados');
 
-// Estado de filtros
-let filtroTipoActivo = "todos";
-let filtroContinenteActivo = "todos";
-let queryBusqueda = "";
-
-function aplicarFiltros() {
+function filtrarDestinos(filtro) {
   let visibles = 0;
-
-  destinoItems.forEach((item) => {
+  destinoItems.forEach(item => {
     const tipo = item.dataset.tipo;
-    const continente = item.dataset.continente;
-    const nombre = (item.dataset.nombre || "").toLowerCase();
+    const mostrar = filtro === 'todos' || tipo === filtro;
+    item.classList.toggle('oculto', !mostrar);
+    if (mostrar) visibles++;
+  });
+  if (sinResultados) {
+    sinResultados.classList.toggle('d-none', visibles > 0);
+  }
+}
 
-    // Coincidencia con tipo de entorno
-    const matchesTipo = filtroTipoActivo === "todos" || tipo === filtroTipoActivo;
-    
-    // Coincidencia con continente
-    const matchesContinente = filtroContinenteActivo === "todos" || continente === filtroContinenteActivo;
-    
-    // Coincidencia con búsqueda por texto
-    const matchesBusqueda = queryBusqueda === "" || nombre.includes(queryBusqueda);
+filtrosBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    // Actualizar estado activo
+    filtrosBtns.forEach(b => {
+      b.classList.remove('active');
+      b.setAttribute('aria-pressed', 'false');
+    });
+    btn.classList.add('active');
+    btn.setAttribute('aria-pressed', 'true');
 
-    if (matchesTipo && matchesContinente && matchesBusqueda) {
-      item.classList.remove("d-none");
-      // Pequeña animación de entrada
-      item.style.opacity = "0";
-      item.style.transform = "translateY(10px)";
-      setTimeout(() => {
-        item.style.transition = "opacity 0.3s ease, transform 0.3s ease";
-        item.style.opacity = "1";
-        item.style.transform = "translateY(0)";
-      }, 10);
-      visibles++;
-    } else {
-      item.classList.add("d-none");
+    // Resetear continentes
+    document.querySelectorAll('.continente-card').forEach(c => c.classList.remove('active'));
+
+    // Limpiar buscador
+    const buscador = document.getElementById('buscadorDestinos');
+    if (buscador) buscador.value = '';
+
+    filtrarDestinos(btn.dataset.filtro);
+  });
+});
+
+/* === 6. DESTINOS: Buscador === */
+const buscadorDestinos = document.getElementById('buscadorDestinos');
+if (buscadorDestinos) {
+  buscadorDestinos.addEventListener('input', () => {
+    const query = buscadorDestinos.value.toLowerCase().trim();
+
+    // Resetear filtros activos visualmente
+    filtrosBtns.forEach(b => {
+      b.classList.remove('active');
+      b.setAttribute('aria-pressed', 'false');
+    });
+    const btnTodos = document.querySelector('.filtro-btn[data-filtro="todos"]');
+    if (btnTodos) {
+      btnTodos.classList.add('active');
+      btnTodos.setAttribute('aria-pressed', 'true');
+    }
+    document.querySelectorAll('.continente-card').forEach(c => c.classList.remove('active'));
+
+    let visibles = 0;
+    destinoItems.forEach(item => {
+      const nombre = item.dataset.nombre || '';
+      const mostrar = query === '' || nombre.includes(query);
+      item.classList.toggle('oculto', !mostrar);
+      if (mostrar) visibles++;
+    });
+
+    if (sinResultados) {
+      sinResultados.classList.toggle('d-none', visibles > 0);
     }
   });
-
-  // Mostrar/ocultar mensaje sin resultados
-  if (sinResultados) {
-    sinResultados.classList.toggle("d-none", visibles > 0);
-  }
 }
 
-// Eventos para botones de TIPO DE ENTORNO
-filtrosTipo.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    // Actualizar estado visual
-    filtrosTipo.forEach((b) => {
-      b.classList.remove("active");
-      b.setAttribute("aria-pressed", "false");
+/* === 7. DESTINOS: Filtro por continente === */
+const continenteCards = document.querySelectorAll('.filtro-continente');
+continenteCards.forEach(card => {
+  card.addEventListener('click', () => {
+    const continente = card.dataset.continente;
+
+    // Estado visual continentes
+    continenteCards.forEach(c => {
+      c.classList.remove('active');
+      c.setAttribute('aria-pressed', 'false');
     });
-    btn.classList.add("active");
-    btn.setAttribute("aria-pressed", "true");
-    
-    // Actualizar estado lógico y aplicar
-    filtroTipoActivo = btn.dataset.filtro;
-    aplicarFiltros();
-  });
-});
+    card.classList.add('active');
+    card.setAttribute('aria-pressed', 'true');
 
-// Eventos para botones de CONTINENTE
-filtrosContinente.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    // Actualizar estado visual
-    filtrosContinente.forEach((b) => {
-      b.classList.remove("active");
-      b.setAttribute("aria-pressed", "false");
+    // Resetear filtros de tipo
+    filtrosBtns.forEach(b => {
+      b.classList.remove('active');
+      b.setAttribute('aria-pressed', 'false');
     });
-    btn.classList.add("active");
-    btn.setAttribute("aria-pressed", "true");
-    
-    // Actualizar estado lógico y aplicar
-    filtroContinenteActivo = btn.dataset.continente;
-    aplicarFiltros();
+    const btnTodos = document.querySelector('.filtro-btn[data-filtro="todos"]');
+    if (btnTodos) {
+      btnTodos.classList.add('active');
+      btnTodos.setAttribute('aria-pressed', 'true');
+    }
+
+    // Limpiar buscador
+    if (buscadorDestinos) buscadorDestinos.value = '';
+
+    // Filtrar
+    let visibles = 0;
+    destinoItems.forEach(item => {
+      const badge = item.querySelector('.card-continent-badge');
+      const continenteItem = badge ? badge.textContent.trim() : '';
+      const mostrar = continenteItem === continente;
+      item.classList.toggle('oculto', !mostrar);
+      if (mostrar) visibles++;
+    });
+
+    if (sinResultados) {
+      sinResultados.classList.toggle('d-none', visibles > 0);
+    }
   });
 });
 
-// Buscador: combina con los filtros activos
-if (buscadorDestinos) {
-  buscadorDestinos.addEventListener("input", (e) => {
-    queryBusqueda = e.target.value.toLowerCase().trim();
-    aplicarFiltros();
-  });
-}
-
-// Función para resetear todos los filtros (opcional)
-function resetFilters() {
-  // Resetear tipo
-  filtrosTipo.forEach((b) => {
-    b.classList.remove("active");
-    b.setAttribute("aria-pressed", "false");
-  });
-  const btnTodosTipo = document.querySelector('.filtro-btn[data-filtro="todos"]');
-  if (btnTodosTipo) {
-    btnTodosTipo.classList.add("active");
-    btnTodosTipo.setAttribute("aria-pressed", "true");
-  }
-  filtroTipoActivo = "todos";
-
-  // Resetear continente
-  filtrosContinente.forEach((b) => {
-    b.classList.remove("active");
-    b.setAttribute("aria-pressed", "false");
-  });
-  // Nota: como no hay botón "todos" en continentes, simplemente deseleccionamos todos
-  filtroContinenteActivo = "todos";
-
-  // Resetear buscador
-  if (buscadorDestinos) {
-    buscadorDestinos.value = "";
-  }
-  queryBusqueda = "";
-
-  aplicarFiltros();
-}
-
-// Inicializar al cargar la página
-document.addEventListener("DOMContentLoaded", () => {
-  // Asegurar que "Todos" en tipo esté activo por defecto
-  const btnTodosTipo = document.querySelector('.filtro-btn[data-filtro="todos"]');
-  if (btnTodosTipo) {
-    btnTodosTipo.classList.add("active");
-    btnTodosTipo.setAttribute("aria-pressed", "true");
-  }
-  
-  // Aplicar filtros iniciales
-  aplicarFiltros();
-});
 
 /* ==============================================
    8. FORMULARIO DE CONTACTO — Validación
    ============================================== */
 const contactForm = document.getElementById('contactForm');
- 
+
 if (contactForm) {
- 
+
   // --- Helpers ---
   function marcarValido(input) {
     input.classList.remove('is-invalid');
     input.classList.add('is-valid');
   }
- 
+
   function marcarInvalido(input) {
     input.classList.remove('is-valid');
     input.classList.add('is-invalid');
   }
- 
+
   function limpiarEstado(input) {
     input.classList.remove('is-valid', 'is-invalid');
   }
- 
+
   // --- Validaciones individuales ---
   function validarNombre() {
     const el = document.getElementById('nombre');
@@ -252,7 +222,7 @@ if (contactForm) {
     ok ? marcarValido(el) : marcarInvalido(el);
     return ok;
   }
- 
+
   function validarEmail() {
     const el = document.getElementById('email');
     if (!el) return true;
@@ -261,7 +231,7 @@ if (contactForm) {
     ok ? marcarValido(el) : marcarInvalido(el);
     return ok;
   }
- 
+
   function validarTipo() {
     const el = document.getElementById('tipo');
     if (!el) return true;
@@ -269,7 +239,7 @@ if (contactForm) {
     ok ? marcarValido(el) : marcarInvalido(el);
     return ok;
   }
- 
+
   function validarAsunto() {
     const el = document.getElementById('asunto');
     if (!el) return true;
@@ -277,7 +247,7 @@ if (contactForm) {
     ok ? marcarValido(el) : marcarInvalido(el);
     return ok;
   }
- 
+
   function validarMensaje() {
     const el = document.getElementById('mensaje');
     if (!el) return true;
@@ -285,7 +255,7 @@ if (contactForm) {
     ok ? marcarValido(el) : marcarInvalido(el);
     return ok;
   }
- 
+
   function validarPrivacidad() {
     const el = document.getElementById('privacidad');
     if (!el) return true;
@@ -293,11 +263,11 @@ if (contactForm) {
     ok ? marcarValido(el) : marcarInvalido(el);
     return ok;
   }
- 
+
   // --- Contador de caracteres del mensaje ---
   const mensajeEl = document.getElementById('mensaje');
   const charCountEl = document.getElementById('charCount');
- 
+
   if (mensajeEl && charCountEl) {
     mensajeEl.addEventListener('input', () => {
       const len = mensajeEl.value.trim().length;
@@ -306,7 +276,7 @@ if (contactForm) {
       if (wrapper) wrapper.classList.toggle('alcanzado', len >= 20);
     });
   }
- 
+
   // --- Validación en tiempo real al salir de cada campo ---
   document.getElementById('nombre')?.addEventListener('blur', validarNombre);
   document.getElementById('email')?.addEventListener('blur', validarEmail);
@@ -314,7 +284,7 @@ if (contactForm) {
   document.getElementById('asunto')?.addEventListener('blur', validarAsunto);
   document.getElementById('mensaje')?.addEventListener('blur', validarMensaje);
   document.getElementById('privacidad')?.addEventListener('change', validarPrivacidad);
- 
+
   // Limpiar estado al empezar a escribir
   ['nombre', 'email', 'asunto', 'mensaje'].forEach(id => {
     document.getElementById(id)?.addEventListener('input', function () {
@@ -322,11 +292,11 @@ if (contactForm) {
       limpiarEstado(this);
     });
   });
- 
+
   // --- Submit ---
   contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
- 
+
     const esValido = [
       validarNombre(),
       validarEmail(),
@@ -335,7 +305,7 @@ if (contactForm) {
       validarMensaje(),
       validarPrivacidad()
     ].every(Boolean);
- 
+
     if (!esValido) {
       // Hacer scroll al primer campo inválido
       const primerError = contactForm.querySelector('.is-invalid');
@@ -345,18 +315,18 @@ if (contactForm) {
       }
       return;
     }
- 
+
     // Simular envío: mostrar spinner
     const btnTexto = document.getElementById('btnTexto');
     const btnLoading = document.getElementById('btnLoading');
     const btnEnviar = document.getElementById('btnEnviar');
- 
+
     if (btnTexto && btnLoading && btnEnviar) {
       btnTexto.classList.add('d-none');
       btnLoading.classList.remove('d-none');
       btnEnviar.disabled = true;
     }
- 
+
     // Simular respuesta del servidor (1.5s) y mostrar toast
     setTimeout(() => {
       // Restaurar botón
@@ -365,7 +335,7 @@ if (contactForm) {
         btnLoading.classList.add('d-none');
         btnEnviar.disabled = false;
       }
- 
+
       // Toast de éxito
       const toastEl = document.createElement('div');
       toastEl.className = 'toast align-items-center text-bg-success border-0 position-fixed bottom-0 end-0 m-3';
@@ -380,7 +350,7 @@ if (contactForm) {
         </div>`;
       document.body.appendChild(toastEl);
       new bootstrap.Toast(toastEl, { delay: 5000 }).show();
- 
+
       // Resetear formulario
       contactForm.reset();
       contactForm.querySelectorAll('.is-valid, .is-invalid').forEach(el => {
@@ -390,7 +360,7 @@ if (contactForm) {
         charCountEl.textContent = '0';
         charCountEl.closest('.contacto-char-count')?.classList.remove('alcanzado');
       }
- 
+
     }, 1500);
   });
 }
