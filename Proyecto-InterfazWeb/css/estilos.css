@@ -581,20 +581,6 @@ footer p {
   display: inline-block;
 }
 
-.carousel-title {
-  font-size: 1.35rem;
-  font-weight: 700;
-  color: #ffffff;
-  margin: 0;
-  line-height: 1.3;
-}
-
-.carousel-desc {
-  color: rgba(234, 250, 241, 0.85);
-  font-size: 0.85rem;
-  margin: 0;
-}
-
 /* === Sección destinos grid === */
 .destinos-grid-section {
   background: #060E21;
@@ -793,20 +779,6 @@ footer p {
   height: 360px;
   object-fit: cover;
   display: block;
-}
-
-.exp-tab-img-badge {
-  position: absolute;
-  bottom: 1rem;
-  left: 1rem;
-  background: rgba(6, 14, 33, 0.7);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(46, 204, 113, 0.3);
-  color: #7ee2b8;
-  font-size: 0.78rem;
-  font-weight: 600;
-  padding: 0.35rem 0.8rem;
-  border-radius: 50px;
 }
 
 /* Lista de features dentro del tab */
@@ -1025,4 +997,156 @@ footer p {
   font-size: 0.93rem;
   line-height: 1.7;
   padding: 0 0 1.2rem 0;
+}
+
+/* ==============================================
+   CONTACTO
+   ============================================== */
+ 
+/* Hero contacto */
+.hero-contacto {
+  min-height: 100vh;
+  background: url('../multimedia-optimizado/img/contacto/hero-contacto.webp') center/cover no-repeat;
+}
+ 
+/* Wrapper del formulario */
+.contacto-form-wrapper {
+  background: rgba(11, 28, 45, 0.7);
+  border: 1px solid rgba(46, 204, 113, 0.15);
+  border-radius: 1.2rem;
+}
+ 
+/* Labels */
+.contacto-label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #7ee2b8;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.02em;
+}
+ 
+/* Inputs, textarea y select */
+.contacto-input {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(126, 226, 184, 0.2) !important;
+  color: #eafaf1 !important;
+  border-radius: 0.6rem !important;
+  font-size: 0.93rem;
+  transition: border-color 0.3s, box-shadow 0.3s, background 0.3s;
+}
+ 
+.contacto-input::placeholder {
+  color: rgba(234, 250, 241, 0.3) !important;
+}
+ 
+.contacto-input:focus {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: #2ecc71 !important;
+  box-shadow: 0 0 0 0.2rem rgba(46, 204, 113, 0.18) !important;
+  color: #eafaf1 !important;
+  outline: none;
+}
+ 
+/* Select: opciones del desplegable */
+.contacto-input option {
+  background: #0b1c2d;
+  color: #eafaf1;
+}
+ 
+/* Estado válido */
+.contacto-input.is-valid {
+  border-color: #2ecc71 !important;
+  box-shadow: 0 0 0 0.15rem rgba(46, 204, 113, 0.15) !important;
+}
+ 
+/* Estado inválido */
+.contacto-input.is-invalid {
+  border-color: #e74c3c !important;
+  box-shadow: 0 0 0 0.15rem rgba(231, 76, 60, 0.15) !important;
+}
+ 
+/* Mensajes de feedback */
+.contacto-feedback {
+  font-size: 0.8rem;
+  margin-top: 0.3rem;
+}
+ 
+.contacto-feedback.invalid-feedback {
+  color: #ff7675;
+}
+ 
+/* Contador de caracteres */
+.contacto-char-count {
+  font-size: 0.78rem;
+  color: #8aada0;
+  transition: color 0.3s;
+}
+ 
+.contacto-char-count.alcanzado {
+  color: #2ecc71;
+}
+ 
+/* Checkbox personalizado */
+.contacto-check {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: rgba(126, 226, 184, 0.3);
+  cursor: pointer;
+}
+ 
+.contacto-check:checked {
+  background-color: #2ecc71;
+  border-color: #2ecc71;
+}
+ 
+.contacto-check-label {
+  font-size: 0.88rem;
+  color: #8aada0;
+  cursor: pointer;
+}
+ 
+/* Link dentro del formulario */
+.contacto-link {
+  color: #7ee2b8;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.3s;
+}
+ 
+.contacto-link:hover {
+  color: #2ecc71;
+}
+ 
+/* Tarjetas de info lateral */
+.contacto-info-card {
+  background: rgba(11, 28, 45, 0.6);
+  border: 1px solid rgba(46, 204, 113, 0.12);
+  border-radius: 1rem;
+  transition: border-color 0.3s, transform 0.3s;
+}
+ 
+.contacto-info-card:hover {
+  border-color: rgba(46, 204, 113, 0.35);
+  transform: translateY(-3px);
+}
+ 
+.contacto-info-icon {
+  width: 40px;
+  height: 40px;
+  background: rgba(46, 204, 113, 0.12);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2ecc71;
+  font-size: 1rem;
+}
+ 
+.contacto-info-card .text-muted {
+  color: #8aada0 !important;
+}
+ 
+.contacto-info-card h3 {
+  color: #eafaf1;
+  font-size: 0.95rem;
 }
