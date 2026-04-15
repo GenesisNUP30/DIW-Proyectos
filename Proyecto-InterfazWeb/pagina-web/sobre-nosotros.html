@@ -72,7 +72,10 @@
               <a class="nav-link" href="experiencias.html">Experiencias</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="sobre-nosotros.html"
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="sobre-nosotros.html"
                 >Sobre nosotros</a
               >
             </li>
@@ -174,7 +177,7 @@
         <div class="row align-items-center g-5">
           <div class="col-lg-5 animate-on-scroll">
             <span class="section-tag mb-3 d-inline-block"
-              >Nuestra historia</span
+              >Nuestras ventajas</span
             >
             <h2 id="video-titulo" class="mt-2 mb-3">
               ¿Por qué viajar con DestinoGreen?
@@ -305,6 +308,7 @@
                   class="form-control newsletter-input"
                   placeholder="tu@email.com"
                   aria-label="Correo electrónico para newsletter"
+                  aria-describedby="newsletterError"
                 />
                 <button
                   class="btn btn-primary"
@@ -313,6 +317,11 @@
                 >
                   Suscribirme
                 </button>
+                <!-- Mensaje de error -->
+                <div id="newsletterError" class="invalid-feedback mt-2">
+                  <i class="bi bi-exclamation-circle me-1"></i>Introduce un
+                  correo electrónico válido.
+                </div>
               </div>
               <p class="small text-muted mt-2">
                 Sin spam. Baja cuando quieras.

@@ -24,7 +24,7 @@ p {
 
 body, h1, h2, h3, h4, h5, h6,
 p, a, button, input, textarea,
-.card-title, .accordion-button {
+.card-title {
   font-family: 'Raleway', sans-serif;
 }
 
@@ -179,7 +179,7 @@ p, a, button, input, textarea,
 
 
 /* ==============================================
-   CARDS — DESTINOS
+   CARDS - INDEX
    ============================================== */
 .card {
   position: relative;
@@ -413,50 +413,9 @@ footer p {
 /* ==============================================
    TABS — EXPERIENCIAS
    ============================================== */
-#experienciasTabs .nav-link {
-  color: #A7D7C5;
-  background: transparent;
-  border: none;
-  font-weight: 600;
-  transition: color 0.3s ease, background 0.3s ease;
-}
-
-#experienciasTabs .nav-link:hover {
-  color: #7ee2b8;
-}
-
-#experienciasTabs .nav-link.active {
-  color: #ffffff;
-  border-bottom: 3px solid #2ecc71;
-  background: transparent;
-}
 
 .tab-content {
   text-align: center;
-}
-
-
-/* ==============================================
-   ACCORDION
-   ============================================== */
-.accordion-item {
-  border: none;
-  background-color: transparent;
-}
-
-.accordion-button {
-  background-color: #060E21;
-  color: #ffffff;
-}
-
-.accordion-button:not(.collapsed) {
-  background-color: #0B1D1A;
-  color: #7ee2b8;
-}
-
-.accordion-body {
-  background-color: #0B1D1A;
-  color: #d6d6d6;
 }
 
 
@@ -486,11 +445,10 @@ footer p {
 }
 
 /* ==============================================
-   AÑADIR AL FINAL DE ESTILOS.CSS
-   Estilos específicos de destinos.html
+   Estilos destinos.html
    ============================================== */
 
-/* === Hero destinos (más bajo que el hero principal) === */
+/* === Hero destinos === */
 .hero-destinos {
   min-height: 100vh;
   background: url('../multimedia-optimizado/img/destinos/hero-destinos.webp') center/cover no-repeat;
@@ -550,23 +508,24 @@ footer p {
     pointer-events: none;
 }
 
-.carrusel-caption-custom {
-    z-index: 2;
-}
-
 /* Panel glassmorphism sobre el carrusel */
 .carrusel-glass {
   position: absolute;
-  bottom: 2.5rem;
-  left: 5%;
-  max-width: 400px;
+  bottom: 1rem;
+  left: 2%;
+  max-width: 850px;
   background: rgba(6, 14, 33, 0.55);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border: 1px solid rgba(126, 226, 184, 0.25);
-  border-radius: 1rem;
-  padding: 1.4rem 1.6rem;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  border-radius: 0.75rem;
+  padding: 0.75rem 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+
+#carruselExperiencias .carousel-title {
+  font-size: 1.2rem;
 }
 
 .carousel-tag {
@@ -579,6 +538,23 @@ footer p {
   padding: 0.3rem 0.8rem;
   border-radius: 50px;
   display: inline-block;
+}
+
+@media (max-width: 768px) {
+  #carruselExperiencias .carrusel-glass {
+    bottom: 0.75rem;
+    left: 0.75rem;
+    right: 0.75rem;
+    padding: 0.6rem 0.9rem;
+  }
+
+  #carruselExperiencias .carousel-title {
+    font-size: 0.9rem;
+  }
+  
+  #carruselExperiencias .carousel-desc {
+    font-size: 0.75rem;
+  }
 }
 
 /* === Sección destinos grid === */
@@ -691,6 +667,11 @@ footer p {
 /* Items ocultos por filtro */
 .destino-item.oculto {
   display: none;
+}
+
+/* === Mensaje sin resultados en destinos === */
+#sinResultados {
+  color: #8aada0 !important;
 }
 
 /* === Modales === */
@@ -959,44 +940,6 @@ footer p {
 .sobre-video-wrapper {
   border: 1px solid rgba(46, 204, 113, 0.2);
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
-}
- 
-/* Acordeón FAQ */
-.sobre-accordion {
-  border-top: 1px solid rgba(46, 204, 113, 0.1);
-}
- 
-.sobre-accordion .accordion-item {
-  border: none;
-  border-bottom: 1px solid rgba(46, 204, 113, 0.1);
-  background: transparent;
-}
- 
-.sobre-accordion .accordion-button {
-  background: transparent;
-  color: #eafaf1;
-  font-weight: 600;
-  font-size: 0.95rem;
-  padding: 1.1rem 0;
-  box-shadow: none;
-}
- 
-.sobre-accordion .accordion-button:not(.collapsed) {
-  color: #7ee2b8;
-  background: transparent;
-  box-shadow: none;
-}
- 
-.sobre-accordion .accordion-button::after {
-  filter: invert(0.7) sepia(1) hue-rotate(100deg);
-}
- 
-.sobre-accordion .accordion-body {
-  background: transparent;
-  color: #8aada0;
-  font-size: 0.93rem;
-  line-height: 1.7;
-  padding: 0 0 1.2rem 0;
 }
 
 /* ==============================================
