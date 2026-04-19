@@ -158,9 +158,6 @@
                 <h3 class="carousel-title">
                   Costa Rica: Paraíso de Biodiversidad
                 </h3>
-                <p class="carousel-desc">
-                  98% energía renovable · 25% territorio protegido
-                </p>
                 <button
                   class="btn btn-primary btn-sm mt-3"
                   data-bs-toggle="modal"
@@ -183,9 +180,6 @@
                 <h3 class="carousel-title">
                   Islandia: Energía Pura y Naturaleza Extrema
                 </h3>
-                <p class="carousel-desc">
-                  100% energía geotérmica · Turismo controlado
-                </p>
                 <button
                   class="btn btn-primary btn-sm mt-3"
                   data-bs-toggle="modal"
@@ -208,9 +202,6 @@
                 <h3 class="carousel-title">
                   Portugal: Sostenibilidad Mediterránea
                 </h3>
-                <p class="carousel-desc">
-                  Costas protegidas · Gastronomía local
-                </p>
                 <button
                   class="btn btn-primary btn-sm mt-3"
                   data-bs-toggle="modal"
@@ -289,49 +280,49 @@
                 data-filtro="todos"
                 aria-pressed="true"
               >
-                <i class="bi bi-grid-3x3-gap me-1"></i> Todos
+                Todos
               </button>
               <button
                 class="btn filtro-btn"
                 data-filtro="selva"
                 aria-pressed="false"
               >
-                🌿 Selva
+                Selva
               </button>
               <button
                 class="btn filtro-btn"
                 data-filtro="glaciar"
                 aria-pressed="false"
               >
-                🧊 Glaciares
+                Glaciares
               </button>
               <button
                 class="btn filtro-btn"
                 data-filtro="costa"
                 aria-pressed="false"
               >
-                🌊 Costa
+                Costa
               </button>
               <button
                 class="btn filtro-btn"
                 data-filtro="montana"
                 aria-pressed="false"
               >
-                🏔️ Montaña
+                Montaña
               </button>
               <button
                 class="btn filtro-btn"
                 data-filtro="safari"
                 aria-pressed="false"
               >
-                🦁 Safari
+                Safari
               </button>
               <button
                 class="btn filtro-btn"
                 data-filtro="cultura"
                 aria-pressed="false"
               >
-                🏯 Cultura
+                Cultura
               </button>
             </div>
           </div>
@@ -352,7 +343,7 @@
                 data-continente="todos"
                 aria-pressed="true"
               >
-                🌍 Todos
+                Todos
               </button>
               <button
                 class="btn filtro-continente"
@@ -366,31 +357,36 @@
                 data-continente="América"
                 aria-pressed="false"
               >
-                🌎 América
+                América
               </button>
               <button
                 class="btn filtro-continente"
                 data-continente="Asia"
                 aria-pressed="false"
               >
-                🌏 Asia
+                Asia
               </button>
               <button
                 class="btn filtro-continente"
                 data-continente="África"
                 aria-pressed="false"
               >
-                🌍 África
+                África
               </button>
               <button
                 class="btn filtro-continente"
                 data-continente="Oceanía"
                 aria-pressed="false"
               >
-                🦘 Oceanía
+                Oceanía
               </button>
             </div>
           </div>
+        </div>
+        <div class="text-center mb-4">
+          <button id="btnResetFiltros" class="btn btn-outline-secondary btn-sm">
+            <i class="bi bi-x-circle me-1"></i>Limpiar filtros
+          </button>
         </div>
 
         <!-- Mensaje sin resultados -->
@@ -428,10 +424,6 @@
                   Descubre selvas tropicales, volcanes activos y playas vírgenes
                   mientras apoyas comunidades locales.
                 </p>
-                <div class="mb-3">
-                  <span class="badge bg-success me-1">Carbono Neutral</span>
-                  <span class="badge bg-info">Biodiversidad</span>
-                </div>
                 <button
                   class="btn btn-primary mt-auto"
                   data-bs-toggle="modal"
@@ -468,10 +460,6 @@
                   Glaciares milenarios, géiseres activos y auroras boreales en
                   un país líder en transición energética.
                 </p>
-                <div class="mb-3">
-                  <span class="badge bg-primary me-1">100% Renovable</span>
-                  <span class="badge bg-info">Glaciares</span>
-                </div>
                 <button
                   class="btn btn-primary mt-auto"
                   data-bs-toggle="modal"
@@ -508,10 +496,6 @@
                   Pueblos históricos, costas protegidas y gastronomía local en
                   un destino comprometido con la sostenibilidad.
                 </p>
-                <div class="mb-3">
-                  <span class="badge bg-warning me-1">Pesca Sostenible</span>
-                  <span class="badge bg-success">Costas Protegidas</span>
-                </div>
                 <button
                   class="btn btn-primary mt-auto"
                   data-bs-toggle="modal"
@@ -548,10 +532,6 @@
                   Fiordos espectaculares, auroras boreales y compromiso con la
                   movilidad eléctrica y conservación marina.
                 </p>
-                <div class="mb-3">
-                  <span class="badge bg-primary me-1">Movilidad Eléctrica</span>
-                  <span class="badge bg-info">Fiordos</span>
-                </div>
                 <button
                   class="btn btn-primary mt-auto"
                   data-bs-toggle="modal"
@@ -588,10 +568,6 @@
                   Conservación de especies únicas, turismo Maorí y paisajes
                   cinematográficos con enfoque ecológico.
                 </p>
-                <div class="mb-3">
-                  <span class="badge bg-warning me-1">Conservación</span>
-                  <span class="badge bg-success">Cultura Maorí</span>
-                </div>
                 <button
                   class="btn btn-primary mt-auto"
                   data-bs-toggle="modal"
@@ -628,10 +604,6 @@
                   Armonía entre tradición y sostenibilidad, bosques sagrados y
                   gastronomía respetuosa con el entorno.
                 </p>
-                <div class="mb-3">
-                  <span class="badge bg-warning me-1">Tradición</span>
-                  <span class="badge bg-success">Bosques Sagrados</span>
-                </div>
                 <button
                   class="btn btn-primary mt-auto"
                   data-bs-toggle="modal"
@@ -668,10 +640,6 @@
                   Patagonia salvaje, desierto de Atacama y comunidades indígenas
                   Mapuche preservando su cultura ancestral.
                 </p>
-                <div class="mb-3">
-                  <span class="badge bg-warning me-1">Patagonia</span>
-                  <span class="badge bg-success">Cultura Mapuche</span>
-                </div>
                 <button
                   class="btn btn-primary mt-auto"
                   data-bs-toggle="modal"
@@ -708,10 +676,6 @@
                   Safaris éticos, conservación de vida silvestre y apoyo a
                   comunidades Masai en sus tierras ancestrales.
                 </p>
-                <div class="mb-3">
-                  <span class="badge bg-warning me-1">Vida Silvestre</span>
-                  <span class="badge bg-success">Comunidades Masai</span>
-                </div>
                 <button
                   class="btn btn-primary mt-auto"
                   data-bs-toggle="modal"
@@ -748,10 +712,6 @@
                   Playas responsables, templos budistas y proyectos de
                   conservación marina en el sudeste asiático.
                 </p>
-                <div class="mb-3">
-                  <span class="badge bg-warning me-1">Playas</span>
-                  <span class="badge bg-success">Conservación Marina</span>
-                </div>
                 <button
                   class="btn btn-primary mt-auto"
                   data-bs-toggle="modal"
@@ -846,13 +806,6 @@
             </div>
           </div>
           <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-outline-secondary btn-sm"
-              data-bs-dismiss="modal"
-            >
-              Cerrar
-            </button>
             <a href="contacto.html" class="btn btn-primary"
               >Reservar este viaje</a
             >
@@ -937,13 +890,6 @@
             </div>
           </div>
           <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-outline-secondary btn-sm"
-              data-bs-dismiss="modal"
-            >
-              Cerrar
-            </button>
             <a href="contacto.html" class="btn btn-primary"
               >Reservar este viaje</a
             >
@@ -1027,13 +973,6 @@
             </div>
           </div>
           <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-outline-secondary btn-sm"
-              data-bs-dismiss="modal"
-            >
-              Cerrar
-            </button>
             <a href="contacto.html" class="btn btn-primary"
               >Reservar este viaje</a
             >
@@ -1118,13 +1057,6 @@
             </div>
           </div>
           <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-outline-secondary btn-sm"
-              data-bs-dismiss="modal"
-            >
-              Cerrar
-            </button>
             <a href="contacto.html" class="btn btn-primary"
               >Reservar este viaje</a
             >
@@ -1209,13 +1141,6 @@
             </div>
           </div>
           <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-outline-secondary btn-sm"
-              data-bs-dismiss="modal"
-            >
-              Cerrar
-            </button>
             <a href="contacto.html" class="btn btn-primary"
               >Reservar este viaje</a
             >
@@ -1300,13 +1225,6 @@
             </div>
           </div>
           <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-outline-secondary btn-sm"
-              data-bs-dismiss="modal"
-            >
-              Cerrar
-            </button>
             <a href="contacto.html" class="btn btn-primary"
               >Reservar este viaje</a
             >
@@ -1391,13 +1309,6 @@
             </div>
           </div>
           <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-outline-secondary btn-sm"
-              data-bs-dismiss="modal"
-            >
-              Cerrar
-            </button>
             <a href="contacto.html" class="btn btn-primary"
               >Reservar este viaje</a
             >
@@ -1482,13 +1393,6 @@
             </div>
           </div>
           <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-outline-secondary btn-sm"
-              data-bs-dismiss="modal"
-            >
-              Cerrar
-            </button>
             <a href="contacto.html" class="btn btn-primary"
               >Reservar este viaje</a
             >
@@ -1574,13 +1478,6 @@
             </div>
           </div>
           <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-outline-secondary btn-sm"
-              data-bs-dismiss="modal"
-            >
-              Cerrar
-            </button>
             <a href="contacto.html" class="btn btn-primary"
               >Reservar este viaje</a
             >
