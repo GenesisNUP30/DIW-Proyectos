@@ -9,6 +9,11 @@
       type="image/svg+xml"
       href="../multimedia-optimizado/img/logotipo.svg"
     />
+    <link
+      rel="icon"
+      type="image/png"
+      href="../multimedia-original/img/logo-ecotrip.png"
+    />
     <meta
       name="description"
       content="Conoce DestinoGreen, nuestra filosofía de turismo sostenible y nuestro compromiso con el medio ambiente y las comunidades locales."
@@ -41,12 +46,18 @@
           class="navbar-brand logo-font d-flex align-items-center gap-2"
           href="index.html"
         >
-          <img
-            src="../multimedia-optimizado/img/logotipo.svg"
-            alt="Logo DestinoGreen"
-            height="45"
-            width="45"
-          />
+          <picture>
+            <source
+              srcset="../multimedia-optimizado/img/logotipo.svg"
+              type="image/svg+xml"
+            />
+            <img
+              src="../multimedia-original/img/logo-ecotrip.png"
+              alt="Logo DestinoGreen"
+              height="45"
+              width="45"
+            />
+          </picture>
           DestinoGreen
         </a>
         <button
@@ -153,14 +164,22 @@
 
           <div class="col-lg-6 animate-on-scroll">
             <div class="sobre-img-wrapper">
-              <img
-                src="../multimedia-optimizado/img/sobre-nosotros/team-working.webp"
-                class="img-fluid rounded-4 sobre-img"
-                alt="Equipo de DestinoGreen planificando viajes sostenibles"
-                loading="lazy"
-                width="600"
-                height="440"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ../multimedia-optimizado/img/sobre-nosotros/team-working.webp
+                  "
+                  type="image/webp"
+                />
+                <img
+                  src="../multimedia-original/img/sobre-nosotros/team-working.jpg"
+                  class="img-fluid rounded-4 sobre-img"
+                  alt="Equipo de DestinoGreen planificando viajes sostenibles"
+                  loading="lazy"
+                  width="600"
+                  height="440"
+                />
+              </picture>
               <div class="sobre-img-badge">
                 <i class="bi bi-award-fill me-2 text-success"></i>
                 Certificados en turismo responsable
@@ -374,39 +393,57 @@
                 class="footer-social"
                 aria-label="Instagram de DestinoGreen"
               >
-                <img
-                  src="../multimedia-optimizado/icons/insta.svg"
-                  alt=""
-                  aria-hidden="true"
-                  height="32"
-                  width="32"
-                />
+                <picture>
+                  <source
+                    srcset="../multimedia-optimizado/icons/insta.svg"
+                    type="image/svg+xml"
+                  />
+                  <img
+                    src="../multimedia-original/icons/social.png"
+                    alt=""
+                    aria-hidden="true"
+                    height="32"
+                    width="32"
+                  />
+                </picture>
               </a>
               <a
                 href="#"
                 class="footer-social"
                 aria-label="LinkedIn de DestinoGreen"
               >
-                <img
-                  src="../multimedia-optimizado/icons/linkedin.svg"
-                  alt=""
-                  aria-hidden="true"
-                  height="32"
-                  width="32"
-                />
+                <picture>
+                  <source
+                    srcset="../multimedia-optimizado/icons/linkedin.svg"
+                    type="image/svg+xml"
+                  />
+                  <img
+                    src="../multimedia-original/icons/linkedin.png"
+                    alt=""
+                    aria-hidden="true"
+                    height="32"
+                    width="32"
+                  />
+                </picture>
               </a>
               <a
                 href="#"
                 class="footer-social"
                 aria-label="GitHub de DestinoGreen"
               >
-                <img
-                  src="../multimedia-optimizado/icons/github.svg"
-                  alt=""
-                  aria-hidden="true"
-                  height="32"
-                  width="32"
-                />
+                <picture>
+                  <source
+                    srcset="../multimedia-optimizado/icons/github.svg"
+                    type="image/svg+xml"
+                  />
+                  <img
+                    src="../multimedia-original/icons/github.png"
+                    alt=""
+                    aria-hidden="true"
+                    height="32"
+                    width="32"
+                  />
+                </picture>
               </a>
             </div>
           </div>
