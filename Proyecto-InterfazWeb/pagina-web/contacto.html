@@ -4,37 +4,94 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Contacto – DestinoGreen</title>
-    <link rel="icon" type="image/svg+xml" href="../multimedia-optimizado/img/logotipo.svg" />
-    <meta name="description" content="Contacta con DestinoGreen para consultas, reservas o suscripciones al boletín de turismo sostenible." />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="../multimedia-optimizado/img/logotipo.svg"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="../multimedia-original/img/logo-ecotrip.png"
+    />
+    <meta
+      name="description"
+      content="Contacta con DestinoGreen para consultas, reservas o suscripciones al boletín de turismo sostenible."
+    />
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&family=Voces&display=swap" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&family=Voces&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="../css/custom.css" />
     <link rel="stylesheet" href="../css/estilos.css" />
   </head>
 
   <body>
-
     <!-- ===================== NAVBAR ===================== -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" aria-label="Navegación principal">
+    <nav
+      class="navbar navbar-expand-lg navbar-dark fixed-top"
+      aria-label="Navegación principal"
+    >
       <div class="container">
-        <a class="navbar-brand logo-font d-flex align-items-center gap-2" href="index.html">
-          <img src="../multimedia-optimizado/img/logotipo.svg" alt="Logo DestinoGreen" height="45" width="45" />
+        <a
+          class="navbar-brand logo-font d-flex align-items-center gap-2"
+          href="index.html"
+        >
+          <picture>
+            <source
+              srcset="../multimedia-optimizado/img/logotipo.svg"
+              type="image/svg+xml"
+            />
+            <img
+              src="../multimedia-original/img/logo-ecotrip.png"
+              alt="Logo DestinoGreen"
+              height="45"
+              width="45"
+            />
+          </picture>
           DestinoGreen
         </a>
-        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
-          data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
+        <button
+          class="navbar-toggler border-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#menu"
+          aria-controls="menu"
+          aria-expanded="false"
+          aria-label="Abrir menú"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="menu">
           <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
-            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-            <li class="nav-item"><a class="nav-link" href="destinos.html">Destinos</a></li>
-            <li class="nav-item"><a class="nav-link" href="experiencias.html">Experiencias</a></li>
-            <li class="nav-item"><a class="nav-link" href="sobre-nosotros.html">Sobre nosotros</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="destinos.html">Destinos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="experiencias.html">Experiencias</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="sobre-nosotros.html">Sobre nosotros</a>
+            </li>
             <li class="nav-item ms-lg-3">
-              <a class="btn btn-primary btn-sm px-3 active" aria-current="page" href="contacto.html">Reservar viaje</a>
+              <a
+                class="btn btn-primary btn-sm px-3 active"
+                aria-current="page"
+                href="contacto.html"
+                >Reservar viaje</a
+              >
             </li>
           </ul>
         </div>
@@ -42,7 +99,10 @@
     </nav>
 
     <!-- ===================== HERO ===================== -->
-    <header class="hero hero-contacto d-flex align-items-center text-center" role="banner">
+    <header
+      class="hero hero-contacto d-flex align-items-center text-center"
+      role="banner"
+    >
       <div class="container">
         <span class="hero-badge mb-3 d-inline-block">
           <i class="bi bi-envelope-heart me-1"></i> Estamos aquí para ayudarte
@@ -51,7 +111,9 @@
           Reserva tu viaje<br /><span class="text-accent">sostenible</span>
         </h1>
         <p class="lead hero-subtitle mb-0">
-          Cuéntanos qué buscas y diseñamos una experiencia<br class="d-none d-md-block" />
+          Cuéntanos qué buscas y diseñamos una experiencia<br
+            class="d-none d-md-block"
+          />
           a tu medida. Respondemos en menos de 24h.
         </p>
         <div class="scroll-hint mt-4" aria-hidden="true">
@@ -63,21 +125,24 @@
     <!-- ===================== CONTACTO: FORMULARIO + INFO ===================== -->
     <section class="py-5" aria-labelledby="contacto-titulo">
       <div class="container">
-
         <div class="section-header text-center mb-5 animate-on-scroll">
           <span class="section-tag">Contacto</span>
           <h2 id="contacto-titulo" class="mt-2">Hablemos</h2>
-          <p class="text-muted">Todos los campos son obligatorios. Te responderemos lo antes posible.</p>
+          <p class="text-muted">
+            Todos los campos son obligatorios. Te responderemos lo antes
+            posible.
+          </p>
         </div>
 
         <div class="row g-5 justify-content-center">
-
           <!-- Columna formulario -->
           <div class="col-lg-7 animate-on-scroll">
             <div class="contacto-form-wrapper p-4 p-md-5">
-
-              <form id="contactForm" novalidate aria-label="Formulario de contacto">
-
+              <form
+                id="contactForm"
+                novalidate
+                aria-label="Formulario de contacto"
+              >
                 <!-- Nombre + Email -->
                 <div class="row g-3 mb-3">
                   <div class="col-sm-6">
@@ -94,7 +159,10 @@
                       autocomplete="name"
                       aria-describedby="nombreFeedback"
                     />
-                    <div id="nombreFeedback" class="contacto-feedback invalid-feedback">
+                    <div
+                      id="nombreFeedback"
+                      class="contacto-feedback invalid-feedback"
+                    >
                       Introduce tu nombre (mínimo 2 caracteres).
                     </div>
                   </div>
@@ -111,7 +179,10 @@
                       autocomplete="email"
                       aria-describedby="emailFeedback"
                     />
-                    <div id="emailFeedback" class="contacto-feedback invalid-feedback">
+                    <div
+                      id="emailFeedback"
+                      class="contacto-feedback invalid-feedback"
+                    >
                       Introduce un correo electrónico válido.
                     </div>
                   </div>
@@ -128,14 +199,21 @@
                     required
                     aria-describedby="tipoFeedback"
                   >
-                    <option value="" disabled selected>Selecciona una opción...</option>
+                    <option value="" disabled selected>
+                      Selecciona una opción...
+                    </option>
                     <option value="reserva">🧳 Reservar un viaje</option>
                     <option value="info">ℹ️ Información sobre destinos</option>
-                    <option value="experiencia">🌿 Consulta sobre experiencias</option>
+                    <option value="experiencia">
+                      🌿 Consulta sobre experiencias
+                    </option>
                     <option value="grupo">👥 Viaje en grupo</option>
                     <option value="otro">💬 Otro</option>
                   </select>
-                  <div id="tipoFeedback" class="contacto-feedback invalid-feedback">
+                  <div
+                    id="tipoFeedback"
+                    class="contacto-feedback invalid-feedback"
+                  >
                     Selecciona el tipo de consulta.
                   </div>
                 </div>
@@ -154,7 +232,10 @@
                     minlength="5"
                     aria-describedby="asuntoFeedback"
                   />
-                  <div id="asuntoFeedback" class="contacto-feedback invalid-feedback">
+                  <div
+                    id="asuntoFeedback"
+                    class="contacto-feedback invalid-feedback"
+                  >
                     El asunto debe tener al menos 5 caracteres.
                   </div>
                 </div>
@@ -173,7 +254,10 @@
                     minlength="20"
                     aria-describedby="mensajeFeedback"
                   ></textarea>
-                  <div id="mensajeFeedback" class="contacto-feedback invalid-feedback">
+                  <div
+                    id="mensajeFeedback"
+                    class="contacto-feedback invalid-feedback"
+                  >
                     El mensaje debe tener al menos 20 caracteres.
                   </div>
                   <div class="contacto-char-count text-end mt-1">
@@ -191,42 +275,57 @@
                       required
                       aria-describedby="privacidadFeedback"
                     />
-                    <label class="form-check-label contacto-check-label" for="privacidad">
+                    <label
+                      class="form-check-label contacto-check-label"
+                      for="privacidad"
+                    >
                       He leído y acepto la
-                      <a href="#" class="contacto-link">política de privacidad</a>
+                      <a href="#" class="contacto-link"
+                        >política de privacidad</a
+                      >
                     </label>
-                    <div id="privacidadFeedback" class="contacto-feedback invalid-feedback">
+                    <div
+                      id="privacidadFeedback"
+                      class="contacto-feedback invalid-feedback"
+                    >
                       Debes aceptar la política de privacidad.
                     </div>
                   </div>
                 </div>
 
                 <!-- Botón enviar -->
-                <button type="submit" class="btn btn-primary btn-lg w-100" id="btnEnviar">
+                <button
+                  type="submit"
+                  class="btn btn-primary btn-lg w-100"
+                  id="btnEnviar"
+                >
                   <span id="btnTexto">
                     <i class="bi bi-send me-2"></i>Enviar mensaje
                   </span>
                   <span id="btnLoading" class="d-none">
-                    <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                    <span
+                      class="spinner-border spinner-border-sm me-2"
+                      role="status"
+                      aria-hidden="true"
+                    ></span>
                     Enviando...
                   </span>
                 </button>
-
               </form>
-
             </div>
           </div>
 
           <!-- Columna info lateral -->
           <div class="col-lg-4 animate-on-scroll">
             <div class="d-flex flex-column gap-3">
-
               <div class="contacto-info-card p-4">
                 <div class="contacto-info-icon mb-3">
                   <i class="bi bi-clock-fill"></i>
                 </div>
                 <h3 class="h6 mb-1">Tiempo de respuesta</h3>
-                <p class="small text-muted mb-0">Respondemos en menos de 24 horas en días laborables.</p>
+                <p class="small text-muted mb-0">
+                  Respondemos en menos de 24 horas en días laborables.
+                </p>
               </div>
 
               <div class="contacto-info-card p-4">
@@ -234,7 +333,10 @@
                   <i class="bi bi-lock-fill"></i>
                 </div>
                 <h3 class="h6 mb-1">Tus datos, seguros</h3>
-                <p class="small text-muted mb-0">No compartimos tu información con terceros. Cumplimos con el RGPD.</p>
+                <p class="small text-muted mb-0">
+                  No compartimos tu información con terceros. Cumplimos con el
+                  RGPD.
+                </p>
               </div>
 
               <div class="contacto-info-card p-4">
@@ -242,7 +344,10 @@
                   <i class="bi bi-people-fill"></i>
                 </div>
                 <h3 class="h6 mb-1">Atención personalizada</h3>
-                <p class="small text-muted mb-0">Un asesor especializado en turismo sostenible atenderá tu consulta.</p>
+                <p class="small text-muted mb-0">
+                  Un asesor especializado en turismo sostenible atenderá tu
+                  consulta.
+                </p>
               </div>
 
               <div class="contacto-info-card p-4">
@@ -252,13 +357,13 @@
                 <h3 class="h6 mb-1">¿Prefieres llamar?</h3>
                 <p class="small text-muted mb-0">
                   Lunes a viernes de 9:00 a 18:00h<br />
-                  <a href="tel:+34900123456" class="contacto-link">+34 900 123 456</a>
+                  <a href="tel:+34900123456" class="contacto-link"
+                    >+34 900 123 456</a
+                  >
                 </p>
               </div>
-
             </div>
           </div>
-
         </div>
       </div>
     </section>
@@ -268,11 +373,28 @@
       <div class="container">
         <div class="row g-4 mb-4">
           <div class="col-md-4">
-            <a class="navbar-brand logo-font d-flex align-items-center gap-2 mb-3" href="index.html">
-              <img src="../multimedia-optimizado/img/logotipo.svg" alt="DestinoGreen" height="36" width="36" />
+            <a
+              class="navbar-brand logo-font d-flex align-items-center gap-2 mb-3"
+              href="index.html"
+            >
+              <picture>
+                <source
+                  srcset="../multimedia-optimizado/img/logotipo.svg"
+                  type="image/svg+xml"
+                />
+                <img
+                  src="../multimedia-original/img/logo-ecotrip.png"
+                  alt="Logo DestinoGreen"
+                  height="36"
+                  width="36"
+                />
+              </picture>
               DestinoGreen
             </a>
-            <p class="small">Agencia de turismo sostenible comprometida con el planeta y las comunidades locales.</p>
+            <p class="small">
+              Agencia de turismo sostenible comprometida con el planeta y las
+              comunidades locales.
+            </p>
           </div>
           <div class="col-md-2 offset-md-1">
             <h4 class="footer-heading">Navegación</h4>
@@ -295,25 +417,74 @@
           <div class="col-md-3">
             <h4 class="footer-heading">Síguenos</h4>
             <div class="d-flex gap-3 mt-2">
-              <a href="#" class="footer-social" aria-label="Instagram de DestinoGreen">
-                <img src="../multimedia-optimizado/icons/insta.svg" alt="" aria-hidden="true" height="32" width="32" />
+              <a
+                href="#"
+                class="footer-social"
+                aria-label="Instagram de DestinoGreen"
+              >
+                <picture>
+                  <source
+                    srcset="../multimedia-optimizado/icons/insta.svg"
+                    type="image/svg+xml"
+                  />
+                  <img
+                    src="../multimedia-original/icons/social.png"
+                    alt=""
+                    aria-hidden="true"
+                    height="32"
+                    width="32"
+                  />
+                </picture>
               </a>
-              <a href="#" class="footer-social" aria-label="LinkedIn de DestinoGreen">
-                <img src="../multimedia-optimizado/icons/linkedin.svg" alt="" aria-hidden="true" height="32" width="32" />
+              <a
+                href="#"
+                class="footer-social"
+                aria-label="LinkedIn de DestinoGreen"
+              >
+                <picture>
+                  <source
+                    srcset="../multimedia-optimizado/icons/linkedin.svg"
+                    type="image/svg+xml"
+                  />
+                  <img
+                    src="../multimedia-original/icons/linkedin.png"
+                    alt=""
+                    aria-hidden="true"
+                    height="32"
+                    width="32"
+                  />
+                </picture>
               </a>
-              <a href="#" class="footer-social" aria-label="GitHub de DestinoGreen">
-                <img src="../multimedia-optimizado/icons/github.svg" alt="" aria-hidden="true" height="32" width="32" />
+              <a
+                href="#"
+                class="footer-social"
+                aria-label="GitHub de DestinoGreen"
+              >
+                <picture>
+                  <source
+                    srcset="../multimedia-optimizado/icons/github.svg"
+                    type="image/svg+xml"
+                  />
+                  <img
+                    src="../multimedia-original/icons/github.png"
+                    alt=""
+                    aria-hidden="true"
+                    height="32"
+                    width="32"
+                  />
+                </picture>
               </a>
             </div>
           </div>
         </div>
         <hr class="footer-divider" />
-        <p class="text-center small mb-0">&copy; 2026 DestinoGreen – Todos los derechos reservados</p>
+        <p class="text-center small mb-0">
+          &copy; 2026 DestinoGreen – Todos los derechos reservados
+        </p>
       </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../js/scripts.js"></script>
-
   </body>
 </html>
