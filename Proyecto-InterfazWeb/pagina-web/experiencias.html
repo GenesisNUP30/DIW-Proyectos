@@ -9,6 +9,11 @@
       type="image/svg+xml"
       href="../multimedia-optimizado/img/logotipo.svg"
     />
+    <link
+      rel="icon"
+      type="image/png"
+      href="../multimedia-original/img/logo-ecotrip.jpg"
+    />
     <meta
       name="description"
       content="Descubre experiencias únicas de turismo sostenible con DestinoGreen. Actividades responsables que conectan con la naturaleza y comunidades locales."
@@ -41,12 +46,18 @@
           class="navbar-brand logo-font d-flex align-items-center gap-2"
           href="index.html"
         >
-          <img
-            src="../multimedia-optimizado/img/logotipo.svg"
-            alt="Logo DestinoGreen"
-            height="45"
-            width="45"
-          />
+          <picture>
+            <source
+              srcset="../multimedia-optimizado/img/logotipo.svg"
+              type="image/svg+xml"
+            />
+            <img
+              src="../multimedia-original/img/logo-ecotrip.jpg"
+              alt="Logo DestinoGreen"
+              height="45"
+              width="45"
+            />
+          </picture>
           DestinoGreen
         </a>
         <button
@@ -168,12 +179,20 @@
 
           <div class="carousel-inner rounded-4 overflow-hidden">
             <div class="carousel-item active">
-              <img
-                src="../multimedia-optimizado/img/experiencias/carrusel/mexico.webp"
-                class="d-block w-100 exp-carousel-img"
-                alt="Liberación de tortugas marinas en Cabo San Lucas, México"
-                loading="lazy"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ../multimedia-optimizado/img/experiencias/carrusel/mexico.webp
+                  "
+                  type="image/webp"
+                />
+                <img
+                  src="../multimedia-original/img/experiencias/carrusel/mexico.jpg"
+                  class="d-block w-100 exp-carousel-img"
+                  alt="Liberación de tortugas marinas en Cabo San Lucas, México"
+                  loading="lazy"
+                />
+              </picture>
               <div
                 class="carrusel-glass d-none d-md-flex flex-column align-items-start"
               >
@@ -187,12 +206,20 @@
             </div>
 
             <div class="carousel-item">
-              <img
-                src="../multimedia-optimizado/img/experiencias/carrusel/tanzania.webp"
-                class="d-block w-100 exp-carousel-img"
-                alt="Voluntariado en reserva natural del Serengueti, Tanzania"
-                loading="lazy"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ../multimedia-optimizado/img/experiencias/carrusel/tanzania.webp
+                  "
+                  type="image/webp"
+                />
+                <img
+                  src="../multimedia-original/img/experiencias/carrusel/tanzania.jpg"
+                  class="d-block w-100 exp-carousel-img"
+                  alt="Voluntariado en reserva natural del Serengueti, Tanzania"
+                  loading="lazy"
+                />
+              </picture>
               <div
                 class="carrusel-glass d-none d-md-flex flex-column align-items-start"
               >
@@ -204,12 +231,20 @@
             </div>
 
             <div class="carousel-item">
-              <img
-                src="../multimedia-optimizado/img/experiencias/carrusel/indonesia.webp"
-                class="d-block w-100 exp-carousel-img"
-                alt="Restauración de arrecifes de coral en Bali, Indonesia"
-                loading="lazy"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ../multimedia-optimizado/img/experiencias/carrusel/indonesia.webp
+                  "
+                  type="image/webp"
+                />
+                <img
+                  src="../multimedia-original/img/experiencias/carrusel/indonesia.jpg"
+                  class="d-block w-100 exp-carousel-img"
+                  alt="Restauración de arrecifes de coral en Bali, Indonesia"
+                  loading="lazy"
+                />
+              </picture>
               <div
                 class="carrusel-glass d-none d-md-flex flex-column align-items-start"
               >
@@ -336,14 +371,22 @@
             <div class="row g-4 align-items-center">
               <div class="col-lg-5">
                 <div class="exp-tab-img-wrapper">
-                  <img
-                    src="../multimedia-optimizado/img/experiencias/tabs/ecoaventura.webp"
-                    alt="Senderismo y kayak en entornos naturales protegidos"
-                    class="exp-tab-img rounded-4"
-                    loading="lazy"
-                    width="500"
-                    height="360"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ../multimedia-optimizado/img/experiencias/tabs/ecoaventura.webp
+                      "
+                      type="image/webp"
+                    />
+                    <img
+                      src="../multimedia-original/img/experiencias/tabs/ecoaventura.jpg"
+                      alt="Senderismo y kayak en entornos naturales protegidos"
+                      class="exp-tab-img rounded-4"
+                      loading="lazy"
+                      width="500"
+                      height="360"
+                    />
+                  </picture>
                 </div>
               </div>
               <div class="col-lg-7">
@@ -408,14 +451,22 @@
             <div class="row g-4 align-items-center">
               <div class="col-lg-5">
                 <div class="exp-tab-img-wrapper">
-                  <img
-                    src="../multimedia-optimizado/img/experiencias/tabs/comunitario.webp"
-                    alt="Convivencia auténtica con comunidades locales"
-                    class="exp-tab-img rounded-4"
-                    loading="lazy"
-                    width="500"
-                    height="360"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ../multimedia-optimizado/img/experiencias/tabs/comunitario.webp
+                      "
+                      type="image/webp"
+                    />
+                    <img
+                      src="../multimedia-original/img/experiencias/tabs/comunitario.jpg"
+                      alt="Convivencia auténtica con comunidades locales"
+                      class="exp-tab-img rounded-4"
+                      loading="lazy"
+                      width="500"
+                      height="360"
+                    />
+                  </picture>
                 </div>
               </div>
               <div class="col-lg-7">
@@ -481,14 +532,22 @@
             <div class="row g-4 align-items-center">
               <div class="col-lg-5">
                 <div class="exp-tab-img-wrapper">
-                  <img
-                    src="../multimedia-optimizado/img/experiencias/tabs/gastronomia.webp"
-                    alt="Taller de cocina con productos orgánicos y locales"
-                    class="exp-tab-img rounded-4"
-                    loading="lazy"
-                    width="500"
-                    height="360"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ../multimedia-optimizado/img/experiencias/tabs/gastronomia.webp
+                      "
+                      type="image/webp"
+                    />
+                    <img
+                      src="../multimedia-original/img/experiencias/tabs/gastronomia.jpg"
+                      alt="Taller de cocina con productos orgánicos y locales"
+                      class="exp-tab-img rounded-4"
+                      loading="lazy"
+                      width="500"
+                      height="360"
+                    />
+                  </picture>
                 </div>
               </div>
               <div class="col-lg-7">
@@ -554,14 +613,22 @@
             <div class="row g-4 align-items-center">
               <div class="col-lg-5">
                 <div class="exp-tab-img-wrapper">
-                  <img
-                    src="../multimedia-optimizado/img/experiencias/tabs/conservacion.webp"
-                    alt="Voluntariado en proyectos de conservación natural"
-                    class="exp-tab-img rounded-4"
-                    loading="lazy"
-                    width="500"
-                    height="360"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ../multimedia-optimizado/img/experiencias/tabs/conservacion.webp
+                      "
+                      type="image/webp"
+                    />
+                    <img
+                      src="../multimedia-original/img/experiencias/tabs/conservacion.jpg"
+                      alt="Voluntariado en proyectos de conservación natural"
+                      class="exp-tab-img rounded-4"
+                      loading="lazy"
+                      width="500"
+                      height="360"
+                    />
+                  </picture>
                 </div>
               </div>
               <div class="col-lg-7">
@@ -827,12 +894,18 @@
               class="navbar-brand logo-font d-flex align-items-center gap-2 mb-3"
               href="index.html"
             >
-              <img
-                src="../multimedia-optimizado/img/logotipo.svg"
-                alt="DestinoGreen"
-                height="36"
-                width="36"
-              />
+              <picture>
+                <source
+                  srcset="../multimedia-optimizado/img/logotipo.svg"
+                  type="image/svg+xml"
+                />
+                <img
+                  src="../multimedia-original/img/logo-ecotrip.jpg"
+                  alt="Logo DestinoGreen"
+                  height="36"
+                  width="36"
+                />
+              </picture>
               DestinoGreen
             </a>
             <p class="small">
@@ -866,39 +939,57 @@
                 class="footer-social"
                 aria-label="Instagram de DestinoGreen"
               >
-                <img
-                  src="../multimedia-optimizado/icons/insta.svg"
-                  alt=""
-                  aria-hidden="true"
-                  height="32"
-                  width="32"
-                />
+                <picture>
+                  <source
+                    srcset="../multimedia-optimizado/icons/insta.svg"
+                    type="image/svg+xml"
+                  />
+                  <img
+                    src="../multimedia-original/icons/social.png"
+                    alt=""
+                    aria-hidden="true"
+                    height="32"
+                    width="32"
+                  />
+                </picture>
               </a>
               <a
                 href="#"
                 class="footer-social"
                 aria-label="LinkedIn de DestinoGreen"
               >
-                <img
-                  src="../multimedia-optimizado/icons/linkedin.svg"
-                  alt=""
-                  aria-hidden="true"
-                  height="32"
-                  width="32"
-                />
+                <picture>
+                  <source
+                    srcset="../multimedia-optimizado/icons/linkedin.svg"
+                    type="image/svg+xml"
+                  />
+                  <img
+                    src="../multimedia-original/icons/linkedin.png"
+                    alt=""
+                    aria-hidden="true"
+                    height="32"
+                    width="32"
+                  />
+                </picture>
               </a>
               <a
                 href="#"
                 class="footer-social"
                 aria-label="GitHub de DestinoGreen"
               >
-                <img
-                  src="../multimedia-optimizado/icons/github.svg"
-                  alt=""
-                  aria-hidden="true"
-                  height="32"
-                  width="32"
-                />
+                <picture>
+                  <source
+                    srcset="../multimedia-optimizado/icons/github.svg"
+                    type="image/svg+xml"
+                  />
+                  <img
+                    src="../multimedia-original/icons/github.png"
+                    alt=""
+                    aria-hidden="true"
+                    height="32"
+                    width="32"
+                  />
+                </picture>
               </a>
             </div>
           </div>
